@@ -13,6 +13,7 @@ namespace QLDatXe.Models
         }
 
         public virtual DbSet<BenXe> BenXes { get; set; }
+        public virtual DbSet<ChiTietXe> ChiTietXes { get; set; }
         public virtual DbSet<ChuyenXe> ChuyenXes { get; set; }
         public virtual DbSet<Ghe> Ghes { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
@@ -37,14 +38,24 @@ namespace QLDatXe.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<ChuyenXe>()
+                .Property(e => e.MaCX)
+                .IsFixedLength()
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ChuyenXe>()
                 .HasMany(e => e.VeXes)
                 .WithRequired(e => e.ChuyenXe)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Ghe>()
-                .HasMany(e => e.Xes)
+                .HasMany(e => e.ChiTietXes)
                 .WithRequired(e => e.Ghe)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<HoaDon>()
+                .Property(e => e.MaVe)
+                .IsFixedLength()
+                .IsUnicode(false);
 
             modelBuilder.Entity<HoaDon>()
                 .Property(e => e.userName)
@@ -54,6 +65,7 @@ namespace QLDatXe.Models
             modelBuilder.Entity<LoaiXe>()
                 .HasMany(e => e.Xes)
                 .WithRequired(e => e.LoaiXe)
+                .HasForeignKey(e => e.Loai)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<TaiKhoan>()
@@ -65,14 +77,24 @@ namespace QLDatXe.Models
                 .Property(e => e.type)
                 .IsFixedLength();
 
-            modelBuilder.Entity<TaiKhoan>()
-                .HasMany(e => e.HoaDons)
-                .WithRequired(e => e.TaiKhoan)
-                .WillCascadeOnDelete(false);
+            modelBuilder.Entity<VeXe>()
+                .Property(e => e.MaVe)
+                .IsFixedLength()
+                .IsUnicode(false);
+
+            modelBuilder.Entity<VeXe>()
+                .Property(e => e.MaCX)
+                .IsFixedLength()
+                .IsUnicode(false);
 
             modelBuilder.Entity<VeXe>()
                 .HasMany(e => e.HoaDons)
                 .WithRequired(e => e.VeXe)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Xe>()
+                .HasMany(e => e.ChiTietXes)
+                .WithRequired(e => e.Xe)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Xe>()

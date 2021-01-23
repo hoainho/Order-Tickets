@@ -16,7 +16,8 @@ namespace QLDatXe.Models
         }
 
         [Key]
-        public int MaCX { get; set; }
+        [StringLength(10)]
+        public string MaCX { get; set; }
 
         public int MaXe { get; set; }
 
@@ -26,6 +27,8 @@ namespace QLDatXe.Models
 
         [Column(TypeName = "date")]
         public DateTime Ngaydi { get; set; }
+
+        public double GiaVe { get; set; }
 
         public virtual BenXe BenXe { get; set; }
 

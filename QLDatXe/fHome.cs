@@ -14,7 +14,7 @@ namespace QLDatXe
     
     public partial class fHome : Form
     {
-        private TaiKhoan account;
+        public TaiKhoan account;
         public fHome()
         {
             InitializeComponent();
@@ -22,11 +22,8 @@ namespace QLDatXe
         private void fHome_Load(object sender, EventArgs e)
         {
             toolVisible(false);
-            OpenRoom();
             OpenLoginForm();
-
         }
-
         public void OpenLoginForm()
         {
             Form frmChild = this.MdiChildren.OfType<fLogin>().FirstOrDefault();
@@ -40,6 +37,7 @@ namespace QLDatXe
                 frm.accountAccuracy += Frm_accountAccuracy;
 
                 frm.Show();
+
                 return;
             }
             frmChild.Activate();
@@ -51,6 +49,8 @@ namespace QLDatXe
             this.account = acc;
             mnsAccount.Text = string.Format(acc.displayName);
             MessageBox.Show("Xin Chào "+ account.displayName );
+            OpenRoom();
+
             toolVisible(false);
         }
 
@@ -87,20 +87,14 @@ namespace QLDatXe
             }
 
         }
-        //public void showRoom()
-        //{
-        //    if (this.account != null)
-        //    {
-        //        OpenRoom();
-        //    }
-        //}
+        
         public void OpenRoom()
         {
             Form frmChild = this.MdiChildren.OfType<fTicketRoom>().FirstOrDefault();
 
             if (frmChild == null)
             {
-                fTicketRoom frm = new fTicketRoom();
+                fTicketRoom frm = new fTicketRoom(account);
                 frm.MdiParent = this;
                 frm.StartPosition = FormStartPosition.CenterScreen;
                 frm.FormBorderStyle = FormBorderStyle.None;
@@ -114,6 +108,11 @@ namespace QLDatXe
         private void mnsHome_Click(object sender, EventArgs e)
         {
             OpenRoom();
+        }
+
+        private void mnsManageTickets_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

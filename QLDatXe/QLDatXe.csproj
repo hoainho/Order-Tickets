@@ -83,8 +83,10 @@
       <DependentUpon>fTicketRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\BenXe.cs" />
+    <Compile Include="Models\ChiTietXe.cs" />
     <Compile Include="Models\ChuyenXe.cs" />
     <Compile Include="Models\DataAccessLayer.cs" />
+    <Compile Include="Models\Ghe.cs" />
     <Compile Include="Models\HoaDon.cs" />
     <Compile Include="Models\LoaiXe.cs" />
     <Compile Include="Models\sysdiagram.cs" />

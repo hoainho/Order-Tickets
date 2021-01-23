@@ -16,7 +16,7 @@ namespace QLDatXe.Models
         }
 
         [Key]
-        public int Loai { get; set; }
+        public int MaLoai { get; set; }
 
         [Required]
         [StringLength(50)]

@@ -12,6 +12,7 @@ namespace QLDatXe.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Xe()
         {
+            ChiTietXes = new HashSet<ChiTietXe>();
             ChuyenXes = new HashSet<ChuyenXe>();
         }
 
@@ -20,14 +21,13 @@ namespace QLDatXe.Models
 
         public int Loai { get; set; }
 
-        public int MaGhe { get; set; }
+        public int SoGhe { get; set; }
 
-        public int TongGhe { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietXe> ChiTietXes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChuyenXe> ChuyenXes { get; set; }
-
-        public virtual Ghe Ghe { get; set; }
 
         public virtual LoaiXe LoaiXe { get; set; }
     }

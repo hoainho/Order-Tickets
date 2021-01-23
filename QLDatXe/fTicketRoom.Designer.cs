@@ -43,36 +43,36 @@ namespace QLDatXe
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblDiaChiBXDen = new System.Windows.Forms.Label();
+            this.lblMaBenXeDen = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lblTenBenXeDen = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblDiaChiBXDi = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblTenBenXeDi = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblMaBenXeDi = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.lblTinhTrang = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.lblSoGheCon = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblSoGhe = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblLoaiXe = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblMaXe = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblThoiGian = new System.Windows.Forms.Label();
+            this.lblMaChuyenXe = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBuyNow = new ePOSOne.btnProduct.Button_WOC();
             this.tpVe = new System.Windows.Forms.TabPage();
+            this.cmbTemp = new System.Windows.Forms.ComboBox();
             this.dgvVeXe = new System.Windows.Forms.DataGridView();
             this.colMaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaChuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,60 +81,54 @@ namespace QLDatXe
             this.colGiaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
+            this.lblBXDen_DatXe = new System.Windows.Forms.Label();
             this.lblBenXeDen = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblBXDi_DatXe = new System.Windows.Forms.Label();
             this.lblBenXeDi = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.txtGiaVe = new System.Windows.Forms.TextBox();
+            this.txtGiaVe_DatVe = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtTenKhach = new System.Windows.Forms.TextBox();
             this.txtMaVe = new System.Windows.Forms.TextBox();
-            this.txtMaChuyen_Ve = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.button_WOC10 = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC9 = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC8 = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC12 = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC2 = new ePOSOne.btnProduct.Button_WOC();
             this.tpQLLich = new System.Windows.Forms.TabPage();
+            this.cmbMaChuyen = new System.Windows.Forms.ComboBox();
+            this.cmbMaXe_Chuyen = new System.Windows.Forms.ComboBox();
+            this.dtpChuyenXe = new System.Windows.Forms.DateTimePicker();
+            this.cmbBXDen = new System.Windows.Forms.ComboBox();
+            this.cmbBXDi = new System.Windows.Forms.ComboBox();
             this.dgvLichTong = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaXe_Chuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSoGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGiaVeXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.txtMaXe_CX = new System.Windows.Forms.TextBox();
-            this.txtMaChuyen = new System.Windows.Forms.TextBox();
+            this.txtGiaVe = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.btnXoaChuyen = new ePOSOne.btnProduct.Button_WOC();
-            this.btnSuaChuyen = new ePOSOne.btnProduct.Button_WOC();
-            this.btnAddChuyen = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC14 = new ePOSOne.btnProduct.Button_WOC();
             this.tpXe = new System.Windows.Forms.TabPage();
+            this.txtSoGhe = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.cmbMaXe = new System.Windows.Forms.ComboBox();
             this.cmbLoaiXe = new System.Windows.Forms.ComboBox();
             this.dgvXe = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.txtSoGhe = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.txtMaXe = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
-            this.btnXoaXe = new ePOSOne.btnProduct.Button_WOC();
-            this.btnSuaXe = new ePOSOne.btnProduct.Button_WOC();
-            this.btnThemXe = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC13 = new ePOSOne.btnProduct.Button_WOC();
             this.tpBenXe = new System.Windows.Forms.TabPage();
             this.dgvBenXe = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -145,10 +139,6 @@ namespace QLDatXe
             this.txtDiaChiBX = new System.Windows.Forms.TextBox();
             this.lblTenBX = new System.Windows.Forms.Label();
             this.lblDiaChi = new System.Windows.Forms.Label();
-            this.btnXoaBX = new ePOSOne.btnProduct.Button_WOC();
-            this.btnSuaBX = new ePOSOne.btnProduct.Button_WOC();
-            this.btnAddBX = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC15 = new ePOSOne.btnProduct.Button_WOC();
             this.tpNhanVien = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -158,6 +148,25 @@ namespace QLDatXe
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.NotificationError = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnBuyNow = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC10 = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC9 = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC8 = new ePOSOne.btnProduct.Button_WOC();
+            this.btnAddVeXe = new ePOSOne.btnProduct.Button_WOC();
+            this.btnXoaChuyen = new ePOSOne.btnProduct.Button_WOC();
+            this.btnSuaChuyen = new ePOSOne.btnProduct.Button_WOC();
+            this.btnAddChuyen = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC14 = new ePOSOne.btnProduct.Button_WOC();
+            this.btnXoaXe = new ePOSOne.btnProduct.Button_WOC();
+            this.btnSuaXe = new ePOSOne.btnProduct.Button_WOC();
+            this.btnThemXe = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC13 = new ePOSOne.btnProduct.Button_WOC();
+            this.btnXoaBX = new ePOSOne.btnProduct.Button_WOC();
+            this.btnSuaBX = new ePOSOne.btnProduct.Button_WOC();
+            this.btnAddBX = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC15 = new ePOSOne.btnProduct.Button_WOC();
             this.button_WOC7 = new ePOSOne.btnProduct.Button_WOC();
             this.btnStaff = new ePOSOne.btnProduct.Button_WOC();
             this.button_WOC5 = new ePOSOne.btnProduct.Button_WOC();
@@ -165,11 +174,6 @@ namespace QLDatXe
             this.button_WOC3 = new ePOSOne.btnProduct.Button_WOC();
             this.btnTickets = new ePOSOne.btnProduct.Button_WOC();
             this.btnCalendar = new ePOSOne.btnProduct.Button_WOC();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.NotificationError = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cmbBXDi = new System.Windows.Forms.ComboBox();
-            this.cmbBXDen = new System.Windows.Forms.ComboBox();
-            this.dtpChuyenXe = new System.Windows.Forms.DateTimePicker();
             this.tabpageVeXe.SuspendLayout();
             this.tpLich.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLichChay)).BeginInit();
@@ -253,6 +257,7 @@ namespace QLDatXe
             this.dgvLichChay.RowTemplate.Height = 24;
             this.dgvLichChay.Size = new System.Drawing.Size(979, 182);
             this.dgvLichChay.TabIndex = 1;
+            this.dgvLichChay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLichChayXe_CellClick);
             // 
             // ColChuyenXe
             // 
@@ -293,10 +298,10 @@ namespace QLDatXe
             // 
             this.groupBox5.Controls.Add(this.label22);
             this.groupBox5.Controls.Add(this.label18);
-            this.groupBox5.Controls.Add(this.label21);
-            this.groupBox5.Controls.Add(this.label17);
+            this.groupBox5.Controls.Add(this.lblDiaChiBXDen);
+            this.groupBox5.Controls.Add(this.lblMaBenXeDen);
             this.groupBox5.Controls.Add(this.label20);
-            this.groupBox5.Controls.Add(this.label19);
+            this.groupBox5.Controls.Add(this.lblTenBenXeDen);
             this.groupBox5.Location = new System.Drawing.Point(342, 198);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(294, 104);
@@ -322,23 +327,21 @@ namespace QLDatXe
             this.label18.TabIndex = 0;
             this.label18.Text = "Mã Bến Xe :";
             // 
-            // label21
+            // lblDiaChiBXDen
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(109, 75);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(46, 17);
-            this.label21.TabIndex = 1;
-            this.label21.Text = "label2";
+            this.lblDiaChiBXDen.AutoSize = true;
+            this.lblDiaChiBXDen.Location = new System.Drawing.Point(109, 75);
+            this.lblDiaChiBXDen.Name = "lblDiaChiBXDen";
+            this.lblDiaChiBXDen.Size = new System.Drawing.Size(0, 17);
+            this.lblDiaChiBXDen.TabIndex = 1;
             // 
-            // label17
+            // lblMaBenXeDen
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(109, 24);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(46, 17);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "label2";
+            this.lblMaBenXeDen.AutoSize = true;
+            this.lblMaBenXeDen.Location = new System.Drawing.Point(109, 24);
+            this.lblMaBenXeDen.Name = "lblMaBenXeDen";
+            this.lblMaBenXeDen.Size = new System.Drawing.Size(0, 17);
+            this.lblMaBenXeDen.TabIndex = 1;
             // 
             // label20
             // 
@@ -349,23 +352,22 @@ namespace QLDatXe
             this.label20.TabIndex = 0;
             this.label20.Text = "Tên Bến Xe :";
             // 
-            // label19
+            // lblTenBenXeDen
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(109, 49);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(46, 17);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "label2";
+            this.lblTenBenXeDen.AutoSize = true;
+            this.lblTenBenXeDen.Location = new System.Drawing.Point(109, 49);
+            this.lblTenBenXeDen.Name = "lblTenBenXeDen";
+            this.lblTenBenXeDen.Size = new System.Drawing.Size(0, 17);
+            this.lblTenBenXeDen.TabIndex = 1;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.lblDiaChiBXDi);
             this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Controls.Add(this.lblTenBenXeDi);
             this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.lblMaBenXeDi);
             this.groupBox4.Location = new System.Drawing.Point(342, 94);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(294, 108);
@@ -382,14 +384,13 @@ namespace QLDatXe
             this.label12.TabIndex = 0;
             this.label12.Text = "Địa Chỉ :";
             // 
-            // label11
+            // lblDiaChiBXDi
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(109, 78);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 17);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "label2";
+            this.lblDiaChiBXDi.AutoSize = true;
+            this.lblDiaChiBXDi.Location = new System.Drawing.Point(109, 78);
+            this.lblDiaChiBXDi.Name = "lblDiaChiBXDi";
+            this.lblDiaChiBXDi.Size = new System.Drawing.Size(0, 17);
+            this.lblDiaChiBXDi.TabIndex = 1;
             // 
             // label16
             // 
@@ -400,14 +401,13 @@ namespace QLDatXe
             this.label16.TabIndex = 0;
             this.label16.Text = "Tên Bến Xe :";
             // 
-            // label15
+            // lblTenBenXeDi
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(109, 52);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(46, 17);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "label2";
+            this.lblTenBenXeDi.AutoSize = true;
+            this.lblTenBenXeDi.Location = new System.Drawing.Point(109, 52);
+            this.lblTenBenXeDi.Name = "lblTenBenXeDi";
+            this.lblTenBenXeDi.Size = new System.Drawing.Size(0, 17);
+            this.lblTenBenXeDi.TabIndex = 1;
             // 
             // label14
             // 
@@ -418,21 +418,20 @@ namespace QLDatXe
             this.label14.TabIndex = 0;
             this.label14.Text = "Mã Bến Xe :";
             // 
-            // label13
+            // lblMaBenXeDi
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(109, 27);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 17);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "label2";
+            this.lblMaBenXeDi.AutoSize = true;
+            this.lblMaBenXeDi.Location = new System.Drawing.Point(109, 27);
+            this.lblMaBenXeDi.Name = "lblMaBenXeDi";
+            this.lblMaBenXeDi.Size = new System.Drawing.Size(0, 17);
+            this.lblMaBenXeDi.TabIndex = 1;
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.label28);
-            this.groupBox6.Controls.Add(this.label27);
+            this.groupBox6.Controls.Add(this.lblTinhTrang);
             this.groupBox6.Controls.Add(this.label24);
-            this.groupBox6.Controls.Add(this.label23);
+            this.groupBox6.Controls.Add(this.lblSoGheCon);
             this.groupBox6.Location = new System.Drawing.Point(672, 94);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(312, 208);
@@ -449,14 +448,13 @@ namespace QLDatXe
             this.label28.TabIndex = 0;
             this.label28.Text = "Tình Trạng :";
             // 
-            // label27
+            // lblTinhTrang
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(167, 137);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(46, 17);
-            this.label27.TabIndex = 1;
-            this.label27.Text = "label2";
+            this.lblTinhTrang.AutoSize = true;
+            this.lblTinhTrang.Location = new System.Drawing.Point(167, 137);
+            this.lblTinhTrang.Name = "lblTinhTrang";
+            this.lblTinhTrang.Size = new System.Drawing.Size(0, 17);
+            this.lblTinhTrang.TabIndex = 1;
             // 
             // label24
             // 
@@ -467,23 +465,22 @@ namespace QLDatXe
             this.label24.TabIndex = 0;
             this.label24.Text = "Số Ghế :";
             // 
-            // label23
+            // lblSoGheCon
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(167, 51);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(46, 17);
-            this.label23.TabIndex = 1;
-            this.label23.Text = "label2";
+            this.lblSoGheCon.AutoSize = true;
+            this.lblSoGheCon.Location = new System.Drawing.Point(167, 51);
+            this.lblSoGheCon.Name = "lblSoGheCon";
+            this.lblSoGheCon.Size = new System.Drawing.Size(0, 17);
+            this.lblSoGheCon.TabIndex = 1;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.lblSoGhe);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.lblLoaiXe);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.lblMaXe);
             this.groupBox3.Location = new System.Drawing.Point(7, 94);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(312, 208);
@@ -500,14 +497,13 @@ namespace QLDatXe
             this.label10.TabIndex = 0;
             this.label10.Text = "Số Ghế :";
             // 
-            // label9
+            // lblSoGhe
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(135, 151);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 17);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "label2";
+            this.lblSoGhe.AutoSize = true;
+            this.lblSoGhe.Location = new System.Drawing.Point(135, 151);
+            this.lblSoGhe.Name = "lblSoGhe";
+            this.lblSoGhe.Size = new System.Drawing.Size(0, 17);
+            this.lblSoGhe.TabIndex = 1;
             // 
             // label8
             // 
@@ -518,14 +514,13 @@ namespace QLDatXe
             this.label8.TabIndex = 0;
             this.label8.Text = "Loại Xe :";
             // 
-            // label7
+            // lblLoaiXe
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(135, 102);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 17);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "label2";
+            this.lblLoaiXe.AutoSize = true;
+            this.lblLoaiXe.Location = new System.Drawing.Point(135, 102);
+            this.lblLoaiXe.Name = "lblLoaiXe";
+            this.lblLoaiXe.Size = new System.Drawing.Size(0, 17);
+            this.lblLoaiXe.TabIndex = 1;
             // 
             // label5
             // 
@@ -536,19 +531,18 @@ namespace QLDatXe
             this.label5.TabIndex = 0;
             this.label5.Text = "Mã Xe :";
             // 
-            // label6
+            // lblMaXe
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(135, 51);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 17);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "label2";
+            this.lblMaXe.AutoSize = true;
+            this.lblMaXe.Location = new System.Drawing.Point(135, 51);
+            this.lblMaXe.Name = "lblMaXe";
+            this.lblMaXe.Size = new System.Drawing.Size(0, 17);
+            this.lblMaXe.TabIndex = 1;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.lblThoiGian);
+            this.groupBox2.Controls.Add(this.lblMaChuyenXe);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(6, 5);
@@ -558,23 +552,21 @@ namespace QLDatXe
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chuyến Xe";
             // 
-            // label4
+            // lblThoiGian
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(417, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "label2";
+            this.lblThoiGian.AutoSize = true;
+            this.lblThoiGian.Location = new System.Drawing.Point(417, 33);
+            this.lblThoiGian.Name = "lblThoiGian";
+            this.lblThoiGian.Size = new System.Drawing.Size(0, 17);
+            this.lblThoiGian.TabIndex = 1;
             // 
-            // label2
+            // lblMaChuyenXe
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(155, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "sadsad";
+            this.lblMaChuyenXe.AutoSize = true;
+            this.lblMaChuyenXe.Location = new System.Drawing.Point(155, 33);
+            this.lblMaChuyenXe.Name = "lblMaChuyenXe";
+            this.lblMaChuyenXe.Size = new System.Drawing.Size(0, 17);
+            this.lblMaChuyenXe.TabIndex = 1;
             // 
             // label3
             // 
@@ -594,58 +586,31 @@ namespace QLDatXe
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Chuyến Xe :";
             // 
-            // btnBuyNow
-            // 
-            this.btnBuyNow.BackColor = System.Drawing.Color.Transparent;
-            this.btnBuyNow.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnBuyNow.ButtonColor = System.Drawing.Color.White;
-            this.btnBuyNow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuyNow.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnBuyNow.FlatAppearance.BorderSize = 0;
-            this.btnBuyNow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnBuyNow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnBuyNow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuyNow.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuyNow.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBuyNow.Location = new System.Drawing.Point(672, 6);
-            this.btnBuyNow.Name = "btnBuyNow";
-            this.btnBuyNow.OnHoverBorderColor = System.Drawing.Color.RoyalBlue;
-            this.btnBuyNow.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
-            this.btnBuyNow.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnBuyNow.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnBuyNow.Size = new System.Drawing.Size(312, 81);
-            this.btnBuyNow.TabIndex = 1;
-            this.btnBuyNow.Text = "MUA VÉ NGAY";
-            this.btnBuyNow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuyNow.TextColor = System.Drawing.Color.Black;
-            this.btnBuyNow.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnBuyNow.UseCompatibleTextRendering = true;
-            this.btnBuyNow.UseVisualStyleBackColor = false;
-            // 
             // tpVe
             // 
+            this.tpVe.Controls.Add(this.cmbTemp);
             this.tpVe.Controls.Add(this.dgvVeXe);
             this.tpVe.Controls.Add(this.panel3);
             this.tpVe.Controls.Add(this.label31);
+            this.tpVe.Controls.Add(this.lblBXDen_DatXe);
             this.tpVe.Controls.Add(this.lblBenXeDen);
+            this.tpVe.Controls.Add(this.label2);
+            this.tpVe.Controls.Add(this.lblBXDi_DatXe);
             this.tpVe.Controls.Add(this.lblBenXeDi);
             this.tpVe.Controls.Add(this.panel11);
-            this.tpVe.Controls.Add(this.txtGiaVe);
+            this.tpVe.Controls.Add(this.txtGiaVe_DatVe);
             this.tpVe.Controls.Add(this.txtSDT);
             this.tpVe.Controls.Add(this.txtTenKhach);
             this.tpVe.Controls.Add(this.txtMaVe);
-            this.tpVe.Controls.Add(this.txtMaChuyen_Ve);
             this.tpVe.Controls.Add(this.label35);
             this.tpVe.Controls.Add(this.label34);
             this.tpVe.Controls.Add(this.label33);
             this.tpVe.Controls.Add(this.label32);
             this.tpVe.Controls.Add(this.label29);
-            this.tpVe.Controls.Add(this.label25);
             this.tpVe.Controls.Add(this.button_WOC10);
             this.tpVe.Controls.Add(this.button_WOC9);
             this.tpVe.Controls.Add(this.button_WOC8);
-            this.tpVe.Controls.Add(this.button_WOC12);
-            this.tpVe.Controls.Add(this.button_WOC2);
+            this.tpVe.Controls.Add(this.btnAddVeXe);
             this.tpVe.Location = new System.Drawing.Point(4, 25);
             this.tpVe.Name = "tpVe";
             this.tpVe.Padding = new System.Windows.Forms.Padding(3);
@@ -653,6 +618,15 @@ namespace QLDatXe
             this.tpVe.TabIndex = 1;
             this.tpVe.Text = "Khu Bán Vé";
             this.tpVe.UseVisualStyleBackColor = true;
+            // 
+            // cmbTemp
+            // 
+            this.cmbTemp.FormattingEnabled = true;
+            this.cmbTemp.Location = new System.Drawing.Point(197, 19);
+            this.cmbTemp.Name = "cmbTemp";
+            this.cmbTemp.Size = new System.Drawing.Size(293, 24);
+            this.cmbTemp.TabIndex = 29;
+            this.cmbTemp.SelectedValueChanged += new System.EventHandler(this.cmbTemp_SelectedValueChanged);
             // 
             // dgvVeXe
             // 
@@ -674,6 +648,7 @@ namespace QLDatXe
             this.dgvVeXe.RowTemplate.Height = 24;
             this.dgvVeXe.Size = new System.Drawing.Size(977, 186);
             this.dgvVeXe.TabIndex = 4;
+            this.dgvVeXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVeXe_CellClick);
             // 
             // colMaVe
             // 
@@ -714,7 +689,7 @@ namespace QLDatXe
             // 
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Location = new System.Drawing.Point(243, 55);
+            this.panel3.Location = new System.Drawing.Point(260, 61);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(136, 45);
             this.panel3.TabIndex = 3;
@@ -722,27 +697,55 @@ namespace QLDatXe
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(454, 134);
+            this.label31.Location = new System.Drawing.Point(517, 123);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(212, 17);
             this.label31.TabIndex = 2;
             this.label31.Text = "* ( Không cần điền nếu mua vé )";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblBXDen_DatXe
+            // 
+            this.lblBXDen_DatXe.AutoSize = true;
+            this.lblBXDen_DatXe.Location = new System.Drawing.Point(517, 76);
+            this.lblBXDen_DatXe.Name = "lblBXDen_DatXe";
+            this.lblBXDen_DatXe.Size = new System.Drawing.Size(0, 17);
+            this.lblBXDen_DatXe.TabIndex = 2;
+            this.lblBXDen_DatXe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblBenXeDen
             // 
             this.lblBenXeDen.AutoSize = true;
-            this.lblBenXeDen.Location = new System.Drawing.Point(485, 68);
+            this.lblBenXeDen.Location = new System.Drawing.Point(414, 76);
             this.lblBenXeDen.Name = "lblBenXeDen";
             this.lblBenXeDen.Size = new System.Drawing.Size(84, 17);
             this.lblBenXeDen.TabIndex = 2;
             this.lblBenXeDen.Text = "Bến Xe Đến";
             this.lblBenXeDen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(66, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Chuyến Xe :";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblBXDi_DatXe
+            // 
+            this.lblBXDi_DatXe.AutoSize = true;
+            this.lblBXDi_DatXe.Location = new System.Drawing.Point(117, 76);
+            this.lblBXDi_DatXe.Name = "lblBXDi_DatXe";
+            this.lblBXDi_DatXe.Size = new System.Drawing.Size(0, 17);
+            this.lblBXDi_DatXe.TabIndex = 2;
+            this.lblBXDi_DatXe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblBenXeDi
             // 
             this.lblBenXeDi.AutoSize = true;
-            this.lblBenXeDi.Location = new System.Drawing.Point(42, 68);
+            this.lblBenXeDi.Location = new System.Drawing.Point(17, 76);
             this.lblBenXeDi.Name = "lblBenXeDi";
             this.lblBenXeDi.Size = new System.Drawing.Size(71, 17);
             this.lblBenXeDi.TabIndex = 2;
@@ -758,46 +761,43 @@ namespace QLDatXe
             this.panel11.Size = new System.Drawing.Size(27, 30);
             this.panel11.TabIndex = 2;
             // 
-            // txtGiaVe
+            // txtGiaVe_DatVe
             // 
-            this.txtGiaVe.Enabled = false;
-            this.txtGiaVe.Location = new System.Drawing.Point(134, 271);
-            this.txtGiaVe.Name = "txtGiaVe";
-            this.txtGiaVe.Size = new System.Drawing.Size(293, 22);
-            this.txtGiaVe.TabIndex = 1;
+            this.txtGiaVe_DatVe.Enabled = false;
+            this.txtGiaVe_DatVe.Location = new System.Drawing.Point(197, 259);
+            this.txtGiaVe_DatVe.Name = "txtGiaVe_DatVe";
+            this.txtGiaVe_DatVe.Size = new System.Drawing.Size(293, 22);
+            this.txtGiaVe_DatVe.TabIndex = 1;
+            this.txtGiaVe_DatVe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(134, 222);
+            this.txtSDT.Location = new System.Drawing.Point(197, 211);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(293, 22);
             this.txtSDT.TabIndex = 1;
+            this.txtSDT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTenKhach
             // 
-            this.txtTenKhach.Location = new System.Drawing.Point(134, 176);
+            this.txtTenKhach.Location = new System.Drawing.Point(197, 165);
             this.txtTenKhach.Name = "txtTenKhach";
             this.txtTenKhach.Size = new System.Drawing.Size(293, 22);
             this.txtTenKhach.TabIndex = 1;
+            this.txtTenKhach.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtMaVe
             // 
-            this.txtMaVe.Location = new System.Drawing.Point(134, 131);
+            this.txtMaVe.Location = new System.Drawing.Point(197, 120);
             this.txtMaVe.Name = "txtMaVe";
             this.txtMaVe.Size = new System.Drawing.Size(293, 22);
             this.txtMaVe.TabIndex = 1;
-            // 
-            // txtMaChuyen_Ve
-            // 
-            this.txtMaChuyen_Ve.Location = new System.Drawing.Point(111, 19);
-            this.txtMaChuyen_Ve.Name = "txtMaChuyen_Ve";
-            this.txtMaChuyen_Ve.Size = new System.Drawing.Size(164, 22);
-            this.txtMaChuyen_Ve.TabIndex = 1;
+            this.txtMaVe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(433, 274);
+            this.label35.Location = new System.Drawing.Point(496, 262);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(37, 17);
             this.label35.TabIndex = 0;
@@ -806,7 +806,7 @@ namespace QLDatXe
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(66, 271);
+            this.label34.Location = new System.Drawing.Point(129, 259);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(59, 17);
             this.label34.TabIndex = 0;
@@ -815,7 +815,7 @@ namespace QLDatXe
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(19, 225);
+            this.label33.Location = new System.Drawing.Point(82, 214);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(106, 17);
             this.label33.TabIndex = 0;
@@ -824,7 +824,7 @@ namespace QLDatXe
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(3, 176);
+            this.label32.Location = new System.Drawing.Point(66, 165);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(123, 17);
             this.label32.TabIndex = 0;
@@ -833,118 +833,16 @@ namespace QLDatXe
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(70, 131);
+            this.label29.Location = new System.Drawing.Point(133, 120);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(56, 17);
             this.label29.TabIndex = 0;
             this.label29.Text = "Mã Vé :";
             // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(19, 19);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(85, 17);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "Chuyến Xe :";
-            // 
-            // button_WOC10
-            // 
-            this.button_WOC10.BackColor = System.Drawing.Color.Transparent;
-            this.button_WOC10.BorderColor = System.Drawing.Color.Black;
-            this.button_WOC10.ButtonColor = System.Drawing.Color.White;
-            this.button_WOC10.FlatAppearance.BorderSize = 0;
-            this.button_WOC10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC10.ForeColor = System.Drawing.Color.Transparent;
-            this.button_WOC10.Location = new System.Drawing.Point(761, 225);
-            this.button_WOC10.Name = "button_WOC10";
-            this.button_WOC10.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC10.OnHoverButtonColor = System.Drawing.Color.SandyBrown;
-            this.button_WOC10.OnHoverTextColor = System.Drawing.Color.Black;
-            this.button_WOC10.Size = new System.Drawing.Size(174, 50);
-            this.button_WOC10.TabIndex = 1;
-            this.button_WOC10.Text = "Reset";
-            this.button_WOC10.TextColor = System.Drawing.Color.Black;
-            this.button_WOC10.UseVisualStyleBackColor = false;
-            // 
-            // button_WOC9
-            // 
-            this.button_WOC9.BackColor = System.Drawing.Color.Transparent;
-            this.button_WOC9.BorderColor = System.Drawing.Color.Black;
-            this.button_WOC9.ButtonColor = System.Drawing.Color.White;
-            this.button_WOC9.FlatAppearance.BorderSize = 0;
-            this.button_WOC9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC9.ForeColor = System.Drawing.Color.Transparent;
-            this.button_WOC9.Location = new System.Drawing.Point(761, 159);
-            this.button_WOC9.Name = "button_WOC9";
-            this.button_WOC9.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC9.OnHoverButtonColor = System.Drawing.Color.DarkOrange;
-            this.button_WOC9.OnHoverTextColor = System.Drawing.Color.Black;
-            this.button_WOC9.Size = new System.Drawing.Size(174, 50);
-            this.button_WOC9.TabIndex = 1;
-            this.button_WOC9.Text = "Hủy Vé";
-            this.button_WOC9.TextColor = System.Drawing.Color.Black;
-            this.button_WOC9.UseVisualStyleBackColor = false;
-            // 
-            // button_WOC8
-            // 
-            this.button_WOC8.BackColor = System.Drawing.Color.Transparent;
-            this.button_WOC8.BorderColor = System.Drawing.Color.Black;
-            this.button_WOC8.ButtonColor = System.Drawing.Color.White;
-            this.button_WOC8.FlatAppearance.BorderSize = 0;
-            this.button_WOC8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC8.ForeColor = System.Drawing.Color.Transparent;
-            this.button_WOC8.Location = new System.Drawing.Point(761, 87);
-            this.button_WOC8.Name = "button_WOC8";
-            this.button_WOC8.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC8.OnHoverButtonColor = System.Drawing.Color.Orange;
-            this.button_WOC8.OnHoverTextColor = System.Drawing.Color.Black;
-            this.button_WOC8.Size = new System.Drawing.Size(174, 50);
-            this.button_WOC8.TabIndex = 1;
-            this.button_WOC8.Text = "Sửa Vé";
-            this.button_WOC8.TextColor = System.Drawing.Color.Black;
-            this.button_WOC8.UseVisualStyleBackColor = false;
-            // 
-            // button_WOC12
-            // 
-            this.button_WOC12.BackColor = System.Drawing.Color.Transparent;
-            this.button_WOC12.BorderColor = System.Drawing.Color.Black;
-            this.button_WOC12.ButtonColor = System.Drawing.Color.White;
-            this.button_WOC12.FlatAppearance.BorderSize = 0;
-            this.button_WOC12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC12.ForeColor = System.Drawing.Color.Transparent;
-            this.button_WOC12.Location = new System.Drawing.Point(761, 19);
-            this.button_WOC12.Name = "button_WOC12";
-            this.button_WOC12.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC12.OnHoverButtonColor = System.Drawing.Color.NavajoWhite;
-            this.button_WOC12.OnHoverTextColor = System.Drawing.Color.Black;
-            this.button_WOC12.Size = new System.Drawing.Size(174, 50);
-            this.button_WOC12.TabIndex = 1;
-            this.button_WOC12.Text = "Mua Vé";
-            this.button_WOC12.TextColor = System.Drawing.Color.Black;
-            this.button_WOC12.UseVisualStyleBackColor = false;
-            // 
-            // button_WOC2
-            // 
-            this.button_WOC2.BackColor = System.Drawing.Color.Transparent;
-            this.button_WOC2.BorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC2.ButtonColor = System.Drawing.Color.CornflowerBlue;
-            this.button_WOC2.FlatAppearance.BorderSize = 0;
-            this.button_WOC2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC2.ForeColor = System.Drawing.Color.Transparent;
-            this.button_WOC2.Location = new System.Drawing.Point(290, 11);
-            this.button_WOC2.Name = "button_WOC2";
-            this.button_WOC2.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC2.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
-            this.button_WOC2.OnHoverTextColor = System.Drawing.Color.White;
-            this.button_WOC2.Size = new System.Drawing.Size(89, 33);
-            this.button_WOC2.TabIndex = 1;
-            this.button_WOC2.Text = "Kiểm Tra";
-            this.button_WOC2.TextColor = System.Drawing.Color.Black;
-            this.button_WOC2.UseVisualStyleBackColor = false;
-            // 
             // tpQLLich
             // 
+            this.tpQLLich.Controls.Add(this.cmbMaChuyen);
+            this.tpQLLich.Controls.Add(this.cmbMaXe_Chuyen);
             this.tpQLLich.Controls.Add(this.dtpChuyenXe);
             this.tpQLLich.Controls.Add(this.cmbBXDen);
             this.tpQLLich.Controls.Add(this.cmbBXDi);
@@ -952,8 +850,8 @@ namespace QLDatXe
             this.tpQLLich.Controls.Add(this.panel12);
             this.tpQLLich.Controls.Add(this.label37);
             this.tpQLLich.Controls.Add(this.label38);
-            this.tpQLLich.Controls.Add(this.txtMaXe_CX);
-            this.tpQLLich.Controls.Add(this.txtMaChuyen);
+            this.tpQLLich.Controls.Add(this.txtGiaVe);
+            this.tpQLLich.Controls.Add(this.label4);
             this.tpQLLich.Controls.Add(this.label41);
             this.tpQLLich.Controls.Add(this.label42);
             this.tpQLLich.Controls.Add(this.label44);
@@ -968,6 +866,48 @@ namespace QLDatXe
             this.tpQLLich.Text = "Quản Lí Lịch Chạy";
             this.tpQLLich.UseVisualStyleBackColor = true;
             // 
+            // cmbMaChuyen
+            // 
+            this.cmbMaChuyen.FormattingEnabled = true;
+            this.cmbMaChuyen.Location = new System.Drawing.Point(140, 29);
+            this.cmbMaChuyen.Name = "cmbMaChuyen";
+            this.cmbMaChuyen.Size = new System.Drawing.Size(293, 24);
+            this.cmbMaChuyen.TabIndex = 46;
+            this.cmbMaChuyen.SelectedValueChanged += new System.EventHandler(this.cmbMaChuyen_SelectedValueChanged);
+            // 
+            // cmbMaXe_Chuyen
+            // 
+            this.cmbMaXe_Chuyen.FormattingEnabled = true;
+            this.cmbMaXe_Chuyen.Location = new System.Drawing.Point(143, 207);
+            this.cmbMaXe_Chuyen.Name = "cmbMaXe_Chuyen";
+            this.cmbMaXe_Chuyen.Size = new System.Drawing.Size(293, 24);
+            this.cmbMaXe_Chuyen.TabIndex = 44;
+            // 
+            // dtpChuyenXe
+            // 
+            this.dtpChuyenXe.CustomFormat = "dd/MM/yyyy";
+            this.dtpChuyenXe.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpChuyenXe.Location = new System.Drawing.Point(143, 164);
+            this.dtpChuyenXe.Name = "dtpChuyenXe";
+            this.dtpChuyenXe.Size = new System.Drawing.Size(293, 22);
+            this.dtpChuyenXe.TabIndex = 28;
+            // 
+            // cmbBXDen
+            // 
+            this.cmbBXDen.FormattingEnabled = true;
+            this.cmbBXDen.Location = new System.Drawing.Point(143, 116);
+            this.cmbBXDen.Name = "cmbBXDen";
+            this.cmbBXDen.Size = new System.Drawing.Size(293, 24);
+            this.cmbBXDen.TabIndex = 27;
+            // 
+            // cmbBXDi
+            // 
+            this.cmbBXDi.FormattingEnabled = true;
+            this.cmbBXDi.Location = new System.Drawing.Point(143, 70);
+            this.cmbBXDi.Name = "cmbBXDi";
+            this.cmbBXDi.Size = new System.Drawing.Size(293, 24);
+            this.cmbBXDi.TabIndex = 27;
+            // 
             // dgvLichTong
             // 
             this.dgvLichTong.AllowUserToAddRows = false;
@@ -977,10 +917,11 @@ namespace QLDatXe
             this.dgvLichTong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLichTong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
+            this.colMaXe_Chuyen,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.colSoGhe});
+            this.colGiaVeXe});
             this.dgvLichTong.Location = new System.Drawing.Point(10, 302);
             this.dgvLichTong.Name = "dgvLichTong";
             this.dgvLichTong.ReadOnly = true;
@@ -988,6 +929,7 @@ namespace QLDatXe
             this.dgvLichTong.RowTemplate.Height = 24;
             this.dgvLichTong.Size = new System.Drawing.Size(977, 186);
             this.dgvLichTong.TabIndex = 26;
+            this.dgvLichTong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChuyenXe_CellClick);
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -995,6 +937,13 @@ namespace QLDatXe
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // colMaXe_Chuyen
+            // 
+            this.colMaXe_Chuyen.HeaderText = "Mã Xe";
+            this.colMaXe_Chuyen.MinimumWidth = 6;
+            this.colMaXe_Chuyen.Name = "colMaXe_Chuyen";
+            this.colMaXe_Chuyen.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -1017,12 +966,12 @@ namespace QLDatXe
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // colSoGhe
+            // colGiaVeXe
             // 
-            this.colSoGhe.HeaderText = "Số Ghế";
-            this.colSoGhe.MinimumWidth = 6;
-            this.colSoGhe.Name = "colSoGhe";
-            this.colSoGhe.ReadOnly = true;
+            this.colGiaVeXe.HeaderText = "Giá Vé";
+            this.colGiaVeXe.MinimumWidth = 6;
+            this.colGiaVeXe.Name = "colGiaVeXe";
+            this.colGiaVeXe.ReadOnly = true;
             // 
             // panel12
             // 
@@ -1036,7 +985,7 @@ namespace QLDatXe
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(38, 142);
+            this.label37.Location = new System.Drawing.Point(42, 119);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(92, 17);
             this.label37.TabIndex = 23;
@@ -1046,33 +995,35 @@ namespace QLDatXe
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(51, 96);
+            this.label38.Location = new System.Drawing.Point(55, 73);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(79, 17);
             this.label38.TabIndex = 22;
             this.label38.Text = "Bến Xe Đi :";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtMaXe_CX
+            // txtGiaVe
             // 
-            this.txtMaXe_CX.Location = new System.Drawing.Point(139, 230);
-            this.txtMaXe_CX.Name = "txtMaXe_CX";
-            this.txtMaXe_CX.Size = new System.Drawing.Size(293, 22);
-            this.txtMaXe_CX.TabIndex = 18;
-            this.txtMaXe_CX.Validating += new System.ComponentModel.CancelEventHandler(this.textBox6_Validating);
+            this.txtGiaVe.Location = new System.Drawing.Point(143, 254);
+            this.txtGiaVe.Name = "txtGiaVe";
+            this.txtGiaVe.Size = new System.Drawing.Size(293, 22);
+            this.txtGiaVe.TabIndex = 11;
+            this.txtGiaVe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGiaVe.Validating += new System.ComponentModel.CancelEventHandler(this.textBox6_Validating);
             // 
-            // txtMaChuyen
+            // label4
             // 
-            this.txtMaChuyen.Location = new System.Drawing.Point(139, 53);
-            this.txtMaChuyen.Name = "txtMaChuyen";
-            this.txtMaChuyen.Size = new System.Drawing.Size(293, 22);
-            this.txtMaChuyen.TabIndex = 11;
-            this.txtMaChuyen.Validating += new System.ComponentModel.CancelEventHandler(this.textBox6_Validating);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(69, 257);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 17);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Giá Vé :";
             // 
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(65, 233);
+            this.label41.Location = new System.Drawing.Point(69, 210);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(60, 17);
             this.label41.TabIndex = 8;
@@ -1081,7 +1032,7 @@ namespace QLDatXe
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(53, 187);
+            this.label42.Location = new System.Drawing.Point(57, 164);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(78, 17);
             this.label42.TabIndex = 7;
@@ -1090,97 +1041,21 @@ namespace QLDatXe
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(22, 56);
+            this.label44.Location = new System.Drawing.Point(26, 33);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(108, 17);
             this.label44.TabIndex = 5;
             this.label44.Text = "Mã Chuyến Xe :";
             // 
-            // btnXoaChuyen
-            // 
-            this.btnXoaChuyen.BackColor = System.Drawing.Color.Transparent;
-            this.btnXoaChuyen.BorderColor = System.Drawing.Color.Black;
-            this.btnXoaChuyen.ButtonColor = System.Drawing.Color.White;
-            this.btnXoaChuyen.FlatAppearance.BorderSize = 0;
-            this.btnXoaChuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaChuyen.ForeColor = System.Drawing.Color.Transparent;
-            this.btnXoaChuyen.Location = new System.Drawing.Point(655, 222);
-            this.btnXoaChuyen.Name = "btnXoaChuyen";
-            this.btnXoaChuyen.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnXoaChuyen.OnHoverButtonColor = System.Drawing.Color.DarkOrange;
-            this.btnXoaChuyen.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnXoaChuyen.Size = new System.Drawing.Size(174, 50);
-            this.btnXoaChuyen.TabIndex = 13;
-            this.btnXoaChuyen.Text = "Xóa Chuyến";
-            this.btnXoaChuyen.TextColor = System.Drawing.Color.Black;
-            this.btnXoaChuyen.UseVisualStyleBackColor = false;
-            // 
-            // btnSuaChuyen
-            // 
-            this.btnSuaChuyen.BackColor = System.Drawing.Color.Transparent;
-            this.btnSuaChuyen.BorderColor = System.Drawing.Color.Black;
-            this.btnSuaChuyen.ButtonColor = System.Drawing.Color.White;
-            this.btnSuaChuyen.FlatAppearance.BorderSize = 0;
-            this.btnSuaChuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaChuyen.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSuaChuyen.Location = new System.Drawing.Point(655, 143);
-            this.btnSuaChuyen.Name = "btnSuaChuyen";
-            this.btnSuaChuyen.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnSuaChuyen.OnHoverButtonColor = System.Drawing.Color.Orange;
-            this.btnSuaChuyen.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnSuaChuyen.Size = new System.Drawing.Size(174, 50);
-            this.btnSuaChuyen.TabIndex = 12;
-            this.btnSuaChuyen.Text = "Sửa Chuyến";
-            this.btnSuaChuyen.TextColor = System.Drawing.Color.Black;
-            this.btnSuaChuyen.UseVisualStyleBackColor = false;
-            // 
-            // btnAddChuyen
-            // 
-            this.btnAddChuyen.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddChuyen.BorderColor = System.Drawing.Color.Black;
-            this.btnAddChuyen.ButtonColor = System.Drawing.Color.White;
-            this.btnAddChuyen.FlatAppearance.BorderSize = 0;
-            this.btnAddChuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddChuyen.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAddChuyen.Location = new System.Drawing.Point(655, 68);
-            this.btnAddChuyen.Name = "btnAddChuyen";
-            this.btnAddChuyen.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnAddChuyen.OnHoverButtonColor = System.Drawing.Color.NavajoWhite;
-            this.btnAddChuyen.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnAddChuyen.Size = new System.Drawing.Size(174, 50);
-            this.btnAddChuyen.TabIndex = 20;
-            this.btnAddChuyen.Text = "Thêm Chuyến";
-            this.btnAddChuyen.TextColor = System.Drawing.Color.Black;
-            this.btnAddChuyen.UseVisualStyleBackColor = false;
-            // 
-            // button_WOC14
-            // 
-            this.button_WOC14.BackColor = System.Drawing.Color.Transparent;
-            this.button_WOC14.BorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC14.ButtonColor = System.Drawing.Color.CornflowerBlue;
-            this.button_WOC14.FlatAppearance.BorderSize = 0;
-            this.button_WOC14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC14.ForeColor = System.Drawing.Color.Transparent;
-            this.button_WOC14.Location = new System.Drawing.Point(441, 47);
-            this.button_WOC14.Name = "button_WOC14";
-            this.button_WOC14.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC14.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
-            this.button_WOC14.OnHoverTextColor = System.Drawing.Color.White;
-            this.button_WOC14.Size = new System.Drawing.Size(89, 33);
-            this.button_WOC14.TabIndex = 15;
-            this.button_WOC14.Text = "Kiểm Tra";
-            this.button_WOC14.TextColor = System.Drawing.Color.Black;
-            this.button_WOC14.UseVisualStyleBackColor = false;
-            // 
             // tpXe
             // 
+            this.tpXe.Controls.Add(this.txtSoGhe);
+            this.tpXe.Controls.Add(this.label26);
+            this.tpXe.Controls.Add(this.cmbMaXe);
             this.tpXe.Controls.Add(this.cmbLoaiXe);
             this.tpXe.Controls.Add(this.dgvXe);
             this.tpXe.Controls.Add(this.panel13);
-            this.tpXe.Controls.Add(this.txtSoGhe);
             this.tpXe.Controls.Add(this.label36);
-            this.tpXe.Controls.Add(this.txtMaXe);
-            this.tpXe.Controls.Add(this.label40);
             this.tpXe.Controls.Add(this.label45);
             this.tpXe.Controls.Add(this.btnXoaXe);
             this.tpXe.Controls.Add(this.btnSuaXe);
@@ -1192,11 +1067,37 @@ namespace QLDatXe
             this.tpXe.TabIndex = 3;
             this.tpXe.Text = "Quản Lí Xe";
             this.tpXe.UseVisualStyleBackColor = true;
+            this.tpXe.Click += new System.EventHandler(this.tpXe_Click);
+            // 
+            // txtSoGhe
+            // 
+            this.txtSoGhe.Location = new System.Drawing.Point(132, 208);
+            this.txtSoGhe.Name = "txtSoGhe";
+            this.txtSoGhe.Size = new System.Drawing.Size(293, 22);
+            this.txtSoGhe.TabIndex = 53;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(63, 211);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(56, 17);
+            this.label26.TabIndex = 52;
+            this.label26.Text = "Số Ghế";
+            // 
+            // cmbMaXe
+            // 
+            this.cmbMaXe.Enabled = false;
+            this.cmbMaXe.FormattingEnabled = true;
+            this.cmbMaXe.Location = new System.Drawing.Point(131, 112);
+            this.cmbMaXe.Name = "cmbMaXe";
+            this.cmbMaXe.Size = new System.Drawing.Size(293, 24);
+            this.cmbMaXe.TabIndex = 43;
             // 
             // cmbLoaiXe
             // 
             this.cmbLoaiXe.FormattingEnabled = true;
-            this.cmbLoaiXe.Location = new System.Drawing.Point(137, 96);
+            this.cmbLoaiXe.Location = new System.Drawing.Point(131, 164);
             this.cmbLoaiXe.Name = "cmbLoaiXe";
             this.cmbLoaiXe.Size = new System.Drawing.Size(293, 24);
             this.cmbLoaiXe.TabIndex = 43;
@@ -1211,14 +1112,16 @@ namespace QLDatXe
             this.dgvXe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
+            this.colSoGhe});
             this.dgvXe.Location = new System.Drawing.Point(8, 298);
             this.dgvXe.Name = "dgvXe";
             this.dgvXe.ReadOnly = true;
             this.dgvXe.RowHeadersWidth = 51;
             this.dgvXe.RowTemplate.Height = 24;
+            this.dgvXe.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvXe.Size = new System.Drawing.Size(977, 186);
             this.dgvXe.TabIndex = 42;
+            this.dgvXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvXe_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1234,12 +1137,12 @@ namespace QLDatXe
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn7
+            // colSoGhe
             // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Số Ghế";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.colSoGhe.HeaderText = "Số Ghế";
+            this.colSoGhe.MinimumWidth = 6;
+            this.colSoGhe.Name = "colSoGhe";
+            this.colSoGhe.ReadOnly = true;
             // 
             // panel13
             // 
@@ -1250,125 +1153,23 @@ namespace QLDatXe
             this.panel13.Size = new System.Drawing.Size(136, 45);
             this.panel13.TabIndex = 41;
             // 
-            // txtSoGhe
-            // 
-            this.txtSoGhe.Location = new System.Drawing.Point(137, 139);
-            this.txtSoGhe.Name = "txtSoGhe";
-            this.txtSoGhe.Size = new System.Drawing.Size(293, 22);
-            this.txtSoGhe.TabIndex = 37;
-            // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(67, 96);
+            this.label36.Location = new System.Drawing.Point(61, 164);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(64, 17);
             this.label36.TabIndex = 29;
             this.label36.Text = "Loại Xe :";
             // 
-            // txtMaXe
-            // 
-            this.txtMaXe.Enabled = false;
-            this.txtMaXe.Location = new System.Drawing.Point(137, 49);
-            this.txtMaXe.Name = "txtMaXe";
-            this.txtMaXe.Size = new System.Drawing.Size(293, 22);
-            this.txtMaXe.TabIndex = 31;
-            this.txtMaXe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(67, 142);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(68, 17);
-            this.label40.TabIndex = 29;
-            this.label40.Text = "Số Ghế : ";
-            // 
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(75, 51);
+            this.label45.Location = new System.Drawing.Point(69, 119);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(56, 17);
             this.label45.TabIndex = 27;
             this.label45.Text = "Mã Xe :";
-            // 
-            // btnXoaXe
-            // 
-            this.btnXoaXe.BackColor = System.Drawing.Color.Transparent;
-            this.btnXoaXe.BorderColor = System.Drawing.Color.Black;
-            this.btnXoaXe.ButtonColor = System.Drawing.Color.White;
-            this.btnXoaXe.FlatAppearance.BorderSize = 0;
-            this.btnXoaXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaXe.ForeColor = System.Drawing.Color.Transparent;
-            this.btnXoaXe.Location = new System.Drawing.Point(653, 218);
-            this.btnXoaXe.Name = "btnXoaXe";
-            this.btnXoaXe.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnXoaXe.OnHoverButtonColor = System.Drawing.Color.DarkOrange;
-            this.btnXoaXe.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnXoaXe.Size = new System.Drawing.Size(174, 50);
-            this.btnXoaXe.TabIndex = 33;
-            this.btnXoaXe.Text = "Xóa Xe";
-            this.btnXoaXe.TextColor = System.Drawing.Color.Black;
-            this.btnXoaXe.UseVisualStyleBackColor = false;
-            // 
-            // btnSuaXe
-            // 
-            this.btnSuaXe.BackColor = System.Drawing.Color.Transparent;
-            this.btnSuaXe.BorderColor = System.Drawing.Color.Black;
-            this.btnSuaXe.ButtonColor = System.Drawing.Color.White;
-            this.btnSuaXe.FlatAppearance.BorderSize = 0;
-            this.btnSuaXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaXe.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSuaXe.Location = new System.Drawing.Point(653, 139);
-            this.btnSuaXe.Name = "btnSuaXe";
-            this.btnSuaXe.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnSuaXe.OnHoverButtonColor = System.Drawing.Color.Orange;
-            this.btnSuaXe.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnSuaXe.Size = new System.Drawing.Size(174, 50);
-            this.btnSuaXe.TabIndex = 32;
-            this.btnSuaXe.Text = "Sửa Xe";
-            this.btnSuaXe.TextColor = System.Drawing.Color.Black;
-            this.btnSuaXe.UseVisualStyleBackColor = false;
-            // 
-            // btnThemXe
-            // 
-            this.btnThemXe.BackColor = System.Drawing.Color.Transparent;
-            this.btnThemXe.BorderColor = System.Drawing.Color.Black;
-            this.btnThemXe.ButtonColor = System.Drawing.Color.White;
-            this.btnThemXe.FlatAppearance.BorderSize = 0;
-            this.btnThemXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemXe.ForeColor = System.Drawing.Color.Transparent;
-            this.btnThemXe.Location = new System.Drawing.Point(653, 64);
-            this.btnThemXe.Name = "btnThemXe";
-            this.btnThemXe.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnThemXe.OnHoverButtonColor = System.Drawing.Color.NavajoWhite;
-            this.btnThemXe.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnThemXe.Size = new System.Drawing.Size(174, 50);
-            this.btnThemXe.TabIndex = 38;
-            this.btnThemXe.Text = "Thêm Xe Mới";
-            this.btnThemXe.TextColor = System.Drawing.Color.Black;
-            this.btnThemXe.UseVisualStyleBackColor = false;
-            this.btnThemXe.Click += new System.EventHandler(this.btnThemXe_Click);
-            // 
-            // button_WOC13
-            // 
-            this.button_WOC13.BackColor = System.Drawing.Color.Transparent;
-            this.button_WOC13.BorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC13.ButtonColor = System.Drawing.Color.CornflowerBlue;
-            this.button_WOC13.FlatAppearance.BorderSize = 0;
-            this.button_WOC13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC13.ForeColor = System.Drawing.Color.Transparent;
-            this.button_WOC13.Location = new System.Drawing.Point(439, 43);
-            this.button_WOC13.Name = "button_WOC13";
-            this.button_WOC13.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC13.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
-            this.button_WOC13.OnHoverTextColor = System.Drawing.Color.White;
-            this.button_WOC13.Size = new System.Drawing.Size(89, 33);
-            this.button_WOC13.TabIndex = 34;
-            this.button_WOC13.Text = "Kiểm Tra";
-            this.button_WOC13.TextColor = System.Drawing.Color.Black;
-            this.button_WOC13.UseVisualStyleBackColor = false;
             // 
             // tpBenXe
             // 
@@ -1470,84 +1271,6 @@ namespace QLDatXe
             this.lblDiaChi.Size = new System.Drawing.Size(65, 17);
             this.lblDiaChi.TabIndex = 45;
             this.lblDiaChi.Text = "Địa Chỉ : ";
-            // 
-            // btnXoaBX
-            // 
-            this.btnXoaBX.BackColor = System.Drawing.Color.Transparent;
-            this.btnXoaBX.BorderColor = System.Drawing.Color.Black;
-            this.btnXoaBX.ButtonColor = System.Drawing.Color.White;
-            this.btnXoaBX.FlatAppearance.BorderSize = 0;
-            this.btnXoaBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaBX.ForeColor = System.Drawing.Color.Transparent;
-            this.btnXoaBX.Location = new System.Drawing.Point(653, 203);
-            this.btnXoaBX.Name = "btnXoaBX";
-            this.btnXoaBX.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnXoaBX.OnHoverButtonColor = System.Drawing.Color.DarkOrange;
-            this.btnXoaBX.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnXoaBX.Size = new System.Drawing.Size(174, 50);
-            this.btnXoaBX.TabIndex = 48;
-            this.btnXoaBX.Text = "Xóa Bến Xe ";
-            this.btnXoaBX.TextColor = System.Drawing.Color.Black;
-            this.btnXoaBX.UseVisualStyleBackColor = false;
-            this.btnXoaBX.Click += new System.EventHandler(this.btnXoaBX_Click);
-            // 
-            // btnSuaBX
-            // 
-            this.btnSuaBX.BackColor = System.Drawing.Color.Transparent;
-            this.btnSuaBX.BorderColor = System.Drawing.Color.Black;
-            this.btnSuaBX.ButtonColor = System.Drawing.Color.White;
-            this.btnSuaBX.FlatAppearance.BorderSize = 0;
-            this.btnSuaBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaBX.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSuaBX.Location = new System.Drawing.Point(653, 124);
-            this.btnSuaBX.Name = "btnSuaBX";
-            this.btnSuaBX.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnSuaBX.OnHoverButtonColor = System.Drawing.Color.Orange;
-            this.btnSuaBX.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnSuaBX.Size = new System.Drawing.Size(174, 50);
-            this.btnSuaBX.TabIndex = 47;
-            this.btnSuaBX.Text = "Sửa Bến Xe";
-            this.btnSuaBX.TextColor = System.Drawing.Color.Black;
-            this.btnSuaBX.UseVisualStyleBackColor = false;
-            // 
-            // btnAddBX
-            // 
-            this.btnAddBX.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddBX.BorderColor = System.Drawing.Color.Black;
-            this.btnAddBX.ButtonColor = System.Drawing.Color.White;
-            this.btnAddBX.FlatAppearance.BorderSize = 0;
-            this.btnAddBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddBX.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAddBX.Location = new System.Drawing.Point(653, 49);
-            this.btnAddBX.Name = "btnAddBX";
-            this.btnAddBX.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnAddBX.OnHoverButtonColor = System.Drawing.Color.NavajoWhite;
-            this.btnAddBX.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnAddBX.Size = new System.Drawing.Size(174, 50);
-            this.btnAddBX.TabIndex = 52;
-            this.btnAddBX.Text = "Thêm Bến Xe Mới";
-            this.btnAddBX.TextColor = System.Drawing.Color.Black;
-            this.btnAddBX.UseVisualStyleBackColor = false;
-            this.btnAddBX.Click += new System.EventHandler(this.btnAddBX_Click);
-            // 
-            // button_WOC15
-            // 
-            this.button_WOC15.BackColor = System.Drawing.Color.Transparent;
-            this.button_WOC15.BorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC15.ButtonColor = System.Drawing.Color.CornflowerBlue;
-            this.button_WOC15.FlatAppearance.BorderSize = 0;
-            this.button_WOC15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC15.ForeColor = System.Drawing.Color.Transparent;
-            this.button_WOC15.Location = new System.Drawing.Point(498, 85);
-            this.button_WOC15.Name = "button_WOC15";
-            this.button_WOC15.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC15.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
-            this.button_WOC15.OnHoverTextColor = System.Drawing.Color.White;
-            this.button_WOC15.Size = new System.Drawing.Size(89, 33);
-            this.button_WOC15.TabIndex = 49;
-            this.button_WOC15.Text = "Kiểm Tra";
-            this.button_WOC15.TextColor = System.Drawing.Color.Black;
-            this.button_WOC15.UseVisualStyleBackColor = false;
             // 
             // tpNhanVien
             // 
@@ -1653,6 +1376,363 @@ namespace QLDatXe
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(27, 30);
             this.panel4.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(2, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1234, 158);
+            this.panel1.TabIndex = 4;
+            // 
+            // NotificationError
+            // 
+            this.NotificationError.ContainerControl = this;
+            this.NotificationError.Icon = ((System.Drawing.Icon)(resources.GetObject("NotificationError.Icon")));
+            // 
+            // btnBuyNow
+            // 
+            this.btnBuyNow.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuyNow.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnBuyNow.ButtonColor = System.Drawing.Color.White;
+            this.btnBuyNow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuyNow.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnBuyNow.FlatAppearance.BorderSize = 0;
+            this.btnBuyNow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBuyNow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBuyNow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuyNow.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuyNow.ForeColor = System.Drawing.Color.Transparent;
+            this.btnBuyNow.Location = new System.Drawing.Point(672, 6);
+            this.btnBuyNow.Name = "btnBuyNow";
+            this.btnBuyNow.OnHoverBorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnBuyNow.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
+            this.btnBuyNow.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnBuyNow.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnBuyNow.Size = new System.Drawing.Size(312, 81);
+            this.btnBuyNow.TabIndex = 1;
+            this.btnBuyNow.Text = "MUA VÉ NGAY";
+            this.btnBuyNow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuyNow.TextColor = System.Drawing.Color.Black;
+            this.btnBuyNow.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnBuyNow.UseCompatibleTextRendering = true;
+            this.btnBuyNow.UseVisualStyleBackColor = false;
+            // 
+            // button_WOC10
+            // 
+            this.button_WOC10.BackColor = System.Drawing.Color.Transparent;
+            this.button_WOC10.BorderColor = System.Drawing.Color.Black;
+            this.button_WOC10.ButtonColor = System.Drawing.Color.White;
+            this.button_WOC10.FlatAppearance.BorderSize = 0;
+            this.button_WOC10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC10.ForeColor = System.Drawing.Color.Transparent;
+            this.button_WOC10.Location = new System.Drawing.Point(761, 225);
+            this.button_WOC10.Name = "button_WOC10";
+            this.button_WOC10.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.button_WOC10.OnHoverButtonColor = System.Drawing.Color.SandyBrown;
+            this.button_WOC10.OnHoverTextColor = System.Drawing.Color.Black;
+            this.button_WOC10.Size = new System.Drawing.Size(174, 50);
+            this.button_WOC10.TabIndex = 1;
+            this.button_WOC10.Text = "Reset";
+            this.button_WOC10.TextColor = System.Drawing.Color.Black;
+            this.button_WOC10.UseVisualStyleBackColor = false;
+            // 
+            // button_WOC9
+            // 
+            this.button_WOC9.BackColor = System.Drawing.Color.Transparent;
+            this.button_WOC9.BorderColor = System.Drawing.Color.Black;
+            this.button_WOC9.ButtonColor = System.Drawing.Color.White;
+            this.button_WOC9.FlatAppearance.BorderSize = 0;
+            this.button_WOC9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC9.ForeColor = System.Drawing.Color.Transparent;
+            this.button_WOC9.Location = new System.Drawing.Point(761, 159);
+            this.button_WOC9.Name = "button_WOC9";
+            this.button_WOC9.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.button_WOC9.OnHoverButtonColor = System.Drawing.Color.DarkOrange;
+            this.button_WOC9.OnHoverTextColor = System.Drawing.Color.Black;
+            this.button_WOC9.Size = new System.Drawing.Size(174, 50);
+            this.button_WOC9.TabIndex = 1;
+            this.button_WOC9.Text = "Hủy Vé";
+            this.button_WOC9.TextColor = System.Drawing.Color.Black;
+            this.button_WOC9.UseVisualStyleBackColor = false;
+            this.button_WOC9.Click += new System.EventHandler(this.button_WOC9_Click);
+            // 
+            // button_WOC8
+            // 
+            this.button_WOC8.BackColor = System.Drawing.Color.Transparent;
+            this.button_WOC8.BorderColor = System.Drawing.Color.Black;
+            this.button_WOC8.ButtonColor = System.Drawing.Color.White;
+            this.button_WOC8.FlatAppearance.BorderSize = 0;
+            this.button_WOC8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC8.ForeColor = System.Drawing.Color.Transparent;
+            this.button_WOC8.Location = new System.Drawing.Point(761, 87);
+            this.button_WOC8.Name = "button_WOC8";
+            this.button_WOC8.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.button_WOC8.OnHoverButtonColor = System.Drawing.Color.Orange;
+            this.button_WOC8.OnHoverTextColor = System.Drawing.Color.Black;
+            this.button_WOC8.Size = new System.Drawing.Size(174, 50);
+            this.button_WOC8.TabIndex = 1;
+            this.button_WOC8.Text = "Sửa Vé";
+            this.button_WOC8.TextColor = System.Drawing.Color.Black;
+            this.button_WOC8.UseVisualStyleBackColor = false;
+            // 
+            // btnAddVeXe
+            // 
+            this.btnAddVeXe.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddVeXe.BorderColor = System.Drawing.Color.Black;
+            this.btnAddVeXe.ButtonColor = System.Drawing.Color.White;
+            this.btnAddVeXe.FlatAppearance.BorderSize = 0;
+            this.btnAddVeXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddVeXe.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddVeXe.Location = new System.Drawing.Point(761, 19);
+            this.btnAddVeXe.Name = "btnAddVeXe";
+            this.btnAddVeXe.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnAddVeXe.OnHoverButtonColor = System.Drawing.Color.NavajoWhite;
+            this.btnAddVeXe.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnAddVeXe.Size = new System.Drawing.Size(174, 50);
+            this.btnAddVeXe.TabIndex = 1;
+            this.btnAddVeXe.Text = "Mua Vé";
+            this.btnAddVeXe.TextColor = System.Drawing.Color.Black;
+            this.btnAddVeXe.UseVisualStyleBackColor = false;
+            this.btnAddVeXe.Click += new System.EventHandler(this.btnAddVeXe_Click);
+            // 
+            // btnXoaChuyen
+            // 
+            this.btnXoaChuyen.BackColor = System.Drawing.Color.Transparent;
+            this.btnXoaChuyen.BorderColor = System.Drawing.Color.Black;
+            this.btnXoaChuyen.ButtonColor = System.Drawing.Color.White;
+            this.btnXoaChuyen.FlatAppearance.BorderSize = 0;
+            this.btnXoaChuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaChuyen.ForeColor = System.Drawing.Color.Transparent;
+            this.btnXoaChuyen.Location = new System.Drawing.Point(655, 222);
+            this.btnXoaChuyen.Name = "btnXoaChuyen";
+            this.btnXoaChuyen.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnXoaChuyen.OnHoverButtonColor = System.Drawing.Color.DarkOrange;
+            this.btnXoaChuyen.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnXoaChuyen.Size = new System.Drawing.Size(174, 50);
+            this.btnXoaChuyen.TabIndex = 13;
+            this.btnXoaChuyen.Text = "Xóa Chuyến";
+            this.btnXoaChuyen.TextColor = System.Drawing.Color.Black;
+            this.btnXoaChuyen.UseVisualStyleBackColor = false;
+            this.btnXoaChuyen.Click += new System.EventHandler(this.btnXoaChuyenXe_Click);
+            // 
+            // btnSuaChuyen
+            // 
+            this.btnSuaChuyen.BackColor = System.Drawing.Color.Transparent;
+            this.btnSuaChuyen.BorderColor = System.Drawing.Color.Black;
+            this.btnSuaChuyen.ButtonColor = System.Drawing.Color.White;
+            this.btnSuaChuyen.FlatAppearance.BorderSize = 0;
+            this.btnSuaChuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaChuyen.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSuaChuyen.Location = new System.Drawing.Point(655, 143);
+            this.btnSuaChuyen.Name = "btnSuaChuyen";
+            this.btnSuaChuyen.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnSuaChuyen.OnHoverButtonColor = System.Drawing.Color.Orange;
+            this.btnSuaChuyen.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnSuaChuyen.Size = new System.Drawing.Size(174, 50);
+            this.btnSuaChuyen.TabIndex = 12;
+            this.btnSuaChuyen.Text = "Sửa Chuyến";
+            this.btnSuaChuyen.TextColor = System.Drawing.Color.Black;
+            this.btnSuaChuyen.UseVisualStyleBackColor = false;
+            this.btnSuaChuyen.Click += new System.EventHandler(this.btnSuaChuyen_Click);
+            // 
+            // btnAddChuyen
+            // 
+            this.btnAddChuyen.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddChuyen.BorderColor = System.Drawing.Color.Black;
+            this.btnAddChuyen.ButtonColor = System.Drawing.Color.White;
+            this.btnAddChuyen.FlatAppearance.BorderSize = 0;
+            this.btnAddChuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddChuyen.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddChuyen.Location = new System.Drawing.Point(655, 68);
+            this.btnAddChuyen.Name = "btnAddChuyen";
+            this.btnAddChuyen.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnAddChuyen.OnHoverButtonColor = System.Drawing.Color.NavajoWhite;
+            this.btnAddChuyen.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnAddChuyen.Size = new System.Drawing.Size(174, 50);
+            this.btnAddChuyen.TabIndex = 20;
+            this.btnAddChuyen.Text = "Thêm Chuyến";
+            this.btnAddChuyen.TextColor = System.Drawing.Color.Black;
+            this.btnAddChuyen.UseVisualStyleBackColor = false;
+            this.btnAddChuyen.Click += new System.EventHandler(this.btnAddChuyen_Click);
+            // 
+            // button_WOC14
+            // 
+            this.button_WOC14.BackColor = System.Drawing.Color.Transparent;
+            this.button_WOC14.BorderColor = System.Drawing.Color.Transparent;
+            this.button_WOC14.ButtonColor = System.Drawing.Color.CornflowerBlue;
+            this.button_WOC14.FlatAppearance.BorderSize = 0;
+            this.button_WOC14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC14.ForeColor = System.Drawing.Color.Transparent;
+            this.button_WOC14.Location = new System.Drawing.Point(445, 24);
+            this.button_WOC14.Name = "button_WOC14";
+            this.button_WOC14.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.button_WOC14.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
+            this.button_WOC14.OnHoverTextColor = System.Drawing.Color.White;
+            this.button_WOC14.Size = new System.Drawing.Size(89, 33);
+            this.button_WOC14.TabIndex = 15;
+            this.button_WOC14.Text = "Tìm Kiếm";
+            this.button_WOC14.TextColor = System.Drawing.Color.Black;
+            this.button_WOC14.UseVisualStyleBackColor = false;
+            // 
+            // btnXoaXe
+            // 
+            this.btnXoaXe.BackColor = System.Drawing.Color.Transparent;
+            this.btnXoaXe.BorderColor = System.Drawing.Color.Black;
+            this.btnXoaXe.ButtonColor = System.Drawing.Color.White;
+            this.btnXoaXe.FlatAppearance.BorderSize = 0;
+            this.btnXoaXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaXe.ForeColor = System.Drawing.Color.Transparent;
+            this.btnXoaXe.Location = new System.Drawing.Point(653, 218);
+            this.btnXoaXe.Name = "btnXoaXe";
+            this.btnXoaXe.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnXoaXe.OnHoverButtonColor = System.Drawing.Color.DarkOrange;
+            this.btnXoaXe.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnXoaXe.Size = new System.Drawing.Size(174, 50);
+            this.btnXoaXe.TabIndex = 33;
+            this.btnXoaXe.Text = "Xóa Xe";
+            this.btnXoaXe.TextColor = System.Drawing.Color.Black;
+            this.btnXoaXe.UseVisualStyleBackColor = false;
+            this.btnXoaXe.Click += new System.EventHandler(this.btnXoaXe_Click);
+            // 
+            // btnSuaXe
+            // 
+            this.btnSuaXe.BackColor = System.Drawing.Color.Transparent;
+            this.btnSuaXe.BorderColor = System.Drawing.Color.Black;
+            this.btnSuaXe.ButtonColor = System.Drawing.Color.White;
+            this.btnSuaXe.FlatAppearance.BorderSize = 0;
+            this.btnSuaXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaXe.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSuaXe.Location = new System.Drawing.Point(653, 139);
+            this.btnSuaXe.Name = "btnSuaXe";
+            this.btnSuaXe.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnSuaXe.OnHoverButtonColor = System.Drawing.Color.Orange;
+            this.btnSuaXe.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnSuaXe.Size = new System.Drawing.Size(174, 50);
+            this.btnSuaXe.TabIndex = 32;
+            this.btnSuaXe.Text = "Sửa Xe";
+            this.btnSuaXe.TextColor = System.Drawing.Color.Black;
+            this.btnSuaXe.UseVisualStyleBackColor = false;
+            this.btnSuaXe.Click += new System.EventHandler(this.btnSuaXe_Click);
+            // 
+            // btnThemXe
+            // 
+            this.btnThemXe.BackColor = System.Drawing.Color.Transparent;
+            this.btnThemXe.BorderColor = System.Drawing.Color.Black;
+            this.btnThemXe.ButtonColor = System.Drawing.Color.White;
+            this.btnThemXe.FlatAppearance.BorderSize = 0;
+            this.btnThemXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemXe.ForeColor = System.Drawing.Color.Transparent;
+            this.btnThemXe.Location = new System.Drawing.Point(653, 64);
+            this.btnThemXe.Name = "btnThemXe";
+            this.btnThemXe.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnThemXe.OnHoverButtonColor = System.Drawing.Color.NavajoWhite;
+            this.btnThemXe.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnThemXe.Size = new System.Drawing.Size(174, 50);
+            this.btnThemXe.TabIndex = 38;
+            this.btnThemXe.Text = "Thêm Xe Mới";
+            this.btnThemXe.TextColor = System.Drawing.Color.Black;
+            this.btnThemXe.UseVisualStyleBackColor = false;
+            this.btnThemXe.Click += new System.EventHandler(this.btnThemXe_Click);
+            // 
+            // button_WOC13
+            // 
+            this.button_WOC13.BackColor = System.Drawing.Color.Transparent;
+            this.button_WOC13.BorderColor = System.Drawing.Color.Transparent;
+            this.button_WOC13.ButtonColor = System.Drawing.Color.CornflowerBlue;
+            this.button_WOC13.FlatAppearance.BorderSize = 0;
+            this.button_WOC13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC13.ForeColor = System.Drawing.Color.Transparent;
+            this.button_WOC13.Location = new System.Drawing.Point(439, 43);
+            this.button_WOC13.Name = "button_WOC13";
+            this.button_WOC13.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.button_WOC13.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
+            this.button_WOC13.OnHoverTextColor = System.Drawing.Color.White;
+            this.button_WOC13.Size = new System.Drawing.Size(89, 33);
+            this.button_WOC13.TabIndex = 34;
+            this.button_WOC13.Text = "Kiểm Tra";
+            this.button_WOC13.TextColor = System.Drawing.Color.Black;
+            this.button_WOC13.UseVisualStyleBackColor = false;
+            // 
+            // btnXoaBX
+            // 
+            this.btnXoaBX.BackColor = System.Drawing.Color.Transparent;
+            this.btnXoaBX.BorderColor = System.Drawing.Color.Black;
+            this.btnXoaBX.ButtonColor = System.Drawing.Color.White;
+            this.btnXoaBX.FlatAppearance.BorderSize = 0;
+            this.btnXoaBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaBX.ForeColor = System.Drawing.Color.Transparent;
+            this.btnXoaBX.Location = new System.Drawing.Point(653, 203);
+            this.btnXoaBX.Name = "btnXoaBX";
+            this.btnXoaBX.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnXoaBX.OnHoverButtonColor = System.Drawing.Color.DarkOrange;
+            this.btnXoaBX.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnXoaBX.Size = new System.Drawing.Size(174, 50);
+            this.btnXoaBX.TabIndex = 48;
+            this.btnXoaBX.Text = "Xóa Bến Xe ";
+            this.btnXoaBX.TextColor = System.Drawing.Color.Black;
+            this.btnXoaBX.UseVisualStyleBackColor = false;
+            this.btnXoaBX.Click += new System.EventHandler(this.btnXoaBX_Click);
+            // 
+            // btnSuaBX
+            // 
+            this.btnSuaBX.BackColor = System.Drawing.Color.Transparent;
+            this.btnSuaBX.BorderColor = System.Drawing.Color.Black;
+            this.btnSuaBX.ButtonColor = System.Drawing.Color.White;
+            this.btnSuaBX.FlatAppearance.BorderSize = 0;
+            this.btnSuaBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaBX.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSuaBX.Location = new System.Drawing.Point(653, 124);
+            this.btnSuaBX.Name = "btnSuaBX";
+            this.btnSuaBX.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnSuaBX.OnHoverButtonColor = System.Drawing.Color.Orange;
+            this.btnSuaBX.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnSuaBX.Size = new System.Drawing.Size(174, 50);
+            this.btnSuaBX.TabIndex = 47;
+            this.btnSuaBX.Text = "Sửa Bến Xe";
+            this.btnSuaBX.TextColor = System.Drawing.Color.Black;
+            this.btnSuaBX.UseVisualStyleBackColor = false;
+            this.btnSuaBX.Click += new System.EventHandler(this.btnSuaBX_Click);
+            // 
+            // btnAddBX
+            // 
+            this.btnAddBX.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddBX.BorderColor = System.Drawing.Color.Black;
+            this.btnAddBX.ButtonColor = System.Drawing.Color.White;
+            this.btnAddBX.FlatAppearance.BorderSize = 0;
+            this.btnAddBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddBX.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddBX.Location = new System.Drawing.Point(653, 49);
+            this.btnAddBX.Name = "btnAddBX";
+            this.btnAddBX.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnAddBX.OnHoverButtonColor = System.Drawing.Color.NavajoWhite;
+            this.btnAddBX.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnAddBX.Size = new System.Drawing.Size(174, 50);
+            this.btnAddBX.TabIndex = 52;
+            this.btnAddBX.Text = "Thêm Bến Xe Mới";
+            this.btnAddBX.TextColor = System.Drawing.Color.Black;
+            this.btnAddBX.UseVisualStyleBackColor = false;
+            this.btnAddBX.Click += new System.EventHandler(this.btnAddBX_Click);
+            // 
+            // button_WOC15
+            // 
+            this.button_WOC15.BackColor = System.Drawing.Color.Transparent;
+            this.button_WOC15.BorderColor = System.Drawing.Color.Transparent;
+            this.button_WOC15.ButtonColor = System.Drawing.Color.CornflowerBlue;
+            this.button_WOC15.FlatAppearance.BorderSize = 0;
+            this.button_WOC15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC15.ForeColor = System.Drawing.Color.Transparent;
+            this.button_WOC15.Location = new System.Drawing.Point(498, 85);
+            this.button_WOC15.Name = "button_WOC15";
+            this.button_WOC15.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.button_WOC15.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
+            this.button_WOC15.OnHoverTextColor = System.Drawing.Color.White;
+            this.button_WOC15.Size = new System.Drawing.Size(89, 33);
+            this.button_WOC15.TabIndex = 49;
+            this.button_WOC15.Text = "Kiểm Tra";
+            this.button_WOC15.TextColor = System.Drawing.Color.Black;
+            this.button_WOC15.UseVisualStyleBackColor = false;
             // 
             // button_WOC7
             // 
@@ -1821,43 +1901,6 @@ namespace QLDatXe
             this.btnCalendar.UseVisualStyleBackColor = false;
             this.btnCalendar.Click += new System.EventHandler(this.btnCalendar_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(2, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1234, 158);
-            this.panel1.TabIndex = 4;
-            // 
-            // NotificationError
-            // 
-            this.NotificationError.ContainerControl = this;
-            this.NotificationError.Icon = ((System.Drawing.Icon)(resources.GetObject("NotificationError.Icon")));
-            // 
-            // cmbBXDi
-            // 
-            this.cmbBXDi.FormattingEnabled = true;
-            this.cmbBXDi.Location = new System.Drawing.Point(139, 93);
-            this.cmbBXDi.Name = "cmbBXDi";
-            this.cmbBXDi.Size = new System.Drawing.Size(293, 24);
-            this.cmbBXDi.TabIndex = 27;
-            // 
-            // cmbBXDen
-            // 
-            this.cmbBXDen.FormattingEnabled = true;
-            this.cmbBXDen.Location = new System.Drawing.Point(139, 139);
-            this.cmbBXDen.Name = "cmbBXDen";
-            this.cmbBXDen.Size = new System.Drawing.Size(293, 24);
-            this.cmbBXDen.TabIndex = 27;
-            // 
-            // dtpChuyenXe
-            // 
-            this.dtpChuyenXe.Location = new System.Drawing.Point(139, 187);
-            this.dtpChuyenXe.Name = "dtpChuyenXe";
-            this.dtpChuyenXe.Size = new System.Drawing.Size(293, 22);
-            this.dtpChuyenXe.TabIndex = 28;
-            // 
             // fTicketRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1910,32 +1953,32 @@ namespace QLDatXe
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblDiaChiBXDen;
+        private System.Windows.Forms.Label lblMaBenXeDen;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblTenBenXeDen;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblDiaChiBXDi;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblTenBenXeDi;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblMaBenXeDi;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label lblTinhTrang;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lblSoGheCon;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblSoGhe;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblLoaiXe;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblMaXe;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblThoiGian;
+        private System.Windows.Forms.Label lblMaChuyenXe;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private ePOSOne.btnProduct.Button_WOC btnBuyNow;
@@ -1951,22 +1994,19 @@ namespace QLDatXe
         private System.Windows.Forms.Label lblBenXeDen;
         private System.Windows.Forms.Label lblBenXeDi;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox txtGiaVe;
+        private System.Windows.Forms.TextBox txtGiaVe_DatVe;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.TextBox txtTenKhach;
         private System.Windows.Forms.TextBox txtMaVe;
-        private System.Windows.Forms.TextBox txtMaChuyen_Ve;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label25;
         private ePOSOne.btnProduct.Button_WOC button_WOC10;
         private ePOSOne.btnProduct.Button_WOC button_WOC9;
         private ePOSOne.btnProduct.Button_WOC button_WOC8;
-        private ePOSOne.btnProduct.Button_WOC button_WOC12;
-        private ePOSOne.btnProduct.Button_WOC button_WOC2;
+        private ePOSOne.btnProduct.Button_WOC btnAddVeXe;
         private System.Windows.Forms.TabPage tpQLLich;
         private System.Windows.Forms.TabPage tpXe;
         private System.Windows.Forms.TabPage tpBenXe;
@@ -1991,7 +2031,6 @@ namespace QLDatXe
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox txtMaChuyen;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label44;
         private ePOSOne.btnProduct.Button_WOC btnXoaChuyen;
@@ -1999,26 +2038,14 @@ namespace QLDatXe
         private ePOSOne.btnProduct.Button_WOC btnAddChuyen;
         private ePOSOne.btnProduct.Button_WOC button_WOC14;
         private System.Windows.Forms.ErrorProvider NotificationError;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSoGhe;
         private System.Windows.Forms.DataGridView dgvXe;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.TextBox txtSoGhe;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox txtMaXe;
-        private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label45;
         private ePOSOne.btnProduct.Button_WOC btnXoaXe;
         private ePOSOne.btnProduct.Button_WOC btnSuaXe;
         private ePOSOne.btnProduct.Button_WOC btnThemXe;
         private ePOSOne.btnProduct.Button_WOC button_WOC13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.TextBox txtMaXe_CX;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.DataGridView dgvBenXe;
         private System.Windows.Forms.Panel panel14;
@@ -2042,5 +2069,25 @@ namespace QLDatXe
         private System.Windows.Forms.DateTimePicker dtpChuyenXe;
         private System.Windows.Forms.ComboBox cmbBXDen;
         private System.Windows.Forms.ComboBox cmbBXDi;
+        private System.Windows.Forms.ComboBox cmbMaXe;
+        private System.Windows.Forms.TextBox txtSoGhe;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoGhe;
+        private System.Windows.Forms.ComboBox cmbMaXe_Chuyen;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblBXDen_DatXe;
+        private System.Windows.Forms.Label lblBXDi_DatXe;
+        private System.Windows.Forms.TextBox txtGiaVe;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaXe_Chuyen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colGiaVeXe;
+        private System.Windows.Forms.ComboBox cmbTemp;
+        private System.Windows.Forms.ComboBox cmbMaChuyen;
     }
 }

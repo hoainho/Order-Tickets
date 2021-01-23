@@ -13,7 +13,9 @@ namespace QLDatXe.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaHD { get; set; }
 
-        public int MaVe { get; set; }
+        [Required]
+        [StringLength(10)]
+        public string MaVe { get; set; }
 
         [Required]
         [StringLength(20)]
@@ -24,8 +26,6 @@ namespace QLDatXe.Models
         public int trangthai { get; set; }
 
         public int giamgia { get; set; }
-
-        public virtual TaiKhoan TaiKhoan { get; set; }
 
         public virtual VeXe VeXe { get; set; }
     }

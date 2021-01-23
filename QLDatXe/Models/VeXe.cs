@@ -16,17 +16,18 @@ namespace QLDatXe.Models
         }
 
         [Key]
-        public int MaVe { get; set; }
-
-        public int MaCX { get; set; }
+        [StringLength(10)]
+        public string MaVe { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(10)]
+        public string MaCX { get; set; }
+
+        [Required]
+        [StringLength(100)]
         public string TenKhach { get; set; }
 
-        public int CMND { get; set; }
-
-        public double GiaVe { get; set; }
+        public int sdt { get; set; }
 
         public virtual ChuyenXe ChuyenXe { get; set; }
 

@@ -86,6 +86,7 @@ namespace QLDatXe
             this.mnsManageTickets.Name = "mnsManageTickets";
             this.mnsManageTickets.Size = new System.Drawing.Size(113, 24);
             this.mnsManageTickets.Text = "Quản Lí Vé";
+            this.mnsManageTickets.Click += new System.EventHandler(this.mnsManageTickets_Click);
             // 
             // mnsStatis
             // 

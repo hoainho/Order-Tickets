@@ -37,8 +37,18 @@ namespace QLDatXe.Models
                 .HasForeignKey(e => e.MaBXDen)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<ChiTietXe>()
+                .Property(e => e.MaXe)
+                .IsFixedLength()
+                .IsUnicode(false);
+
             modelBuilder.Entity<ChuyenXe>()
                 .Property(e => e.MaCX)
+                .IsFixedLength()
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ChuyenXe>()
+                .Property(e => e.MaXe)
                 .IsFixedLength()
                 .IsUnicode(false);
 
@@ -51,11 +61,6 @@ namespace QLDatXe.Models
                 .HasMany(e => e.ChiTietXes)
                 .WithRequired(e => e.Ghe)
                 .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<HoaDon>()
-                .Property(e => e.MaVe)
-                .IsFixedLength()
-                .IsUnicode(false);
 
             modelBuilder.Entity<HoaDon>()
                 .Property(e => e.userName)
@@ -78,7 +83,7 @@ namespace QLDatXe.Models
                 .IsFixedLength();
 
             modelBuilder.Entity<VeXe>()
-                .Property(e => e.MaVe)
+                .Property(e => e.MaXe)
                 .IsFixedLength()
                 .IsUnicode(false);
 
@@ -93,12 +98,22 @@ namespace QLDatXe.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Xe>()
+                .Property(e => e.MaXe)
+                .IsFixedLength()
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Xe>()
                 .HasMany(e => e.ChiTietXes)
                 .WithRequired(e => e.Xe)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Xe>()
                 .HasMany(e => e.ChuyenXes)
+                .WithRequired(e => e.Xe)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Xe>()
+                .HasMany(e => e.VeXes)
                 .WithRequired(e => e.Xe)
                 .WillCascadeOnDelete(false);
         }

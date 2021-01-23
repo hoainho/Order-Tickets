@@ -14,10 +14,12 @@ namespace QLDatXe.Models
         {
             ChiTietXes = new HashSet<ChiTietXe>();
             ChuyenXes = new HashSet<ChuyenXe>();
+            VeXes = new HashSet<VeXe>();
         }
 
         [Key]
-        public int MaXe { get; set; }
+        [StringLength(10)]
+        public string MaXe { get; set; }
 
         public int Loai { get; set; }
 
@@ -30,5 +32,8 @@ namespace QLDatXe.Models
         public virtual ICollection<ChuyenXe> ChuyenXes { get; set; }
 
         public virtual LoaiXe LoaiXe { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VeXe> VeXes { get; set; }
     }
 }

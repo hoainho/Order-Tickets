@@ -16,8 +16,11 @@ namespace QLDatXe.Models
         }
 
         [Key]
+        public int MaVe { get; set; }
+
+        [Required]
         [StringLength(10)]
-        public string MaVe { get; set; }
+        public string MaXe { get; set; }
 
         [Required]
         [StringLength(10)]
@@ -33,5 +36,7 @@ namespace QLDatXe.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
+
+        public virtual Xe Xe { get; set; }
     }
 }

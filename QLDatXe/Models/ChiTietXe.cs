@@ -11,7 +11,9 @@ namespace QLDatXe.Models
     {
         public int ID { get; set; }
 
-        public int MaXe { get; set; }
+        [Required]
+        [StringLength(10)]
+        public string MaXe { get; set; }
 
         public int MaGhe { get; set; }
 

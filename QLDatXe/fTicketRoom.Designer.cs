@@ -72,10 +72,12 @@ namespace QLDatXe
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tpVe = new System.Windows.Forms.TabPage();
+            this.cmbMaXe_DatVe = new System.Windows.Forms.ComboBox();
             this.cmbTemp = new System.Windows.Forms.ComboBox();
             this.dgvVeXe = new System.Windows.Forms.DataGridView();
             this.colMaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaChuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaXe_Ve = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenKhach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSĐT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGiaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,6 +97,7 @@ namespace QLDatXe
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.tpQLLich = new System.Windows.Forms.TabPage();
             this.cmbMaChuyen = new System.Windows.Forms.ComboBox();
@@ -151,6 +154,7 @@ namespace QLDatXe
             this.panel1 = new System.Windows.Forms.Panel();
             this.NotificationError = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnBuyNow = new ePOSOne.btnProduct.Button_WOC();
+            this.btnTimKiemVe = new ePOSOne.btnProduct.Button_WOC();
             this.button_WOC10 = new ePOSOne.btnProduct.Button_WOC();
             this.button_WOC9 = new ePOSOne.btnProduct.Button_WOC();
             this.button_WOC8 = new ePOSOne.btnProduct.Button_WOC();
@@ -158,7 +162,7 @@ namespace QLDatXe
             this.btnXoaChuyen = new ePOSOne.btnProduct.Button_WOC();
             this.btnSuaChuyen = new ePOSOne.btnProduct.Button_WOC();
             this.btnAddChuyen = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC14 = new ePOSOne.btnProduct.Button_WOC();
+            this.btnTimKiemChuyen = new ePOSOne.btnProduct.Button_WOC();
             this.btnXoaXe = new ePOSOne.btnProduct.Button_WOC();
             this.btnSuaXe = new ePOSOne.btnProduct.Button_WOC();
             this.btnThemXe = new ePOSOne.btnProduct.Button_WOC();
@@ -588,6 +592,8 @@ namespace QLDatXe
             // 
             // tpVe
             // 
+            this.tpVe.Controls.Add(this.btnTimKiemVe);
+            this.tpVe.Controls.Add(this.cmbMaXe_DatVe);
             this.tpVe.Controls.Add(this.cmbTemp);
             this.tpVe.Controls.Add(this.dgvVeXe);
             this.tpVe.Controls.Add(this.panel3);
@@ -606,6 +612,7 @@ namespace QLDatXe
             this.tpVe.Controls.Add(this.label34);
             this.tpVe.Controls.Add(this.label33);
             this.tpVe.Controls.Add(this.label32);
+            this.tpVe.Controls.Add(this.label6);
             this.tpVe.Controls.Add(this.label29);
             this.tpVe.Controls.Add(this.button_WOC10);
             this.tpVe.Controls.Add(this.button_WOC9);
@@ -618,6 +625,15 @@ namespace QLDatXe
             this.tpVe.TabIndex = 1;
             this.tpVe.Text = "Khu Bán Vé";
             this.tpVe.UseVisualStyleBackColor = true;
+            // 
+            // cmbMaXe_DatVe
+            // 
+            this.cmbMaXe_DatVe.FormattingEnabled = true;
+            this.cmbMaXe_DatVe.Location = new System.Drawing.Point(197, 139);
+            this.cmbMaXe_DatVe.Name = "cmbMaXe_DatVe";
+            this.cmbMaXe_DatVe.Size = new System.Drawing.Size(293, 24);
+            this.cmbMaXe_DatVe.TabIndex = 29;
+            this.cmbMaXe_DatVe.SelectedValueChanged += new System.EventHandler(this.cmbTemp_SelectedValueChanged);
             // 
             // cmbTemp
             // 
@@ -638,6 +654,7 @@ namespace QLDatXe
             this.dgvVeXe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaVe,
             this.colMaChuyen,
+            this.colMaXe_Ve,
             this.colTenKhach,
             this.colSĐT,
             this.colGiaVe});
@@ -664,6 +681,13 @@ namespace QLDatXe
             this.colMaChuyen.Name = "colMaChuyen";
             this.colMaChuyen.ReadOnly = true;
             // 
+            // colMaXe_Ve
+            // 
+            this.colMaXe_Ve.HeaderText = "Mã Xe";
+            this.colMaXe_Ve.MinimumWidth = 6;
+            this.colMaXe_Ve.Name = "colMaXe_Ve";
+            this.colMaXe_Ve.ReadOnly = true;
+            // 
             // colTenKhach
             // 
             this.colTenKhach.HeaderText = "Tên Khách Hàng";
@@ -689,7 +713,7 @@ namespace QLDatXe
             // 
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Location = new System.Drawing.Point(260, 61);
+            this.panel3.Location = new System.Drawing.Point(259, 49);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(136, 45);
             this.panel3.TabIndex = 3;
@@ -697,7 +721,7 @@ namespace QLDatXe
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(517, 123);
+            this.label31.Location = new System.Drawing.Point(516, 107);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(212, 17);
             this.label31.TabIndex = 2;
@@ -707,7 +731,7 @@ namespace QLDatXe
             // lblBXDen_DatXe
             // 
             this.lblBXDen_DatXe.AutoSize = true;
-            this.lblBXDen_DatXe.Location = new System.Drawing.Point(517, 76);
+            this.lblBXDen_DatXe.Location = new System.Drawing.Point(516, 64);
             this.lblBXDen_DatXe.Name = "lblBXDen_DatXe";
             this.lblBXDen_DatXe.Size = new System.Drawing.Size(0, 17);
             this.lblBXDen_DatXe.TabIndex = 2;
@@ -716,7 +740,7 @@ namespace QLDatXe
             // lblBenXeDen
             // 
             this.lblBenXeDen.AutoSize = true;
-            this.lblBenXeDen.Location = new System.Drawing.Point(414, 76);
+            this.lblBenXeDen.Location = new System.Drawing.Point(413, 64);
             this.lblBenXeDen.Name = "lblBenXeDen";
             this.lblBenXeDen.Size = new System.Drawing.Size(84, 17);
             this.lblBenXeDen.TabIndex = 2;
@@ -736,7 +760,7 @@ namespace QLDatXe
             // lblBXDi_DatXe
             // 
             this.lblBXDi_DatXe.AutoSize = true;
-            this.lblBXDi_DatXe.Location = new System.Drawing.Point(117, 76);
+            this.lblBXDi_DatXe.Location = new System.Drawing.Point(116, 64);
             this.lblBXDi_DatXe.Name = "lblBXDi_DatXe";
             this.lblBXDi_DatXe.Size = new System.Drawing.Size(0, 17);
             this.lblBXDi_DatXe.TabIndex = 2;
@@ -745,7 +769,7 @@ namespace QLDatXe
             // lblBenXeDi
             // 
             this.lblBenXeDi.AutoSize = true;
-            this.lblBenXeDi.Location = new System.Drawing.Point(17, 76);
+            this.lblBenXeDi.Location = new System.Drawing.Point(16, 64);
             this.lblBenXeDi.Name = "lblBenXeDi";
             this.lblBenXeDi.Size = new System.Drawing.Size(71, 17);
             this.lblBenXeDi.TabIndex = 2;
@@ -764,7 +788,7 @@ namespace QLDatXe
             // txtGiaVe_DatVe
             // 
             this.txtGiaVe_DatVe.Enabled = false;
-            this.txtGiaVe_DatVe.Location = new System.Drawing.Point(197, 259);
+            this.txtGiaVe_DatVe.Location = new System.Drawing.Point(198, 248);
             this.txtGiaVe_DatVe.Name = "txtGiaVe_DatVe";
             this.txtGiaVe_DatVe.Size = new System.Drawing.Size(293, 22);
             this.txtGiaVe_DatVe.TabIndex = 1;
@@ -772,7 +796,7 @@ namespace QLDatXe
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(197, 211);
+            this.txtSDT.Location = new System.Drawing.Point(198, 212);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(293, 22);
             this.txtSDT.TabIndex = 1;
@@ -780,7 +804,7 @@ namespace QLDatXe
             // 
             // txtTenKhach
             // 
-            this.txtTenKhach.Location = new System.Drawing.Point(197, 165);
+            this.txtTenKhach.Location = new System.Drawing.Point(198, 176);
             this.txtTenKhach.Name = "txtTenKhach";
             this.txtTenKhach.Size = new System.Drawing.Size(293, 22);
             this.txtTenKhach.TabIndex = 1;
@@ -788,7 +812,7 @@ namespace QLDatXe
             // 
             // txtMaVe
             // 
-            this.txtMaVe.Location = new System.Drawing.Point(197, 120);
+            this.txtMaVe.Location = new System.Drawing.Point(198, 104);
             this.txtMaVe.Name = "txtMaVe";
             this.txtMaVe.Size = new System.Drawing.Size(293, 22);
             this.txtMaVe.TabIndex = 1;
@@ -797,7 +821,7 @@ namespace QLDatXe
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(496, 262);
+            this.label35.Location = new System.Drawing.Point(497, 251);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(37, 17);
             this.label35.TabIndex = 0;
@@ -806,7 +830,7 @@ namespace QLDatXe
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(129, 259);
+            this.label34.Location = new System.Drawing.Point(130, 248);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(59, 17);
             this.label34.TabIndex = 0;
@@ -815,7 +839,7 @@ namespace QLDatXe
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(82, 214);
+            this.label33.Location = new System.Drawing.Point(83, 215);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(106, 17);
             this.label33.TabIndex = 0;
@@ -824,16 +848,25 @@ namespace QLDatXe
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(66, 165);
+            this.label32.Location = new System.Drawing.Point(67, 176);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(123, 17);
             this.label32.TabIndex = 0;
             this.label32.Text = "Tên Hành Khách :";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(134, 139);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 17);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Mã Xe :";
+            // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(133, 120);
+            this.label29.Location = new System.Drawing.Point(134, 104);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(56, 17);
             this.label29.TabIndex = 0;
@@ -858,7 +891,7 @@ namespace QLDatXe
             this.tpQLLich.Controls.Add(this.btnXoaChuyen);
             this.tpQLLich.Controls.Add(this.btnSuaChuyen);
             this.tpQLLich.Controls.Add(this.btnAddChuyen);
-            this.tpQLLich.Controls.Add(this.button_WOC14);
+            this.tpQLLich.Controls.Add(this.btnTimKiemChuyen);
             this.tpQLLich.Location = new System.Drawing.Point(4, 25);
             this.tpQLLich.Name = "tpQLLich";
             this.tpQLLich.Size = new System.Drawing.Size(992, 497);
@@ -1418,6 +1451,26 @@ namespace QLDatXe
             this.btnBuyNow.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnBuyNow.UseCompatibleTextRendering = true;
             this.btnBuyNow.UseVisualStyleBackColor = false;
+            this.btnBuyNow.Click += new System.EventHandler(this.btnBuyNow_Click);
+            // 
+            // btnTimKiemVe
+            // 
+            this.btnTimKiemVe.BackColor = System.Drawing.Color.Transparent;
+            this.btnTimKiemVe.BorderColor = System.Drawing.Color.Transparent;
+            this.btnTimKiemVe.ButtonColor = System.Drawing.Color.CornflowerBlue;
+            this.btnTimKiemVe.FlatAppearance.BorderSize = 0;
+            this.btnTimKiemVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiemVe.ForeColor = System.Drawing.Color.Transparent;
+            this.btnTimKiemVe.Location = new System.Drawing.Point(520, 14);
+            this.btnTimKiemVe.Name = "btnTimKiemVe";
+            this.btnTimKiemVe.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnTimKiemVe.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
+            this.btnTimKiemVe.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnTimKiemVe.Size = new System.Drawing.Size(89, 33);
+            this.btnTimKiemVe.TabIndex = 30;
+            this.btnTimKiemVe.Text = "Tìm Kiếm";
+            this.btnTimKiemVe.TextColor = System.Drawing.Color.Black;
+            this.btnTimKiemVe.UseVisualStyleBackColor = false;
             // 
             // button_WOC10
             // 
@@ -1557,24 +1610,24 @@ namespace QLDatXe
             this.btnAddChuyen.UseVisualStyleBackColor = false;
             this.btnAddChuyen.Click += new System.EventHandler(this.btnAddChuyen_Click);
             // 
-            // button_WOC14
+            // btnTimKiemChuyen
             // 
-            this.button_WOC14.BackColor = System.Drawing.Color.Transparent;
-            this.button_WOC14.BorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC14.ButtonColor = System.Drawing.Color.CornflowerBlue;
-            this.button_WOC14.FlatAppearance.BorderSize = 0;
-            this.button_WOC14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC14.ForeColor = System.Drawing.Color.Transparent;
-            this.button_WOC14.Location = new System.Drawing.Point(445, 24);
-            this.button_WOC14.Name = "button_WOC14";
-            this.button_WOC14.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC14.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
-            this.button_WOC14.OnHoverTextColor = System.Drawing.Color.White;
-            this.button_WOC14.Size = new System.Drawing.Size(89, 33);
-            this.button_WOC14.TabIndex = 15;
-            this.button_WOC14.Text = "Tìm Kiếm";
-            this.button_WOC14.TextColor = System.Drawing.Color.Black;
-            this.button_WOC14.UseVisualStyleBackColor = false;
+            this.btnTimKiemChuyen.BackColor = System.Drawing.Color.Transparent;
+            this.btnTimKiemChuyen.BorderColor = System.Drawing.Color.Transparent;
+            this.btnTimKiemChuyen.ButtonColor = System.Drawing.Color.CornflowerBlue;
+            this.btnTimKiemChuyen.FlatAppearance.BorderSize = 0;
+            this.btnTimKiemChuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiemChuyen.ForeColor = System.Drawing.Color.Transparent;
+            this.btnTimKiemChuyen.Location = new System.Drawing.Point(445, 24);
+            this.btnTimKiemChuyen.Name = "btnTimKiemChuyen";
+            this.btnTimKiemChuyen.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnTimKiemChuyen.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
+            this.btnTimKiemChuyen.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnTimKiemChuyen.Size = new System.Drawing.Size(89, 33);
+            this.btnTimKiemChuyen.TabIndex = 15;
+            this.btnTimKiemChuyen.Text = "Tìm Kiếm";
+            this.btnTimKiemChuyen.TextColor = System.Drawing.Color.Black;
+            this.btnTimKiemChuyen.UseVisualStyleBackColor = false;
             // 
             // btnXoaXe
             // 
@@ -1984,11 +2037,6 @@ namespace QLDatXe
         private ePOSOne.btnProduct.Button_WOC btnBuyNow;
         private System.Windows.Forms.TabPage tpVe;
         private System.Windows.Forms.DataGridView dgvVeXe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaVe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaChuyen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTenKhach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSĐT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colGiaVe;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label lblBenXeDen;
@@ -2036,7 +2084,7 @@ namespace QLDatXe
         private ePOSOne.btnProduct.Button_WOC btnXoaChuyen;
         private ePOSOne.btnProduct.Button_WOC btnSuaChuyen;
         private ePOSOne.btnProduct.Button_WOC btnAddChuyen;
-        private ePOSOne.btnProduct.Button_WOC button_WOC14;
+        private ePOSOne.btnProduct.Button_WOC btnTimKiemChuyen;
         private System.Windows.Forms.ErrorProvider NotificationError;
         private System.Windows.Forms.DataGridView dgvXe;
         private System.Windows.Forms.Panel panel13;
@@ -2089,5 +2137,14 @@ namespace QLDatXe
         private System.Windows.Forms.DataGridViewTextBoxColumn colGiaVeXe;
         private System.Windows.Forms.ComboBox cmbTemp;
         private System.Windows.Forms.ComboBox cmbMaChuyen;
+        private ePOSOne.btnProduct.Button_WOC btnTimKiemVe;
+        private System.Windows.Forms.ComboBox cmbMaXe_DatVe;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaVe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaChuyen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaXe_Ve;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenKhach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSĐT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colGiaVe;
     }
 }

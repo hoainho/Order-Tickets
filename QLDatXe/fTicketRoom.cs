@@ -18,15 +18,32 @@ namespace QLDatXe
         private TaiKhoan account;
         private string idChuyen;
         private int idBX;
-        private int idXe;
+        private string idXe;
         private string idChuyen_Lich;
-        private string idVeXe;
+        private int idVeXe;
 
         public int MaCX_DatXe { get; private set; }
 
         public fTicketRoom()
         {
             InitializeComponent();
+        }
+        //Random mã cho chuyến xe
+        private string RandomString(int size, bool lowerCase)
+        {
+            StringBuilder sb = new StringBuilder();
+            char c;
+            Random rand = new Random();
+            for (int i = 0; i < size; i++)
+            {
+                c = Convert.ToChar(Convert.ToInt32(rand.Next(65, 87)));
+                sb.Append(c);
+            }
+            if (lowerCase)
+            {
+                return sb.ToString().ToLower();
+            }
+            return sb.ToString();
         }
         public fTicketRoom(TaiKhoan acc)
         {
@@ -44,6 +61,7 @@ namespace QLDatXe
             //Show ComboBox
             ShowCmbLoaiXe();
             ShowCmbMaXe();
+            ShowCmbMaXe_DatVe();
             ShowCmbChuyenDi();
             ShowCmbChuyenDen();
             ShowCmbMaXe_Chuyen();
@@ -76,6 +94,17 @@ namespace QLDatXe
                 cmbMaXe.ValueMember = "MaXe";
             }
         }
+        public void ShowCmbMaXe_DatVe()
+        {
+            using (var _contextDB = new DataAccessLayer())
+            {
+                List<Xe> listXe = _contextDB.Xes.ToList();
+                cmbMaXe_DatVe.DataSource = listXe;
+                cmbMaXe_DatVe.DisplayMember = "MaXe";
+                cmbMaXe_DatVe.ValueMember = "MaXe";
+            }
+        }
+        
         public void ShowCmbMaXe_Chuyen()
         {
             using (var _contextDB = new DataAccessLayer())
@@ -180,9 +209,10 @@ namespace QLDatXe
                     int index = dgvVeXe.Rows.Add();
                     dgvVeXe.Rows[index].Cells[0].Value = item.MaVe;
                     dgvVeXe.Rows[index].Cells[1].Value = (item.ChuyenXe.BenXe.Ten + " - " + item.ChuyenXe.BenXe1.Ten).ToString();
-                    dgvVeXe.Rows[index].Cells[2].Value = item.TenKhach;
-                    dgvVeXe.Rows[index].Cells[3].Value = item.sdt;
-                    dgvVeXe.Rows[index].Cells[4].Value = item.ChuyenXe.GiaVe;
+                    dgvVeXe.Rows[index].Cells[2].Value = item.MaXe;
+                    dgvVeXe.Rows[index].Cells[3].Value = item.TenKhach;
+                    dgvVeXe.Rows[index].Cells[4].Value = item.sdt;
+                    dgvVeXe.Rows[index].Cells[5].Value = item.ChuyenXe.GiaVe;
                 }
             }
 
@@ -253,7 +283,7 @@ namespace QLDatXe
             int index = e.RowIndex;
             if (index >= 0)
             {
-                this.idXe = int.Parse(dgvXe.Rows[index].Cells[0].Value.ToString());
+                this.idXe = dgvXe.Rows[index].Cells[0].Value.ToString();
                 cmbMaXe.Text = dgvXe.Rows[index].Cells[0].Value.ToString();
                 cmbLoaiXe.Text = dgvXe.Rows[index].Cells[1].Value.ToString();
                 txtSoGhe.Text = dgvXe.Rows[index].Cells[2].Value.ToString();
@@ -286,7 +316,7 @@ namespace QLDatXe
             int index = e.RowIndex;
             if (index >= 0)
             {
-                this.idChuyen_Lich = dgvLichChay.Rows[index].Cells[0].RowIndex.ToString();
+                this.idChuyen_Lich = dgvLichChay.Rows[index].Cells[0].Value.ToString();
                 lblMaChuyenXe.Text = dgvLichChay.Rows[index].Cells[0].Value.ToString();
                 lblThoiGian.Text = dgvLichChay.Rows[index].Cells[1].Value.ToString();
                 lblLoaiXe.Text = dgvLichChay.Rows[index].Cells[2].Value.ToString();
@@ -294,7 +324,7 @@ namespace QLDatXe
                 lblTenBenXeDen.Text = dgvLichChay.Rows[index].Cells[4].Value.ToString();
                 using (var _contextDB = new DataAccessLayer())
                 {
-                    List<ChuyenXe> listChuyenXe = _contextDB.ChuyenXes.Where(x => x.MaCX == this.idChuyen_Lich).ToList();
+                    List<ChuyenXe> listChuyenXe = _contextDB.ChuyenXes.Where(x => (x.BenXe.Ten + " - " + x.BenXe1.Ten) == this.idChuyen_Lich).ToList();
                     foreach (ChuyenXe item in listChuyenXe)
                     {
                         lblMaChuyenXe.Text =(item.BenXe.Ten + " - " + item.BenXe1.Ten).ToString(); ;
@@ -308,14 +338,17 @@ namespace QLDatXe
                         lblMaBenXeDen.Text = item.BenXe1.MaBX.ToString();
                         lblTenBenXeDen.Text = item.BenXe1.Ten.ToString();
                         lblDiaChiBXDen.Text = item.BenXe1.DiaChi.ToString();
-                        int SoGhe = (item.Xe.SoGhe - item.VeXes.Count());
-                        if (SoGhe < 0)
+                        if (int.Parse((item.Xe.SoGhe - item.VeXes.Count()).ToString()) < 0)
                         {
                             lblSoGheCon.Text = "0";
                             lblTinhTrang.Text = "Hết Chỗ";
                         }
-                        lblSoGheCon.Text = (item.Xe.SoGhe - item.VeXes.Count()).ToString();
-                        lblTinhTrang.Text = "Còn Chỗ";
+                        else
+                        {
+                            lblSoGheCon.Text = (item.Xe.SoGhe - item.VeXes.Count()).ToString();
+                            lblTinhTrang.Text = "Còn Chỗ";
+                        }
+                        
 
                     }
                 }
@@ -330,12 +363,13 @@ namespace QLDatXe
             int index = e.RowIndex;
             if (index >= 0)
             {
-                this.idVeXe = dgvVeXe.Rows[index].Cells[0].Value.ToString();
+                this.idVeXe = int.Parse(dgvVeXe.Rows[index].Cells[0].Value.ToString());
                 txtMaVe.Text = dgvVeXe.Rows[index].Cells[0].Value.ToString();
                 cmbMaChuyen.Text = dgvVeXe.Rows[index].Cells[1].Value.ToString();
-                txtTenKhach.Text = dgvVeXe.Rows[index].Cells[2].Value.ToString();
-                txtSDT.Text = dgvVeXe.Rows[index].Cells[3].Value.ToString();
-                txtGiaVe.Text = dgvVeXe.Rows[index].Cells[4].Value.ToString();
+                cmbMaXe_DatVe.Text = dgvVeXe.Rows[index].Cells[2].Value.ToString();
+                txtTenKhach.Text = dgvVeXe.Rows[index].Cells[3].Value.ToString();
+                txtSDT.Text = dgvVeXe.Rows[index].Cells[4].Value.ToString();
+                txtGiaVe.Text = dgvVeXe.Rows[index].Cells[5].Value.ToString();
             }
             else
             {
@@ -365,7 +399,7 @@ namespace QLDatXe
                     chuyenXe.MaBXDi = int.Parse(cmbBXDi.SelectedValue.ToString());
                     chuyenXe.MaBXDen = int.Parse(cmbBXDen.SelectedValue.ToString());
                     chuyenXe.Ngaydi = DateTime.Parse(dtpChuyenXe.Text);
-                    chuyenXe.MaXe = int.Parse(cmbMaXe_Chuyen.SelectedValue.ToString());
+                    chuyenXe.MaXe = cmbMaXe_Chuyen.SelectedValue.ToString();
                     chuyenXe.GiaVe = int.Parse(txtGiaVe.Text);
                     _dbContext.ChuyenXes.Add(chuyenXe);
                     _dbContext.SaveChanges();
@@ -434,18 +468,77 @@ namespace QLDatXe
             {
                 using (var _dbContext = new DataAccessLayer())
                 {
-                    VeXe vexe = new VeXe();
-                    vexe.MaCX = cmbTemp.SelectedValue.ToString();
-                    vexe.TenKhach = txtTenKhach.Text;
-                    vexe.sdt = int.Parse(txtSDT.Text);
-                    _dbContext.VeXes.Add(vexe);
-                    _dbContext.SaveChanges();
+                    List<VeXe> listVe = _dbContext.VeXes.ToList();
+                    Xe temp = _dbContext.Xes.AsEnumerable().FirstOrDefault(x => x.MaXe == cmbMaXe_DatVe.Text);
+                    int dem = 0;
+                    foreach (VeXe item in listVe)
+                    {
+                        if(item.MaXe == cmbMaXe_DatVe.Text)
+                        {
+                            dem++;
+                        }
+                    }
+                    if(dem > temp.SoGhe)
+                    {
+                        MessageBox.Show("Xe này đã hết vé, vui lòng chọn sẽ khác !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        VeXe vexe = new VeXe();
+                        vexe.MaCX = cmbTemp.SelectedValue.ToString();
+                        vexe.MaXe = cmbMaXe_DatVe.SelectedValue.ToString();
+                        vexe.TenKhach = txtTenKhach.Text;
+                        vexe.sdt = int.Parse(txtSDT.Text);
+                        _dbContext.VeXes.Add(vexe);
+                        _dbContext.SaveChanges();
+
+                        MessageBox.Show("Mua Vé Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ShowVe();
+                    }
+                        
+                    txtTenKhach.Text = "";
+                    txtSDT.Text = "";
                 }
-                MessageBox.Show("Mua Vé Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ShowVe();
-                txtTenKhach.Text = "";
-                txtSDT.Text = "";
+                
             }
+            
+        }
+        private void btnBuyNow_Click(object sender, EventArgs e)
+        {
+            if (txtTenKhach.Text == "" || txtSDT.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn chuyến xe muốn đi bên dưới bảng chọn !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                    if (lblTinhTrang.Text == "Hết Chỗ")
+                    {
+                    MessageBox.Show("Xe này hiện tại đang hết chỗ, vui lòng chọn xe khác !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                    {
+                    using (var _contextDB = new DataAccessLayer())
+                    {
+                        List<ChuyenXe> listChuyenXe = _contextDB.ChuyenXes.Where(x => (x.BenXe.Ten + " - " + x.BenXe1.Ten) == this.idChuyen_Lich).ToList();
+                        foreach (ChuyenXe item in listChuyenXe)
+                        {
+                            VeXe vexe = new VeXe();
+                            vexe.MaCX = item.MaCX;
+                            vexe.MaXe = lblMaXe.Text;
+                            vexe.TenKhach = this.account.displayName;
+                            vexe.sdt = this.account.numberPhone;
+                            _contextDB.VeXes.Add(vexe);
+                        }
+                        _contextDB.SaveChanges();
+                        MessageBox.Show("Mua Vé Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    
+
+                }
+            }      
+                
         }
 
         // Sửa Thông tin trong database và show ra dgv
@@ -503,7 +596,7 @@ namespace QLDatXe
                     dbChuyenXe.MaBXDi = int.Parse(cmbBXDi.SelectedValue.ToString());
                     dbChuyenXe.MaBXDen = int.Parse(cmbBXDen.SelectedValue.ToString());
                     dbChuyenXe.Ngaydi = DateTime.Parse(dtpChuyenXe.Text);
-                    dbChuyenXe.MaXe = int.Parse(cmbMaXe_Chuyen.SelectedValue.ToString());
+                    dbChuyenXe.MaXe = cmbMaXe_Chuyen.SelectedValue.ToString();
                     dbChuyenXe.GiaVe = double.Parse(txtGiaVe.Text);
                     _contextDB.SaveChanges();
                     ShowTongChuyenXe();
@@ -654,6 +747,8 @@ namespace QLDatXe
                 ShowVe();
             }
         }
+
+       
 
     }
 }

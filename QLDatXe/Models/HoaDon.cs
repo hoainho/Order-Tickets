@@ -13,9 +13,7 @@ namespace QLDatXe.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaHD { get; set; }
 
-        [Required]
-        [StringLength(10)]
-        public string MaVe { get; set; }
+        public int MaVe { get; set; }
 
         [Required]
         [StringLength(20)]

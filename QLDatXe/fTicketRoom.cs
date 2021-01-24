@@ -15,36 +15,23 @@ namespace QLDatXe
 {
     public partial class fTicketRoom : Form
     {
+        Random _randomCode = new Random();
         private TaiKhoan account;
         private string idChuyen;
         private int idBX;
         private string idXe;
         private string idChuyen_Lich;
-        private int idVeXe;
-
+        private string idVeXe;
+        private string idsend;
+        private string idSave_DatVe;
         public int MaCX_DatXe { get; private set; }
 
         public fTicketRoom()
         {
             InitializeComponent();
         }
-        //Random mã cho chuyến xe
-        private string RandomString(int size, bool lowerCase)
-        {
-            StringBuilder sb = new StringBuilder();
-            char c;
-            Random rand = new Random();
-            for (int i = 0; i < size; i++)
-            {
-                c = Convert.ToChar(Convert.ToInt32(rand.Next(65, 87)));
-                sb.Append(c);
-            }
-            if (lowerCase)
-            {
-                return sb.ToString().ToLower();
-            }
-            return sb.ToString();
-        }
+        
+        //MDI
         public fTicketRoom(TaiKhoan acc)
         {
             InitializeComponent();
@@ -54,7 +41,7 @@ namespace QLDatXe
         private void fTicketRoom_Load(object sender, EventArgs e)
         {
             //init Database
-            ShowCmbChuyenXe_DatVe();
+            controlVisible();
             txtTenKhach.Text = this.account.displayName;
             txtSDT.Text = this.account.numberPhone.ToString();
             //ForMat DateTime
@@ -66,6 +53,7 @@ namespace QLDatXe
             ShowCmbChuyenDen();
             ShowCmbMaXe_Chuyen();
             ShowCmbMaChuyen();
+            ShowCmbChuyenXe_DatVe();
             //Show datagridview
             ShowChuyenXe();
             ShowTongChuyenXe();
@@ -73,7 +61,40 @@ namespace QLDatXe
             ShowXe();
             ShowBenXe();
         }
+        //Visible Features
+        public void controlVisible()
+        {
+            if (this.account.type.Trim() == "user")
+            {
+                tpgManageBus.TabPages.Remove(tpQLLich);
+                tpgManageBus.TabPages.Remove(tpXe);
+                tpgManageBus.TabPages.Remove(tpBenXe);
+                tpgManageBus.TabPages.Remove(tpNhanVien);
+                pnlManager.Visible = false;
+            }
+
+        }
+        //Refresh Database
+
+        public void RefreshDB()
+        {
+            ShowCmbLoaiXe();
+            ShowCmbMaXe();
+            ShowCmbMaXe_DatVe();
+            ShowCmbChuyenDi();
+            ShowCmbChuyenDen();
+            ShowCmbMaXe_Chuyen();
+            ShowCmbMaChuyen();
+            ShowCmbChuyenXe_DatVe();
+            //Show datagridview
+            ShowChuyenXe();
+            //ShowTongChuyenXe();
+            ShowVe();
+            ShowXe();
+            ShowBenXe();
+        }
         // Load data cho các combobox 
+         
         public void ShowCmbLoaiXe()
         {
             using (var _contextDB = new DataAccessLayer())
@@ -98,7 +119,7 @@ namespace QLDatXe
         {
             using (var _contextDB = new DataAccessLayer())
             {
-                List<Xe> listXe = _contextDB.Xes.ToList();
+                List<ChuyenXe> listXe = _contextDB.ChuyenXes.ToList();
                 cmbMaXe_DatVe.DataSource = listXe;
                 cmbMaXe_DatVe.DisplayMember = "MaXe";
                 cmbMaXe_DatVe.ValueMember = "MaXe";
@@ -125,6 +146,18 @@ namespace QLDatXe
                 cmbBXDi.DisplayMember = "Ten";
                 cmbBXDi.ValueMember = "MaBX";
             }
+        }
+        public void ShowCmbLoaiXe_DatXe(List<Xe> listLX)
+        {
+            cmbLoaiXe_DatVe.DataSource = listLX;
+            cmbLoaiXe_DatVe.DisplayMember = "Loai";
+            cmbLoaiXe_DatVe.ValueMember = "MaXe";
+        }
+        public void ShowCmbTenLoaiXe_DatXe(List<LoaiXe> listTLX)
+        {
+            cmbTenLoaiXe_DatVe.DataSource = listTLX;
+            cmbTenLoaiXe_DatVe.DisplayMember = "TenLoai";
+            cmbTenLoaiXe_DatVe.ValueMember = "MaLoai";
         }
         public void ShowCmbMaChuyen()
         {
@@ -155,10 +188,6 @@ namespace QLDatXe
                 cmbTemp.DisplayMember = "MaCX";
                 cmbTemp.ValueMember = "MaCX";
             }
-        }
-        private void cmbChuyenXe_DatVe_TextChanged(object sender, EventArgs e)
-        {
-           
         }
         // Show Thông tin ra datagridview
         public void ShowChuyenXe()
@@ -201,19 +230,37 @@ namespace QLDatXe
         {
             using (var _contextDB = new DataAccessLayer())
             {
-                List<VeXe> listVeXe = _contextDB.VeXes.ToList();
-                VeXe vexe = new VeXe();
-                dgvVeXe.Rows.Clear();
-                foreach (VeXe item in listVeXe)
+                if (this.account.type == "user")
                 {
-                    int index = dgvVeXe.Rows.Add();
-                    dgvVeXe.Rows[index].Cells[0].Value = item.MaVe;
-                    dgvVeXe.Rows[index].Cells[1].Value = (item.ChuyenXe.BenXe.Ten + " - " + item.ChuyenXe.BenXe1.Ten).ToString();
-                    dgvVeXe.Rows[index].Cells[2].Value = item.MaXe;
-                    dgvVeXe.Rows[index].Cells[3].Value = item.TenKhach;
-                    dgvVeXe.Rows[index].Cells[4].Value = item.sdt;
-                    dgvVeXe.Rows[index].Cells[5].Value = item.ChuyenXe.GiaVe;
+                    List<VeXe> listVeXe = _contextDB.VeXes.Where(x => x.userName == this.account.userName).ToList();
+                    dgvVeXe.Rows.Clear();
+                    foreach (VeXe item in listVeXe)
+                    {
+                        int index = dgvVeXe.Rows.Add();
+                        dgvVeXe.Rows[index].Cells[0].Value = item.MaVe;
+                        dgvVeXe.Rows[index].Cells[1].Value = (item.ChuyenXe.BenXe.Ten + " - " + item.ChuyenXe.BenXe1.Ten).ToString();
+                        dgvVeXe.Rows[index].Cells[2].Value = item.MaXe;
+                        dgvVeXe.Rows[index].Cells[3].Value = item.TenKhach;
+                        dgvVeXe.Rows[index].Cells[4].Value = item.sdt;
+                        dgvVeXe.Rows[index].Cells[5].Value = item.ChuyenXe.GiaVe;
+                    }
                 }
+                else
+                {
+                    List<VeXe> listVeXe = _contextDB.VeXes.ToList();
+                    dgvVeXe.Rows.Clear();
+                    foreach (VeXe item in listVeXe)
+                    {
+                        int index = dgvVeXe.Rows.Add();
+                        dgvVeXe.Rows[index].Cells[0].Value = item.MaVe;
+                        dgvVeXe.Rows[index].Cells[1].Value = (item.ChuyenXe.BenXe.Ten + " - " + item.ChuyenXe.BenXe1.Ten).ToString();
+                        dgvVeXe.Rows[index].Cells[2].Value = item.MaXe;
+                        dgvVeXe.Rows[index].Cells[3].Value = item.TenKhach;
+                        dgvVeXe.Rows[index].Cells[4].Value = item.sdt;
+                        dgvVeXe.Rows[index].Cells[5].Value = item.ChuyenXe.GiaVe;
+                    }
+                }
+                
             }
 
         }
@@ -260,6 +307,15 @@ namespace QLDatXe
             {
                 NotificationError.SetError(temp, "");
 
+            }
+        }
+        private void dtpChuyenXe_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpChuyenXe.Value < DateTime.Now.Date)
+            {
+                MessageBox.Show("Thời gian đi không được nhỏ hơn ngày hiện tại", "Nhắc Nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpChuyenXe.Value = DateTime.Now;
+                return;
             }
         }
 
@@ -338,7 +394,7 @@ namespace QLDatXe
                         lblMaBenXeDen.Text = item.BenXe1.MaBX.ToString();
                         lblTenBenXeDen.Text = item.BenXe1.Ten.ToString();
                         lblDiaChiBXDen.Text = item.BenXe1.DiaChi.ToString();
-                        if (int.Parse((item.Xe.SoGhe - item.VeXes.Count()).ToString()) < 0)
+                        if (int.Parse((item.Xe.SoGhe - item.VeXes.Count()).ToString()) <= 0)
                         {
                             lblSoGheCon.Text = "0";
                             lblTinhTrang.Text = "Hết Chỗ";
@@ -363,8 +419,9 @@ namespace QLDatXe
             int index = e.RowIndex;
             if (index >= 0)
             {
-                this.idVeXe = int.Parse(dgvVeXe.Rows[index].Cells[0].Value.ToString());
+                this.idVeXe = dgvVeXe.Rows[index].Cells[0].Value.ToString();
                 txtMaVe.Text = dgvVeXe.Rows[index].Cells[0].Value.ToString();
+                idSave_DatVe = dgvVeXe.Rows[index].Cells[0].Value.ToString();
                 cmbMaChuyen.Text = dgvVeXe.Rows[index].Cells[1].Value.ToString();
                 cmbMaXe_DatVe.Text = dgvVeXe.Rows[index].Cells[2].Value.ToString();
                 txtTenKhach.Text = dgvVeXe.Rows[index].Cells[3].Value.ToString();
@@ -380,38 +437,49 @@ namespace QLDatXe
         // Thêm thông tin vào database và show ra dgv
         private void btnAddChuyen_Click(object sender, EventArgs e)
         {
-            if (cmbBXDi.Text == "" || cmbBXDen.Text == "" || dtpChuyenXe.Text == "")
+            if (cmbMaChuyen.Text == "" || txtGiaVe.Text == "")
             {
                 MessageBox.Show("Vui lòng không bỏ trống các trường !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+            using (var _dbContext = new DataAccessLayer())
             {
-                using (var _dbContext = new DataAccessLayer())
+                List<ChuyenXe> listCX = _dbContext.ChuyenXes.ToList();
+                foreach (ChuyenXe item in listCX)
                 {
-
-                    ChuyenXe chuyenXe = new ChuyenXe();
-                    if (cmbBXDi.SelectedValue.ToString() == cmbBXDen.SelectedValue.ToString())
+                    if (item.MaCX == cmbMaChuyen.Text)
                     {
-                        MessageBox.Show("Bến Xe Đi không được trùng với Bến Xe Đến !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Mã Chuyến " + item.MaCX + " Đã Tồn Tại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
-                    chuyenXe.MaCX =cmbMaChuyen.Text;
-                    chuyenXe.MaBXDi = int.Parse(cmbBXDi.SelectedValue.ToString());
-                    chuyenXe.MaBXDen = int.Parse(cmbBXDen.SelectedValue.ToString());
-                    chuyenXe.Ngaydi = DateTime.Parse(dtpChuyenXe.Text);
-                    chuyenXe.MaXe = cmbMaXe_Chuyen.SelectedValue.ToString();
-                    chuyenXe.GiaVe = int.Parse(txtGiaVe.Text);
-                    _dbContext.ChuyenXes.Add(chuyenXe);
-                    _dbContext.SaveChanges();
                 }
+                ChuyenXe chuyenXe = new ChuyenXe();
+                chuyenXe.MaCX = cmbMaChuyen.Text.Trim();
+                chuyenXe.MaBXDi = int.Parse(cmbBXDi.SelectedValue.ToString());
+                chuyenXe.MaBXDen = int.Parse(cmbBXDen.SelectedValue.ToString());
+                chuyenXe.Ngaydi = DateTime.Parse(dtpChuyenXe.Text);
+                chuyenXe.MaXe = cmbMaXe_Chuyen.SelectedValue.ToString();
+                chuyenXe.GiaVe = int.Parse(txtGiaVe.Text);
+                if (cmbBXDi.Text == cmbBXDen.Text)
+                {
+                    MessageBox.Show("Bến Xe đi không được trùng với Bến Xe đến", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                _dbContext.ChuyenXes.Add(chuyenXe);
+                MessageBox.Show("Thêm Chuyến " + chuyenXe.MaCX + " Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                _dbContext.SaveChanges();
                 ShowTongChuyenXe();
-                MessageBox.Show("Thêm Chuyến Mới Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 cmbMaChuyen.Text = "";
                 cmbBXDi.SelectedIndex = 0;
                 cmbBXDen.SelectedIndex = 0;
-                dtpChuyenXe.Text = DateTime.Now.ToString();
-                cmbMaXe.SelectedIndex = 0;
+                //dtpChuyenXe.Text = DateTime.Now.ToString();
+                cmbMaXe_Chuyen.Text = "";
+
             }
+
+
         }
         private void btnThemXe_Click(object sender, EventArgs e)
         {
@@ -425,6 +493,7 @@ namespace QLDatXe
                 using (var _dbContext = new DataAccessLayer())
                 {
                     Xe xe = new Xe();
+                    xe.MaXe = _randomCode.Next().ToString();
                     xe.Loai = int.Parse(cmbLoaiXe.SelectedValue.ToString());
                     xe.SoGhe = int.Parse(txtSoGhe.Text);
                     _dbContext.Xes.Add(xe);
@@ -435,15 +504,17 @@ namespace QLDatXe
                 cmbMaXe.SelectedValue = 0;
                 cmbLoaiXe.SelectedIndex =0;
             }
+            
+
         }
         private void btnAddBX_Click(object sender, EventArgs e)
         {
             if (txtTenBX.Text == "" || txtDiaChiBX.Text == "")
             {
                 MessageBox.Show("Vui lòng không bỏ trống các trường !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
-            {
+            
                 using (var _dbContext = new DataAccessLayer())
                 {
                     BenXe benXe = new BenXe();
@@ -456,20 +527,19 @@ namespace QLDatXe
                 MessageBox.Show("Thêm Bến Xe Mới Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtTenBX.Text = "";
                 txtDiaChiBX.Text = "";
-            }
+            
         }
         private void btnAddVeXe_Click(object sender, EventArgs e)
         {
             if (txtTenKhach.Text == "" || txtSDT.Text == "")
             {
                 MessageBox.Show("Vui lòng không bỏ trống các trường !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
-            {
                 using (var _dbContext = new DataAccessLayer())
                 {
                     List<VeXe> listVe = _dbContext.VeXes.ToList();
-                    Xe temp = _dbContext.Xes.AsEnumerable().FirstOrDefault(x => x.MaXe == cmbMaXe_DatVe.Text);
+                    Xe temp = _dbContext.Xes.FirstOrDefault(x => x.MaXe == cmbMaXe_DatVe.Text);
                     int dem = 0;
                     foreach (VeXe item in listVe)
                     {
@@ -481,27 +551,33 @@ namespace QLDatXe
                     if(dem > temp.SoGhe)
                     {
                         MessageBox.Show("Xe này đã hết vé, vui lòng chọn sẽ khác !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                     }
                     else
                     {
                         VeXe vexe = new VeXe();
+                        vexe.MaVe = _randomCode.Next().ToString();
                         vexe.MaCX = cmbTemp.SelectedValue.ToString();
                         vexe.MaXe = cmbMaXe_DatVe.SelectedValue.ToString();
                         vexe.TenKhach = txtTenKhach.Text;
                         vexe.sdt = int.Parse(txtSDT.Text);
+                        vexe.userName = this.account.userName;
                         _dbContext.VeXes.Add(vexe);
                         _dbContext.SaveChanges();
 
-                        MessageBox.Show("Mua Vé Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Mã Vé Xe của bạn là :" + vexe.MaVe + " \n\tHãy Lưu lại nhé!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ShowVe();
                     }
-                        
+                    int soGhe_ThemVe = int.Parse(lblSoGheCon.Text.ToString()) - 1;
+                    if (soGhe_ThemVe == 0)
+                    {
+                        lblTinhTrang.Text = "Hết Chỗ";
+                    }
+                    lblSoGheCon.Text = soGhe_ThemVe.ToString();
                     txtTenKhach.Text = "";
                     txtSDT.Text = "";
                 }
                 
-            }
+            
             
         }
         private void btnBuyNow_Click(object sender, EventArgs e)
@@ -512,30 +588,44 @@ namespace QLDatXe
             }
             else
             {
-                    if (lblTinhTrang.Text == "Hết Chỗ")
-                    {
-                    MessageBox.Show("Xe này hiện tại đang hết chỗ, vui lòng chọn xe khác !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                if (lblTinhTrang.Text == "Hết Chỗ")
+                {
+                MessageBox.Show("Xe này hiện tại đang hết chỗ, vui lòng chọn xe khác !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
                 }
                 else
+                {
+                using (var _contextDB = new DataAccessLayer())
+                {
+                    List<ChuyenXe> listChuyenXe = _contextDB.ChuyenXes.Where(x => (x.BenXe.Ten + " - " + x.BenXe1.Ten) == this.idChuyen_Lich).ToList();
+                    foreach (ChuyenXe item in listChuyenXe)
                     {
-                    using (var _contextDB = new DataAccessLayer())
-                    {
-                        List<ChuyenXe> listChuyenXe = _contextDB.ChuyenXes.Where(x => (x.BenXe.Ten + " - " + x.BenXe1.Ten) == this.idChuyen_Lich).ToList();
-                        foreach (ChuyenXe item in listChuyenXe)
-                        {
-                            VeXe vexe = new VeXe();
-                            vexe.MaCX = item.MaCX;
-                            vexe.MaXe = lblMaXe.Text;
-                            vexe.TenKhach = this.account.displayName;
-                            vexe.sdt = this.account.numberPhone;
+                        VeXe vexe = new VeXe();
+                        vexe.MaVe = _randomCode.Next().ToString();
+                        idsend = vexe.MaVe;
+                        vexe.MaCX = item.MaCX;
+                        vexe.MaXe = lblMaXe.Text;
+                        vexe.TenKhach = this.account.displayName;
+                        vexe.userName = this.account.userName;
+                        vexe.sdt = this.account.numberPhone;
                             _contextDB.VeXes.Add(vexe);
-                        }
-                        _contextDB.SaveChanges();
-                        MessageBox.Show("Mua Vé Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    
-
+                    int temp = int.Parse(lblSoGheCon.Text.ToString()) - 1;
+                        if (temp == 0)
+                        {
+                            lblTinhTrang.Text = "Hết Chỗ";
+                        }
+                    lblSoGheCon.Text = temp.ToString();
+                        _contextDB.SaveChanges();
+                    MessageBox.Show("Mua Vé Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                ShowVe();
+                ShowChuyenXe();
+                if(MessageBox.Show("Bạn có muốn lấy vé luôn không ?","Thông Báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Question) == DialogResult.OK)
+                    {
+                        ReportVeXe reportVe = new ReportVeXe(idsend);
+                        reportVe.ShowDialog();
+                    }
                 }
             }      
                 
@@ -544,6 +634,10 @@ namespace QLDatXe
         // Sửa Thông tin trong database và show ra dgv
         private void btnSuaBX_Click(object sender, EventArgs e)
         {
+            if (txtTenBX.Text == "" || txtDiaChiBX.Text == "")
+            {
+                MessageBox.Show("Vui lòng không bỏ trống các trường !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             using (var _contextDB = new DataAccessLayer())
             {
                 BenXe dbBenXe = _contextDB.BenXes.FirstOrDefault(x => x.MaBX == this.idBX);
@@ -562,6 +656,11 @@ namespace QLDatXe
 
         private void btnSuaXe_Click(object sender, EventArgs e)
         {
+            if (cmbLoaiXe.Text == "")
+            {
+                MessageBox.Show("Vui lòng không bỏ trống các trường !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             using (var _contextDB = new DataAccessLayer())
             {
                 Xe dbXe = _contextDB.Xes.FirstOrDefault(x => x.MaXe == this.idXe);
@@ -588,6 +687,11 @@ namespace QLDatXe
 
         private void btnSuaChuyen_Click(object sender, EventArgs e)
         {
+            if (cmbMaChuyen.Text == "" || txtGiaVe.Text == "")
+            {
+                MessageBox.Show("Vui lòng không bỏ trống các trường !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             using (var _contextDB = new DataAccessLayer())
             {
                 ChuyenXe dbChuyenXe = _contextDB.ChuyenXes.FirstOrDefault(x => x.MaCX == this.idChuyen);
@@ -600,7 +704,7 @@ namespace QLDatXe
                     dbChuyenXe.GiaVe = double.Parse(txtGiaVe.Text);
                     _contextDB.SaveChanges();
                     ShowTongChuyenXe();
-                    MessageBox.Show("Sửa Bến Xe" + dbChuyenXe.MaCX + " Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Sửa Chuyến Xe " + dbChuyenXe.MaCX + " Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                    
                 }
                 else
@@ -617,6 +721,35 @@ namespace QLDatXe
             }
         }
 
+        private void btnSuaVeXe_Click(object sender, EventArgs e)
+        {
+            if (txtTenKhach.Text == "" || txtSDT.Text == "")
+            {
+                MessageBox.Show("Vui lòng không bỏ trống các trường !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            using (var _contextDB = new DataAccessLayer())
+            {
+                VeXe dbVeXe = _contextDB.VeXes.FirstOrDefault(x => x.MaVe == this.idVeXe);
+                if (dbVeXe != null)
+                {
+                    if (MessageBox.Show("Bạn chỉ có thể sửa tên và số điện thoại \n(Trường hợp nhượng vé xe )\n !", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                    {
+                        dbVeXe.TenKhach = txtTenKhach.Text;
+                        dbVeXe.sdt = int.Parse(txtSDT.Text);
+                        _contextDB.SaveChanges();ShowVe();
+                        MessageBox.Show("Sửa Vé Xe Số " + txtMaVe.Text + " Thành Công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+                
+                cmbMaXe.SelectedIndex = 0;
+                cmbLoaiXe.SelectedIndex = 0;
+            }
+        }
 
         // Xóa Thông tin trong database và show ra dgv
         private void btnXoaBX_Click(object sender, EventArgs e)
@@ -662,7 +795,40 @@ namespace QLDatXe
                 ShowTongChuyenXe();
             }
         }
+        private void button_WOC9_Click(object sender, EventArgs e)
+        {
+            using (var _contextDB = new DataAccessLayer())
+            {
+                VeXe dbVeXe = _contextDB.VeXes.FirstOrDefault(x => x.MaVe == this.idVeXe);
+                if (dbVeXe != null)
+                {
+                    _contextDB.VeXes.Remove(dbVeXe);
+                    _contextDB.SaveChanges();
+                    MessageBox.Show("Hủy Thành Công !");
+                }
+                else
+                {
+                    MessageBox.Show("Không Tìm Thấy Mã Vé !");
+                }
+                ShowVe();
+            }
+        }
+        //Report
+        private void btnGetTickets_Click(object sender, EventArgs e)
+        {
+            if (idSave_DatVe != null)
+            {
+                ReportVeXe temp = new ReportVeXe(idSave_DatVe);
+                temp.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn vé muốn in !","Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+        }
 
+        // Các sự kiện thay đổi data children khi data parent thay đổi 
         private void cmbTemp_SelectedValueChanged(object sender, EventArgs e)
         {
             using (var _contextDB = new DataAccessLayer())
@@ -675,9 +841,16 @@ namespace QLDatXe
                     lblBXDen_DatXe.Text = dbchuyenxe.BenXe1.Ten;
                     txtGiaVe_DatVe.Text = dbchuyenxe.GiaVe.ToString();
                 }
-
             }
 
+        }
+        private void cmbMaXe_DatVe_TextChanged(object sender, EventArgs e)
+        {
+            using (var _contextDB = new DataAccessLayer())
+            {
+                List<Xe> listLX = _contextDB.Xes.Where(p => p.MaXe == cmbMaXe_DatVe.Text).ToList();
+                ShowCmbLoaiXe_DatXe(listLX);
+            }
         }
         private void cmbMaChuyen_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -692,63 +865,179 @@ namespace QLDatXe
 
             }
         }
+        private void cmbMaXe_DatVe_Validating(object sender, CancelEventArgs e)
+        {
+            using (var _dbContext = new DataAccessLayer())
+            {
+                List<VeXe> listVe = _dbContext.VeXes.ToList();
+                Xe temp = _dbContext.Xes.FirstOrDefault(x => x.MaXe == cmbMaXe_DatVe.Text);
+                int dem = 0;
+                foreach (VeXe item in listVe)
+                {
+                    if (item.MaXe == cmbMaXe_DatVe.Text)
+                    {
+                        dem++;
+                    }
+                }
+                if (dem > temp.SoGhe)
+                {
+                    NotificationError.SetError(cmbMaXe_DatVe, " Hết Vé !");
+                }
+                else
+                {
+                    NotificationError.SetError(cmbMaXe_DatVe, "");
 
+                }
+            }
+        }
+        //private void cmbBXDi_TextChanged(object sender, EventArgs e)
+        //{
+        //    if (cmbBXDi.Text == cmbBXDen.Text)
+        //    {
+        //        MessageBox.Show("Bến Xe đi không được trùng với Bến Xe đến", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        return;
+        //    }
+        //}
+        private void cmbMaXe_Chuyen_SelectedValueChanged(object sender, EventArgs e)
+        {
+            using (var _contextBD = new DataAccessLayer())
+            {
+                List<ChuyenXe> listCX = _contextBD.ChuyenXes.ToList();
+                foreach (ChuyenXe item in listCX)
+                {
+                    if (item.MaXe == cmbMaXe_Chuyen.Text)
+                    {
+                        MessageBox.Show("Xe này đang chạy, vui lòng chọn xe khác","Nhắc nhở",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+            }
+        }
+
+        private void cmbLoaiXe_DatVe_TextChanged(object sender, EventArgs e)
+        {
+
+            using (var _contextDB = new DataAccessLayer())
+            {
+                List<LoaiXe> listLX = _contextDB.LoaiXes.AsEnumerable().Where(p => p.MaLoai == int.Parse(cmbLoaiXe_DatVe.Text)).ToList();
+                ShowCmbTenLoaiXe_DatXe(listLX);
+            }
+            
+        }
+        //Clear textbox 
+        private void btnResetVe_Click(object sender, EventArgs e)
+        {
+            txtTenKhach.Text = "";
+            txtSDT.Text = "";
+        }
+
+        //Tìm Kiếm 
+        private void btnTimKiemVe_Click(object sender, EventArgs e)
+        {
+            using (var _contextDB = new DataAccessLayer())
+            {
+                if (txtMaVe.Text == "")
+                {
+                    List<VeXe> listSearch = _contextDB.VeXes.ToList();
+                    ShowVe();
+                }
+                else
+                {
+                    List<VeXe> listSearch = _contextDB.VeXes.Where(x => x.MaVe == txtMaVe.Text).ToList();
+                    dgvVeXe.Rows.Clear();
+                    if (listSearch != null)
+                    {
+                        foreach (VeXe item in listSearch)
+                        {
+                            int index = dgvVeXe.Rows.Add();
+                            dgvVeXe.Rows[index].Cells[0].Value = item.MaVe;
+                            dgvVeXe.Rows[index].Cells[1].Value = (item.ChuyenXe.BenXe.Ten + " - " + item.ChuyenXe.BenXe1.Ten).ToString();
+                            dgvVeXe.Rows[index].Cells[2].Value = item.MaXe;
+                            dgvVeXe.Rows[index].Cells[3].Value = item.TenKhach;
+                            dgvVeXe.Rows[index].Cells[4].Value = item.sdt;
+                            dgvVeXe.Rows[index].Cells[5].Value = item.ChuyenXe.GiaVe;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy Mã Vé Xe này", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+               
+            }
+        }
+        private void btnTimKiemChuyen_Click(object sender, EventArgs e)
+        {
+            using (var _contextDB = new DataAccessLayer())
+            {
+                List<ChuyenXe> listSearch = _contextDB.ChuyenXes.Where(x => x.MaCX == cmbMaChuyen.Text).ToList();
+                dgvLichTong.Rows.Clear();
+                if (listSearch != null)
+                {
+                    foreach (ChuyenXe item in listSearch)
+                    {
+                        int index = dgvLichTong.Rows.Add();
+                        dgvLichTong.Rows[index].Cells[0].Value = item.MaCX;
+                        dgvLichTong.Rows[index].Cells[2].Value = item.Ngaydi;
+                        dgvLichTong.Rows[index].Cells[1].Value = item.Xe.LoaiXe.TenLoai;
+                        dgvLichTong.Rows[index].Cells[3].Value = item.BenXe.Ten;
+                        dgvLichTong.Rows[index].Cells[4].Value = item.BenXe1.Ten;
+                        dgvLichTong.Rows[index].Cells[5].Value = item.GiaVe;
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy Mã Vé Xe này", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
         // Switch TabPage : Chuyển tab bằng button 
         private void btnCalendar_Click(object sender, EventArgs e)
         {
-            tabpageVeXe.SelectTab(0);
+            tpgManageBus.SelectTab(0);
+            RefreshDB();
+            cmbMaXe_Chuyen.Text = "";
         }
 
         private void btnTickets_Click(object sender, EventArgs e)
         {
-            tabpageVeXe.SelectTab(1);
+            tpgManageBus.SelectTab(1);
+            RefreshDB();
+            cmbMaXe_Chuyen.Text = "";
         }
 
         private void button_WOC3_Click(object sender, EventArgs e)
         {
-            tabpageVeXe.SelectTab(2);
+            tpgManageBus.SelectTab(2);
+            RefreshDB();
+            cmbMaXe_Chuyen.Text = "";
         }
 
         private void button_WOC4_Click(object sender, EventArgs e)
         {
-            tabpageVeXe.SelectTab(3);
+            tpgManageBus.SelectTab(3);
+            RefreshDB();
+            cmbMaXe_Chuyen.Text = "";
         }
 
         private void button_WOC5_Click(object sender, EventArgs e)
         {
-            tabpageVeXe.SelectTab(4);
+            tpgManageBus.SelectTab(4);
+            RefreshDB();
+            cmbMaXe_Chuyen.Text = "";
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
-            tabpageVeXe.SelectTab(5);
+            tpgManageBus.SelectTab(5);
+            RefreshDB();
+            cmbMaXe_Chuyen.Text = "";
         }
 
-        private void tpXe_Click(object sender, EventArgs e)
+        private void button_WOC7_Click(object sender, EventArgs e)
         {
-
+            Application.Restart();
         }
-
-        private void button_WOC9_Click(object sender, EventArgs e)
-        {
-            using (var _contextDB = new DataAccessLayer())
-            {
-                VeXe dbVeXe = _contextDB.VeXes.FirstOrDefault(x => x.MaVe == this.idVeXe);
-                if (dbVeXe != null)
-                {
-                    _contextDB.VeXes.Remove(dbVeXe);
-                    _contextDB.SaveChanges();
-                    MessageBox.Show("Hủy Thành Công !");
-                }
-                else
-                {
-                    MessageBox.Show("Lỗi");
-                }
-                ShowVe();
-            }
-        }
-
-       
-
     }
 }

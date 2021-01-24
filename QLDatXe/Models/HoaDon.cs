@@ -24,7 +24,5 @@ namespace QLDatXe.Models
         public int trangthai { get; set; }
 
         public int giamgia { get; set; }
-
-        public virtual VeXe VeXe { get; set; }
     }
 }

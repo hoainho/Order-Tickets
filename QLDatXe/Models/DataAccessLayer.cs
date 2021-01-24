@@ -13,9 +13,8 @@ namespace QLDatXe.Models
         }
 
         public virtual DbSet<BenXe> BenXes { get; set; }
-        public virtual DbSet<ChiTietXe> ChiTietXes { get; set; }
+        public virtual DbSet<ChiTietCX> ChiTietCXes { get; set; }
         public virtual DbSet<ChuyenXe> ChuyenXes { get; set; }
-        public virtual DbSet<Ghe> Ghes { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<LoaiXe> LoaiXes { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
@@ -37,7 +36,12 @@ namespace QLDatXe.Models
                 .HasForeignKey(e => e.MaBXDen)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<ChiTietXe>()
+            modelBuilder.Entity<ChiTietCX>()
+                .Property(e => e.MaCX)
+                .IsFixedLength()
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ChiTietCX>()
                 .Property(e => e.MaXe)
                 .IsFixedLength()
                 .IsUnicode(false);
@@ -53,13 +57,13 @@ namespace QLDatXe.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<ChuyenXe>()
-                .HasMany(e => e.VeXes)
+                .HasMany(e => e.ChiTietCXes)
                 .WithRequired(e => e.ChuyenXe)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Ghe>()
-                .HasMany(e => e.ChiTietXes)
-                .WithRequired(e => e.Ghe)
+            modelBuilder.Entity<ChuyenXe>()
+                .HasMany(e => e.VeXes)
+                .WithRequired(e => e.ChuyenXe)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<HoaDon>()
@@ -82,6 +86,16 @@ namespace QLDatXe.Models
                 .Property(e => e.type)
                 .IsFixedLength();
 
+            modelBuilder.Entity<TaiKhoan>()
+                .HasMany(e => e.VeXes)
+                .WithRequired(e => e.TaiKhoan)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<VeXe>()
+                .Property(e => e.MaVe)
+                .IsFixedLength()
+                .IsUnicode(false);
+
             modelBuilder.Entity<VeXe>()
                 .Property(e => e.MaXe)
                 .IsFixedLength()
@@ -93,9 +107,9 @@ namespace QLDatXe.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<VeXe>()
-                .HasMany(e => e.HoaDons)
-                .WithRequired(e => e.VeXe)
-                .WillCascadeOnDelete(false);
+                .Property(e => e.userName)
+                .IsFixedLength()
+                .IsUnicode(false);
 
             modelBuilder.Entity<Xe>()
                 .Property(e => e.MaXe)
@@ -103,7 +117,7 @@ namespace QLDatXe.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Xe>()
-                .HasMany(e => e.ChiTietXes)
+                .HasMany(e => e.ChiTietCXes)
                 .WithRequired(e => e.Xe)
                 .WillCascadeOnDelete(false);
 

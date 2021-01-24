@@ -9,7 +9,13 @@ namespace QLDatXe.Models
     [Table("TaiKhoan")]
     public partial class TaiKhoan
     {
-        [Required]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TaiKhoan()
+        {
+            VeXes = new HashSet<VeXe>();
+        }
+
+        [Key]
         [StringLength(20)]
         public string userName { get; set; }
 
@@ -17,8 +23,6 @@ namespace QLDatXe.Models
         [StringLength(200)]
         public string displayName { get; set; }
 
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int numberPhone { get; set; }
 
         [Required]
@@ -28,5 +32,8 @@ namespace QLDatXe.Models
         [Required]
         [StringLength(200)]
         public string address { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VeXe> VeXes { get; set; }
     }
 }

@@ -68,11 +68,11 @@ namespace QLDatXe
             }
             else
             {
-                if (this.account.type == "User")
+                if (this.account.type.Trim() == "user")
                 {
                     mnsHome.Visible = !status;
                     mnsHelp.Visible = !status;
-                    mnsTour.Visible = !status;
+                    mnsAccount.Visible = !status;
                 }
                 else
                 {

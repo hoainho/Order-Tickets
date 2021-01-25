@@ -104,7 +104,7 @@ namespace QLDatXe
             this.txtAccountType.Name = "txtAccountType";
             this.txtAccountType.Size = new System.Drawing.Size(246, 22);
             this.txtAccountType.TabIndex = 13;
-            this.txtAccountType.Text = "User";
+            this.txtAccountType.Text = "user";
             this.txtAccountType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtUserName

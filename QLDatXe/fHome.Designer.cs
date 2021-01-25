@@ -94,6 +94,7 @@ namespace QLDatXe
             this.mnsStatis.Name = "mnsStatis";
             this.mnsStatis.Size = new System.Drawing.Size(106, 24);
             this.mnsStatis.Text = "Thống Kê";
+            this.mnsStatis.Click += new System.EventHandler(this.mnsStatis_Click);
             // 
             // mnsHelp
             // 

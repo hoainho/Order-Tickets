@@ -98,6 +98,7 @@ namespace QLDatXe
             this.txtPassword.Size = new System.Drawing.Size(246, 22);
             this.txtPassword.TabIndex = 10;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // txtUserName
             // 

@@ -72,6 +72,7 @@ namespace QLDatXe
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tpVe = new System.Windows.Forms.TabPage();
+            this.cmbMaXe_DatVe = new System.Windows.Forms.ComboBox();
             this.cmbTenLoaiXe_DatVe = new System.Windows.Forms.ComboBox();
             this.cmbLoaiXe_DatVe = new System.Windows.Forms.ComboBox();
             this.cmbTemp = new System.Windows.Forms.ComboBox();
@@ -176,7 +177,6 @@ namespace QLDatXe
             this.panel1 = new System.Windows.Forms.Panel();
             this.NotificationError = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpTrangThaiVe = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cmbMaXe_DatVe = new System.Windows.Forms.ComboBox();
             this.btnBuyNow = new ePOSOne.btnProduct.Button_WOC();
             this.btnTimKiemVe = new ePOSOne.btnProduct.Button_WOC();
             this.btnGetTickets = new ePOSOne.btnProduct.Button_WOC();
@@ -505,9 +505,9 @@ namespace QLDatXe
             this.lblSoGheCon.AutoSize = true;
             this.lblSoGheCon.Location = new System.Drawing.Point(167, 51);
             this.lblSoGheCon.Name = "lblSoGheCon";
-            this.lblSoGheCon.Size = new System.Drawing.Size(48, 17);
+            this.lblSoGheCon.Size = new System.Drawing.Size(16, 17);
             this.lblSoGheCon.TabIndex = 1;
-            this.lblSoGheCon.Text = "_____";
+            this.lblSoGheCon.Text = "0";
             // 
             // groupBox3
             // 
@@ -659,6 +659,15 @@ namespace QLDatXe
             this.tpVe.Text = "Khu Bán Vé";
             this.tpVe.UseVisualStyleBackColor = true;
             // 
+            // cmbMaXe_DatVe
+            // 
+            this.cmbMaXe_DatVe.FormattingEnabled = true;
+            this.cmbMaXe_DatVe.Location = new System.Drawing.Point(199, 170);
+            this.cmbMaXe_DatVe.Name = "cmbMaXe_DatVe";
+            this.cmbMaXe_DatVe.Size = new System.Drawing.Size(104, 24);
+            this.cmbMaXe_DatVe.TabIndex = 29;
+            this.cmbMaXe_DatVe.TextChanged += new System.EventHandler(this.cmbMaXe_DatVe_TextChanged);
+            // 
             // cmbTenLoaiXe_DatVe
             // 
             this.cmbTenLoaiXe_DatVe.FormattingEnabled = true;
@@ -709,6 +718,7 @@ namespace QLDatXe
             this.dgvVeXe.Size = new System.Drawing.Size(977, 186);
             this.dgvVeXe.TabIndex = 4;
             this.dgvVeXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVeXe_CellClick);
+            this.dgvVeXe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVeXe_CellContentClick);
             // 
             // colMaVe
             // 
@@ -948,7 +958,6 @@ namespace QLDatXe
             this.cmbMaXe_Chuyen.Name = "cmbMaXe_Chuyen";
             this.cmbMaXe_Chuyen.Size = new System.Drawing.Size(293, 24);
             this.cmbMaXe_Chuyen.TabIndex = 44;
-            this.cmbMaXe_Chuyen.SelectedValueChanged += new System.EventHandler(this.cmbMaXe_Chuyen_SelectedValueChanged);
             // 
             // dtpChuyenXe
             // 
@@ -1581,7 +1590,7 @@ namespace QLDatXe
             this.pnlManager.Controls.Add(this.button_WOC5);
             this.pnlManager.Controls.Add(this.button_WOC4);
             this.pnlManager.Controls.Add(this.button_WOC3);
-            this.pnlManager.Location = new System.Drawing.Point(10, 152);
+            this.pnlManager.Location = new System.Drawing.Point(10, 146);
             this.pnlManager.Name = "pnlManager";
             this.pnlManager.Size = new System.Drawing.Size(200, 257);
             this.pnlManager.TabIndex = 3;
@@ -1673,15 +1682,6 @@ namespace QLDatXe
             // erpTrangThaiVe
             // 
             this.erpTrangThaiVe.ContainerControl = this;
-            // 
-            // cmbMaXe_DatVe
-            // 
-            this.cmbMaXe_DatVe.FormattingEnabled = true;
-            this.cmbMaXe_DatVe.Location = new System.Drawing.Point(199, 170);
-            this.cmbMaXe_DatVe.Name = "cmbMaXe_DatVe";
-            this.cmbMaXe_DatVe.Size = new System.Drawing.Size(104, 24);
-            this.cmbMaXe_DatVe.TabIndex = 29;
-            this.cmbMaXe_DatVe.TextChanged += new System.EventHandler(this.cmbMaXe_DatVe_TextChanged);
             // 
             // btnBuyNow
             // 

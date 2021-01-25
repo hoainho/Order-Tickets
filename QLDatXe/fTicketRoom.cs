@@ -41,6 +41,7 @@ namespace QLDatXe
         private void fTicketRoom_Load(object sender, EventArgs e)
         {
             //init Database
+
             controlVisible();
             txtTenKhach.Text = this.account.displayName;
             txtSDT.Text = this.account.numberPhone.ToString();
@@ -88,7 +89,7 @@ namespace QLDatXe
             ShowCmbChuyenXe_DatVe();
             //Show datagridview
             ShowChuyenXe();
-            //ShowTongChuyenXe();
+            ShowTongChuyenXe();
             ShowVe();
             ShowXe();
             ShowBenXe();
@@ -230,9 +231,9 @@ namespace QLDatXe
         {
             using (var _contextDB = new DataAccessLayer())
             {
-                if (this.account.type == "user")
+                if (this.account.type.Trim() == "user")
                 {
-                    List<VeXe> listVeXe = _contextDB.VeXes.Where(x => x.userName == this.account.userName).ToList();
+                    List<VeXe> listVeXe = _contextDB.VeXes.Where(x => x.userName.Trim() == this.account.userName.Trim()).ToList();
                     dgvVeXe.Rows.Clear();
                     foreach (VeXe item in listVeXe)
                     {
@@ -452,6 +453,12 @@ namespace QLDatXe
                         MessageBox.Show("Mã Chuyến " + item.MaCX + " Đã Tồn Tại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
+                    if (item.MaXe == cmbMaXe_Chuyen.Text)
+                    {
+                        MessageBox.Show("Xe này đang chạy, vui lòng chọn xe khác", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    
                 }
                 ChuyenXe chuyenXe = new ChuyenXe();
                 chuyenXe.MaCX = cmbMaChuyen.Text.Trim();
@@ -582,7 +589,7 @@ namespace QLDatXe
         }
         private void btnBuyNow_Click(object sender, EventArgs e)
         {
-            if (txtTenKhach.Text == "" || txtSDT.Text == "")
+            if (lblMaXe .Text == "")
             {
                 MessageBox.Show("Vui lòng chọn chuyến xe muốn đi bên dưới bảng chọn !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -694,6 +701,15 @@ namespace QLDatXe
             }
             using (var _contextDB = new DataAccessLayer())
             {
+                List<ChuyenXe> listCX = _contextDB.ChuyenXes.ToList();
+                foreach (ChuyenXe item in listCX)
+                {
+                    if (item.MaXe == cmbMaXe_Chuyen.Text)
+                    {
+                        MessageBox.Show("Xe này đang chạy, vui lòng chọn xe khác", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
                 ChuyenXe dbChuyenXe = _contextDB.ChuyenXes.FirstOrDefault(x => x.MaCX == this.idChuyen);
                 if (dbChuyenXe != null)
                 {
@@ -717,7 +733,7 @@ namespace QLDatXe
                 dtpChuyenXe.Text = DateTime.Now.ToString();
                 cmbMaXe_Chuyen.SelectedIndex = 0;
                 txtGiaVe.Text = "";
-
+                    
             }
         }
 
@@ -898,7 +914,7 @@ namespace QLDatXe
         //        return;
         //    }
         //}
-        private void cmbMaXe_Chuyen_SelectedValueChanged(object sender, EventArgs e)
+        private void cmbMaXe_Chuyen_TextChanged(object sender, EventArgs e)
         {
             using (var _contextBD = new DataAccessLayer())
             {
@@ -1038,6 +1054,11 @@ namespace QLDatXe
         private void button_WOC7_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void dgvVeXe_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

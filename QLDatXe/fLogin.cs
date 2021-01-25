@@ -86,5 +86,13 @@ namespace QLDatXe
                 e.Cancel = true;
             }
         }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSignIn_Click(sender, e);
+            }
+        }
     }
 }

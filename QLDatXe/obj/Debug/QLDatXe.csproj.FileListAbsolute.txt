@@ -76,3 +76,7 @@ D:\Dev-C#\QLDatXe\QLDatXe\QLDatXe\bin\Debug\rptVeXe.rdlc
 D:\Dev-C#\QLDatXe\QLDatXe\QLDatXe\obj\Debug\QLDatXe.ReportVeXe.resources
 D:\Dev-C#\QLDatXe\QLDatXe\QLDatXe\obj\Debug\RdlCompile.cache
 D:\Dev-C#\QLDatXe\QLDatXe\QLDatXe\obj\Debug\RdlCompile.compiled
+D:\Dev-C#\QLDatXe\QLDatXe\QLDatXe\obj\Debug\QLDatXe.fStatic.resources
+D:\Dev-C#\QLDatXe\QLDatXe\QLDatXe\obj\Debug\QLDatXe.fManageTicket.resources
+D:\Dev-C#\QLDatXe\QLDatXe\QLDatXe\obj\Debug\QLDatXe.ReportThongKe.resources
+D:\Dev-C#\QLDatXe\QLDatXe\QLDatXe\bin\Debug\rptThongKe.rdlc

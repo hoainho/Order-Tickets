@@ -48,10 +48,9 @@ namespace QLDatXe
         {
             this.account = acc;
             mnsAccount.Text = string.Format(acc.displayName);
-            MessageBox.Show("Xin Chào "+ account.displayName );
             OpenRoom();
-
             toolVisible(false);
+            MessageBox.Show("Xin Chào " + account.displayName);
         }
 
         private void toolVisible(bool status)
@@ -104,7 +103,22 @@ namespace QLDatXe
             }
             frmChild.Activate();
         }
+        public void OpenStatic()
+        {
+            Form frmChild = this.MdiChildren.OfType<fStatic>().FirstOrDefault();
 
+            if (frmChild == null)
+            {
+                fStatic frm = new fStatic(account);
+                frm.MdiParent = this;
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.FormBorderStyle = FormBorderStyle.None;
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+                return;
+            }
+            frmChild.Activate();
+        }
         private void mnsHome_Click(object sender, EventArgs e)
         {
             OpenRoom();
@@ -112,7 +126,24 @@ namespace QLDatXe
 
         private void mnsManageTickets_Click(object sender, EventArgs e)
         {
+            Form frmChild = this.MdiChildren.OfType<fManageTicket>().FirstOrDefault();
 
+            if (frmChild == null)
+            {
+                fManageTicket frm = new fManageTicket(account);
+                frm.MdiParent = this;
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.FormBorderStyle = FormBorderStyle.None;
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+                return;
+            }
+            frmChild.Activate();
+        }
+
+        private void mnsStatis_Click(object sender, EventArgs e)
+        {
+            OpenStatic();
         }
     }
 }

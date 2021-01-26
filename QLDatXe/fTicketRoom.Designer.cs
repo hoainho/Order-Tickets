@@ -71,7 +71,9 @@ namespace QLDatXe
             this.lblMaChuyenXe = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnBuyNow = new ePOSOne.btnProduct.Button_WOC();
             this.tpVe = new System.Windows.Forms.TabPage();
+            this.btnTimKiemVe = new ePOSOne.btnProduct.Button_WOC();
             this.cmbMaXe_DatVe = new System.Windows.Forms.ComboBox();
             this.cmbTenLoaiXe_DatVe = new System.Windows.Forms.ComboBox();
             this.cmbLoaiXe_DatVe = new System.Windows.Forms.ComboBox();
@@ -99,6 +101,11 @@ namespace QLDatXe
             this.label32 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
+            this.btnGetTickets = new ePOSOne.btnProduct.Button_WOC();
+            this.btnResetVe = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC9 = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC8 = new ePOSOne.btnProduct.Button_WOC();
+            this.btnAddVeXe = new ePOSOne.btnProduct.Button_WOC();
             this.tpQLLich = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbMaChuyen = new System.Windows.Forms.ComboBox();
@@ -121,6 +128,10 @@ namespace QLDatXe
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
+            this.btnXoaChuyen = new ePOSOne.btnProduct.Button_WOC();
+            this.btnSuaChuyen = new ePOSOne.btnProduct.Button_WOC();
+            this.btnAddChuyen = new ePOSOne.btnProduct.Button_WOC();
+            this.btnTimKiemChuyen = new ePOSOne.btnProduct.Button_WOC();
             this.tpXe = new System.Windows.Forms.TabPage();
             this.txtSoGhe = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -133,6 +144,9 @@ namespace QLDatXe
             this.panel13 = new System.Windows.Forms.Panel();
             this.label36 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
+            this.btnXoaXe = new ePOSOne.btnProduct.Button_WOC();
+            this.btnSuaXe = new ePOSOne.btnProduct.Button_WOC();
+            this.btnThemXe = new ePOSOne.btnProduct.Button_WOC();
             this.tpBenXe = new System.Windows.Forms.TabPage();
             this.dgvBenXe = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -143,6 +157,9 @@ namespace QLDatXe
             this.txtDiaChiBX = new System.Windows.Forms.TextBox();
             this.lblTenBX = new System.Windows.Forms.Label();
             this.lblDiaChi = new System.Windows.Forms.Label();
+            this.btnXoaBX = new ePOSOne.btnProduct.Button_WOC();
+            this.btnSuaBX = new ePOSOne.btnProduct.Button_WOC();
+            this.btnAddBX = new ePOSOne.btnProduct.Button_WOC();
             this.tpNhanVien = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -165,46 +182,29 @@ namespace QLDatXe
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC2 = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC6 = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC10 = new ePOSOne.btnProduct.Button_WOC();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pnlManager = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.NotificationError = new System.Windows.Forms.ErrorProvider(this.components);
-            this.erpTrangThaiVe = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnBuyNow = new ePOSOne.btnProduct.Button_WOC();
-            this.btnTimKiemVe = new ePOSOne.btnProduct.Button_WOC();
-            this.btnGetTickets = new ePOSOne.btnProduct.Button_WOC();
-            this.btnResetVe = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC9 = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC8 = new ePOSOne.btnProduct.Button_WOC();
-            this.btnAddVeXe = new ePOSOne.btnProduct.Button_WOC();
-            this.btnXoaChuyen = new ePOSOne.btnProduct.Button_WOC();
-            this.btnSuaChuyen = new ePOSOne.btnProduct.Button_WOC();
-            this.btnAddChuyen = new ePOSOne.btnProduct.Button_WOC();
-            this.btnTimKiemChuyen = new ePOSOne.btnProduct.Button_WOC();
-            this.btnXoaXe = new ePOSOne.btnProduct.Button_WOC();
-            this.btnSuaXe = new ePOSOne.btnProduct.Button_WOC();
-            this.btnThemXe = new ePOSOne.btnProduct.Button_WOC();
-            this.btnXoaBX = new ePOSOne.btnProduct.Button_WOC();
-            this.btnSuaBX = new ePOSOne.btnProduct.Button_WOC();
-            this.btnAddBX = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC2 = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC6 = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC10 = new ePOSOne.btnProduct.Button_WOC();
             this.btnStaff = new ePOSOne.btnProduct.Button_WOC();
             this.button_WOC5 = new ePOSOne.btnProduct.Button_WOC();
             this.button_WOC4 = new ePOSOne.btnProduct.Button_WOC();
             this.button_WOC3 = new ePOSOne.btnProduct.Button_WOC();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.button_WOC7 = new ePOSOne.btnProduct.Button_WOC();
             this.btnTickets = new ePOSOne.btnProduct.Button_WOC();
             this.btnCalendar = new ePOSOne.btnProduct.Button_WOC();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.NotificationError = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpTrangThaiVe = new System.Windows.Forms.ErrorProvider(this.components);
             this.tpgManageBus.SuspendLayout();
             this.tpLich.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLichChay)).BeginInit();
@@ -271,6 +271,7 @@ namespace QLDatXe
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(67, 65);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // dgvLichChay
             // 
@@ -622,6 +623,35 @@ namespace QLDatXe
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Chuyến Xe :";
             // 
+            // btnBuyNow
+            // 
+            this.btnBuyNow.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuyNow.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnBuyNow.ButtonColor = System.Drawing.Color.White;
+            this.btnBuyNow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuyNow.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnBuyNow.FlatAppearance.BorderSize = 0;
+            this.btnBuyNow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBuyNow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBuyNow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuyNow.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuyNow.ForeColor = System.Drawing.Color.Transparent;
+            this.btnBuyNow.Location = new System.Drawing.Point(672, 6);
+            this.btnBuyNow.Name = "btnBuyNow";
+            this.btnBuyNow.OnHoverBorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnBuyNow.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
+            this.btnBuyNow.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnBuyNow.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnBuyNow.Size = new System.Drawing.Size(312, 81);
+            this.btnBuyNow.TabIndex = 1;
+            this.btnBuyNow.Text = "MUA VÉ NGAY";
+            this.btnBuyNow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuyNow.TextColor = System.Drawing.Color.Black;
+            this.btnBuyNow.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnBuyNow.UseCompatibleTextRendering = true;
+            this.btnBuyNow.UseVisualStyleBackColor = false;
+            this.btnBuyNow.Click += new System.EventHandler(this.btnBuyNow_Click);
+            // 
             // tpVe
             // 
             this.tpVe.Controls.Add(this.btnTimKiemVe);
@@ -658,6 +688,26 @@ namespace QLDatXe
             this.tpVe.TabIndex = 1;
             this.tpVe.Text = "Khu Bán Vé";
             this.tpVe.UseVisualStyleBackColor = true;
+            // 
+            // btnTimKiemVe
+            // 
+            this.btnTimKiemVe.BackColor = System.Drawing.Color.Transparent;
+            this.btnTimKiemVe.BorderColor = System.Drawing.Color.Transparent;
+            this.btnTimKiemVe.ButtonColor = System.Drawing.Color.CornflowerBlue;
+            this.btnTimKiemVe.FlatAppearance.BorderSize = 0;
+            this.btnTimKiemVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiemVe.ForeColor = System.Drawing.Color.Transparent;
+            this.btnTimKiemVe.Location = new System.Drawing.Point(500, 14);
+            this.btnTimKiemVe.Name = "btnTimKiemVe";
+            this.btnTimKiemVe.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnTimKiemVe.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
+            this.btnTimKiemVe.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnTimKiemVe.Size = new System.Drawing.Size(89, 33);
+            this.btnTimKiemVe.TabIndex = 30;
+            this.btnTimKiemVe.Text = "Tìm Kiếm";
+            this.btnTimKiemVe.TextColor = System.Drawing.Color.Black;
+            this.btnTimKiemVe.UseVisualStyleBackColor = false;
+            this.btnTimKiemVe.Click += new System.EventHandler(this.btnTimKiemVe_Click);
             // 
             // cmbMaXe_DatVe
             // 
@@ -905,6 +955,106 @@ namespace QLDatXe
             this.label29.TabIndex = 0;
             this.label29.Text = "Mã Vé :";
             // 
+            // btnGetTickets
+            // 
+            this.btnGetTickets.BackColor = System.Drawing.Color.Transparent;
+            this.btnGetTickets.BorderColor = System.Drawing.Color.Black;
+            this.btnGetTickets.ButtonColor = System.Drawing.Color.White;
+            this.btnGetTickets.FlatAppearance.BorderSize = 0;
+            this.btnGetTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetTickets.ForeColor = System.Drawing.Color.Transparent;
+            this.btnGetTickets.Location = new System.Drawing.Point(687, 220);
+            this.btnGetTickets.Name = "btnGetTickets";
+            this.btnGetTickets.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnGetTickets.OnHoverButtonColor = System.Drawing.Color.SandyBrown;
+            this.btnGetTickets.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnGetTickets.Size = new System.Drawing.Size(174, 50);
+            this.btnGetTickets.TabIndex = 1;
+            this.btnGetTickets.Text = "Lấy Vé";
+            this.btnGetTickets.TextColor = System.Drawing.Color.Black;
+            this.btnGetTickets.UseVisualStyleBackColor = false;
+            this.btnGetTickets.Click += new System.EventHandler(this.btnGetTickets_Click);
+            // 
+            // btnResetVe
+            // 
+            this.btnResetVe.BackColor = System.Drawing.Color.Transparent;
+            this.btnResetVe.BorderColor = System.Drawing.Color.Black;
+            this.btnResetVe.ButtonColor = System.Drawing.Color.White;
+            this.btnResetVe.FlatAppearance.BorderSize = 0;
+            this.btnResetVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetVe.ForeColor = System.Drawing.Color.Transparent;
+            this.btnResetVe.Location = new System.Drawing.Point(581, 149);
+            this.btnResetVe.Name = "btnResetVe";
+            this.btnResetVe.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnResetVe.OnHoverButtonColor = System.Drawing.Color.SandyBrown;
+            this.btnResetVe.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnResetVe.Size = new System.Drawing.Size(174, 50);
+            this.btnResetVe.TabIndex = 1;
+            this.btnResetVe.Text = "Reset";
+            this.btnResetVe.TextColor = System.Drawing.Color.Black;
+            this.btnResetVe.UseVisualStyleBackColor = false;
+            this.btnResetVe.Click += new System.EventHandler(this.btnResetVe_Click);
+            // 
+            // button_WOC9
+            // 
+            this.button_WOC9.BackColor = System.Drawing.Color.Transparent;
+            this.button_WOC9.BorderColor = System.Drawing.Color.Black;
+            this.button_WOC9.ButtonColor = System.Drawing.Color.White;
+            this.button_WOC9.FlatAppearance.BorderSize = 0;
+            this.button_WOC9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC9.ForeColor = System.Drawing.Color.Transparent;
+            this.button_WOC9.Location = new System.Drawing.Point(779, 144);
+            this.button_WOC9.Name = "button_WOC9";
+            this.button_WOC9.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.button_WOC9.OnHoverButtonColor = System.Drawing.Color.DarkOrange;
+            this.button_WOC9.OnHoverTextColor = System.Drawing.Color.Black;
+            this.button_WOC9.Size = new System.Drawing.Size(174, 50);
+            this.button_WOC9.TabIndex = 1;
+            this.button_WOC9.Text = "Hủy Vé";
+            this.button_WOC9.TextColor = System.Drawing.Color.Black;
+            this.button_WOC9.UseVisualStyleBackColor = false;
+            this.button_WOC9.Click += new System.EventHandler(this.button_WOC9_Click);
+            // 
+            // button_WOC8
+            // 
+            this.button_WOC8.BackColor = System.Drawing.Color.Transparent;
+            this.button_WOC8.BorderColor = System.Drawing.Color.Black;
+            this.button_WOC8.ButtonColor = System.Drawing.Color.White;
+            this.button_WOC8.FlatAppearance.BorderSize = 0;
+            this.button_WOC8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC8.ForeColor = System.Drawing.Color.Transparent;
+            this.button_WOC8.Location = new System.Drawing.Point(779, 76);
+            this.button_WOC8.Name = "button_WOC8";
+            this.button_WOC8.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.button_WOC8.OnHoverButtonColor = System.Drawing.Color.Orange;
+            this.button_WOC8.OnHoverTextColor = System.Drawing.Color.Black;
+            this.button_WOC8.Size = new System.Drawing.Size(174, 50);
+            this.button_WOC8.TabIndex = 1;
+            this.button_WOC8.Text = "Sửa Vé";
+            this.button_WOC8.TextColor = System.Drawing.Color.Black;
+            this.button_WOC8.UseVisualStyleBackColor = false;
+            this.button_WOC8.Click += new System.EventHandler(this.btnSuaVeXe_Click);
+            // 
+            // btnAddVeXe
+            // 
+            this.btnAddVeXe.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddVeXe.BorderColor = System.Drawing.Color.Black;
+            this.btnAddVeXe.ButtonColor = System.Drawing.Color.White;
+            this.btnAddVeXe.FlatAppearance.BorderSize = 0;
+            this.btnAddVeXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddVeXe.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddVeXe.Location = new System.Drawing.Point(577, 76);
+            this.btnAddVeXe.Name = "btnAddVeXe";
+            this.btnAddVeXe.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnAddVeXe.OnHoverButtonColor = System.Drawing.Color.NavajoWhite;
+            this.btnAddVeXe.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnAddVeXe.Size = new System.Drawing.Size(174, 50);
+            this.btnAddVeXe.TabIndex = 1;
+            this.btnAddVeXe.Text = "Mua Vé";
+            this.btnAddVeXe.TextColor = System.Drawing.Color.Black;
+            this.btnAddVeXe.UseVisualStyleBackColor = false;
+            this.btnAddVeXe.Click += new System.EventHandler(this.btnAddVeXe_Click);
+            // 
             // tpQLLich
             // 
             this.tpQLLich.Controls.Add(this.label7);
@@ -1124,6 +1274,86 @@ namespace QLDatXe
             this.label44.TabIndex = 5;
             this.label44.Text = "Mã Chuyến Xe :";
             // 
+            // btnXoaChuyen
+            // 
+            this.btnXoaChuyen.BackColor = System.Drawing.Color.Transparent;
+            this.btnXoaChuyen.BorderColor = System.Drawing.Color.Black;
+            this.btnXoaChuyen.ButtonColor = System.Drawing.Color.White;
+            this.btnXoaChuyen.FlatAppearance.BorderSize = 0;
+            this.btnXoaChuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaChuyen.ForeColor = System.Drawing.Color.Transparent;
+            this.btnXoaChuyen.Location = new System.Drawing.Point(655, 222);
+            this.btnXoaChuyen.Name = "btnXoaChuyen";
+            this.btnXoaChuyen.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnXoaChuyen.OnHoverButtonColor = System.Drawing.Color.DarkOrange;
+            this.btnXoaChuyen.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnXoaChuyen.Size = new System.Drawing.Size(174, 50);
+            this.btnXoaChuyen.TabIndex = 13;
+            this.btnXoaChuyen.Text = "Xóa Chuyến";
+            this.btnXoaChuyen.TextColor = System.Drawing.Color.Black;
+            this.btnXoaChuyen.UseVisualStyleBackColor = false;
+            this.btnXoaChuyen.Click += new System.EventHandler(this.btnXoaChuyenXe_Click);
+            // 
+            // btnSuaChuyen
+            // 
+            this.btnSuaChuyen.BackColor = System.Drawing.Color.Transparent;
+            this.btnSuaChuyen.BorderColor = System.Drawing.Color.Black;
+            this.btnSuaChuyen.ButtonColor = System.Drawing.Color.White;
+            this.btnSuaChuyen.FlatAppearance.BorderSize = 0;
+            this.btnSuaChuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaChuyen.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSuaChuyen.Location = new System.Drawing.Point(655, 143);
+            this.btnSuaChuyen.Name = "btnSuaChuyen";
+            this.btnSuaChuyen.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnSuaChuyen.OnHoverButtonColor = System.Drawing.Color.Orange;
+            this.btnSuaChuyen.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnSuaChuyen.Size = new System.Drawing.Size(174, 50);
+            this.btnSuaChuyen.TabIndex = 12;
+            this.btnSuaChuyen.Text = "Sửa Chuyến";
+            this.btnSuaChuyen.TextColor = System.Drawing.Color.Black;
+            this.btnSuaChuyen.UseVisualStyleBackColor = false;
+            this.btnSuaChuyen.Click += new System.EventHandler(this.btnSuaChuyen_Click);
+            // 
+            // btnAddChuyen
+            // 
+            this.btnAddChuyen.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddChuyen.BorderColor = System.Drawing.Color.Black;
+            this.btnAddChuyen.ButtonColor = System.Drawing.Color.White;
+            this.btnAddChuyen.FlatAppearance.BorderSize = 0;
+            this.btnAddChuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddChuyen.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddChuyen.Location = new System.Drawing.Point(655, 68);
+            this.btnAddChuyen.Name = "btnAddChuyen";
+            this.btnAddChuyen.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnAddChuyen.OnHoverButtonColor = System.Drawing.Color.NavajoWhite;
+            this.btnAddChuyen.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnAddChuyen.Size = new System.Drawing.Size(174, 50);
+            this.btnAddChuyen.TabIndex = 20;
+            this.btnAddChuyen.Text = "Thêm Chuyến";
+            this.btnAddChuyen.TextColor = System.Drawing.Color.Black;
+            this.btnAddChuyen.UseVisualStyleBackColor = false;
+            this.btnAddChuyen.Click += new System.EventHandler(this.btnAddChuyen_Click);
+            // 
+            // btnTimKiemChuyen
+            // 
+            this.btnTimKiemChuyen.BackColor = System.Drawing.Color.Transparent;
+            this.btnTimKiemChuyen.BorderColor = System.Drawing.Color.Transparent;
+            this.btnTimKiemChuyen.ButtonColor = System.Drawing.Color.CornflowerBlue;
+            this.btnTimKiemChuyen.FlatAppearance.BorderSize = 0;
+            this.btnTimKiemChuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiemChuyen.ForeColor = System.Drawing.Color.Transparent;
+            this.btnTimKiemChuyen.Location = new System.Drawing.Point(448, 18);
+            this.btnTimKiemChuyen.Name = "btnTimKiemChuyen";
+            this.btnTimKiemChuyen.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnTimKiemChuyen.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
+            this.btnTimKiemChuyen.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnTimKiemChuyen.Size = new System.Drawing.Size(89, 33);
+            this.btnTimKiemChuyen.TabIndex = 15;
+            this.btnTimKiemChuyen.Text = "Tìm Kiếm";
+            this.btnTimKiemChuyen.TextColor = System.Drawing.Color.Black;
+            this.btnTimKiemChuyen.UseVisualStyleBackColor = false;
+            this.btnTimKiemChuyen.Click += new System.EventHandler(this.btnTimKiemChuyen_Click);
+            // 
             // tpXe
             // 
             this.tpXe.Controls.Add(this.txtSoGhe);
@@ -1245,6 +1475,66 @@ namespace QLDatXe
             this.label45.TabIndex = 27;
             this.label45.Text = "Mã Xe :";
             // 
+            // btnXoaXe
+            // 
+            this.btnXoaXe.BackColor = System.Drawing.Color.Transparent;
+            this.btnXoaXe.BorderColor = System.Drawing.Color.Black;
+            this.btnXoaXe.ButtonColor = System.Drawing.Color.White;
+            this.btnXoaXe.FlatAppearance.BorderSize = 0;
+            this.btnXoaXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaXe.ForeColor = System.Drawing.Color.Transparent;
+            this.btnXoaXe.Location = new System.Drawing.Point(653, 218);
+            this.btnXoaXe.Name = "btnXoaXe";
+            this.btnXoaXe.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnXoaXe.OnHoverButtonColor = System.Drawing.Color.DarkOrange;
+            this.btnXoaXe.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnXoaXe.Size = new System.Drawing.Size(174, 50);
+            this.btnXoaXe.TabIndex = 33;
+            this.btnXoaXe.Text = "Xóa Xe";
+            this.btnXoaXe.TextColor = System.Drawing.Color.Black;
+            this.btnXoaXe.UseVisualStyleBackColor = false;
+            this.btnXoaXe.Click += new System.EventHandler(this.btnXoaXe_Click);
+            // 
+            // btnSuaXe
+            // 
+            this.btnSuaXe.BackColor = System.Drawing.Color.Transparent;
+            this.btnSuaXe.BorderColor = System.Drawing.Color.Black;
+            this.btnSuaXe.ButtonColor = System.Drawing.Color.White;
+            this.btnSuaXe.FlatAppearance.BorderSize = 0;
+            this.btnSuaXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaXe.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSuaXe.Location = new System.Drawing.Point(653, 139);
+            this.btnSuaXe.Name = "btnSuaXe";
+            this.btnSuaXe.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnSuaXe.OnHoverButtonColor = System.Drawing.Color.Orange;
+            this.btnSuaXe.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnSuaXe.Size = new System.Drawing.Size(174, 50);
+            this.btnSuaXe.TabIndex = 32;
+            this.btnSuaXe.Text = "Sửa Xe";
+            this.btnSuaXe.TextColor = System.Drawing.Color.Black;
+            this.btnSuaXe.UseVisualStyleBackColor = false;
+            this.btnSuaXe.Click += new System.EventHandler(this.btnSuaXe_Click);
+            // 
+            // btnThemXe
+            // 
+            this.btnThemXe.BackColor = System.Drawing.Color.Transparent;
+            this.btnThemXe.BorderColor = System.Drawing.Color.Black;
+            this.btnThemXe.ButtonColor = System.Drawing.Color.White;
+            this.btnThemXe.FlatAppearance.BorderSize = 0;
+            this.btnThemXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemXe.ForeColor = System.Drawing.Color.Transparent;
+            this.btnThemXe.Location = new System.Drawing.Point(653, 64);
+            this.btnThemXe.Name = "btnThemXe";
+            this.btnThemXe.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnThemXe.OnHoverButtonColor = System.Drawing.Color.NavajoWhite;
+            this.btnThemXe.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnThemXe.Size = new System.Drawing.Size(174, 50);
+            this.btnThemXe.TabIndex = 38;
+            this.btnThemXe.Text = "Thêm Xe Mới";
+            this.btnThemXe.TextColor = System.Drawing.Color.Black;
+            this.btnThemXe.UseVisualStyleBackColor = false;
+            this.btnThemXe.Click += new System.EventHandler(this.btnThemXe_Click);
+            // 
             // tpBenXe
             // 
             this.tpBenXe.Controls.Add(this.dgvBenXe);
@@ -1344,6 +1634,66 @@ namespace QLDatXe
             this.lblDiaChi.Size = new System.Drawing.Size(65, 17);
             this.lblDiaChi.TabIndex = 45;
             this.lblDiaChi.Text = "Địa Chỉ : ";
+            // 
+            // btnXoaBX
+            // 
+            this.btnXoaBX.BackColor = System.Drawing.Color.Transparent;
+            this.btnXoaBX.BorderColor = System.Drawing.Color.Black;
+            this.btnXoaBX.ButtonColor = System.Drawing.Color.White;
+            this.btnXoaBX.FlatAppearance.BorderSize = 0;
+            this.btnXoaBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaBX.ForeColor = System.Drawing.Color.Transparent;
+            this.btnXoaBX.Location = new System.Drawing.Point(653, 203);
+            this.btnXoaBX.Name = "btnXoaBX";
+            this.btnXoaBX.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnXoaBX.OnHoverButtonColor = System.Drawing.Color.DarkOrange;
+            this.btnXoaBX.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnXoaBX.Size = new System.Drawing.Size(174, 50);
+            this.btnXoaBX.TabIndex = 48;
+            this.btnXoaBX.Text = "Xóa Bến Xe ";
+            this.btnXoaBX.TextColor = System.Drawing.Color.Black;
+            this.btnXoaBX.UseVisualStyleBackColor = false;
+            this.btnXoaBX.Click += new System.EventHandler(this.btnXoaBX_Click);
+            // 
+            // btnSuaBX
+            // 
+            this.btnSuaBX.BackColor = System.Drawing.Color.Transparent;
+            this.btnSuaBX.BorderColor = System.Drawing.Color.Black;
+            this.btnSuaBX.ButtonColor = System.Drawing.Color.White;
+            this.btnSuaBX.FlatAppearance.BorderSize = 0;
+            this.btnSuaBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaBX.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSuaBX.Location = new System.Drawing.Point(653, 124);
+            this.btnSuaBX.Name = "btnSuaBX";
+            this.btnSuaBX.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnSuaBX.OnHoverButtonColor = System.Drawing.Color.Orange;
+            this.btnSuaBX.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnSuaBX.Size = new System.Drawing.Size(174, 50);
+            this.btnSuaBX.TabIndex = 47;
+            this.btnSuaBX.Text = "Sửa Bến Xe";
+            this.btnSuaBX.TextColor = System.Drawing.Color.Black;
+            this.btnSuaBX.UseVisualStyleBackColor = false;
+            this.btnSuaBX.Click += new System.EventHandler(this.btnSuaBX_Click);
+            // 
+            // btnAddBX
+            // 
+            this.btnAddBX.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddBX.BorderColor = System.Drawing.Color.Black;
+            this.btnAddBX.ButtonColor = System.Drawing.Color.White;
+            this.btnAddBX.FlatAppearance.BorderSize = 0;
+            this.btnAddBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddBX.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddBX.Location = new System.Drawing.Point(653, 49);
+            this.btnAddBX.Name = "btnAddBX";
+            this.btnAddBX.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnAddBX.OnHoverButtonColor = System.Drawing.Color.NavajoWhite;
+            this.btnAddBX.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnAddBX.Size = new System.Drawing.Size(174, 50);
+            this.btnAddBX.TabIndex = 52;
+            this.btnAddBX.Text = "Thêm Bến Xe Mới";
+            this.btnAddBX.TextColor = System.Drawing.Color.Black;
+            this.btnAddBX.UseVisualStyleBackColor = false;
+            this.btnAddBX.Click += new System.EventHandler(this.btnAddBX_Click);
             // 
             // tpNhanVien
             // 
@@ -1561,477 +1911,6 @@ namespace QLDatXe
             this.label21.TabIndex = 48;
             this.label21.Text = "Mã Chuyến Xe :";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.groupBox1.Controls.Add(this.pnlManager);
-            this.groupBox1.Controls.Add(this.panel10);
-            this.groupBox1.Controls.Add(this.panel5);
-            this.groupBox1.Controls.Add(this.panel4);
-            this.groupBox1.Controls.Add(this.button_WOC7);
-            this.groupBox1.Controls.Add(this.btnTickets);
-            this.groupBox1.Controls.Add(this.btnCalendar);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(2, 177);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(232, 522);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Chức Năng";
-            // 
-            // pnlManager
-            // 
-            this.pnlManager.Controls.Add(this.panel9);
-            this.pnlManager.Controls.Add(this.panel8);
-            this.pnlManager.Controls.Add(this.panel7);
-            this.pnlManager.Controls.Add(this.panel6);
-            this.pnlManager.Controls.Add(this.btnStaff);
-            this.pnlManager.Controls.Add(this.button_WOC5);
-            this.pnlManager.Controls.Add(this.button_WOC4);
-            this.pnlManager.Controls.Add(this.button_WOC3);
-            this.pnlManager.Location = new System.Drawing.Point(10, 146);
-            this.pnlManager.Name = "pnlManager";
-            this.pnlManager.Size = new System.Drawing.Size(200, 257);
-            this.pnlManager.TabIndex = 3;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Transparent;
-            this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
-            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel9.Location = new System.Drawing.Point(30, 209);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(27, 30);
-            this.panel9.TabIndex = 7;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
-            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel8.Location = new System.Drawing.Point(30, 145);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(27, 30);
-            this.panel8.TabIndex = 8;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel7.BackgroundImage")));
-            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel7.Location = new System.Drawing.Point(30, 82);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(27, 30);
-            this.panel7.TabIndex = 9;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel6.Location = new System.Drawing.Point(30, 19);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(27, 30);
-            this.panel6.TabIndex = 10;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Transparent;
-            this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
-            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel10.Location = new System.Drawing.Point(43, 465);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(27, 30);
-            this.panel10.TabIndex = 2;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Location = new System.Drawing.Point(43, 101);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(27, 30);
-            this.panel5.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel4.Location = new System.Drawing.Point(43, 38);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(27, 30);
-            this.panel4.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(2, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1234, 158);
-            this.panel1.TabIndex = 4;
-            // 
-            // NotificationError
-            // 
-            this.NotificationError.ContainerControl = this;
-            this.NotificationError.Icon = ((System.Drawing.Icon)(resources.GetObject("NotificationError.Icon")));
-            // 
-            // erpTrangThaiVe
-            // 
-            this.erpTrangThaiVe.ContainerControl = this;
-            // 
-            // btnBuyNow
-            // 
-            this.btnBuyNow.BackColor = System.Drawing.Color.Transparent;
-            this.btnBuyNow.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnBuyNow.ButtonColor = System.Drawing.Color.White;
-            this.btnBuyNow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuyNow.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnBuyNow.FlatAppearance.BorderSize = 0;
-            this.btnBuyNow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnBuyNow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnBuyNow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuyNow.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuyNow.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBuyNow.Location = new System.Drawing.Point(672, 6);
-            this.btnBuyNow.Name = "btnBuyNow";
-            this.btnBuyNow.OnHoverBorderColor = System.Drawing.Color.RoyalBlue;
-            this.btnBuyNow.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
-            this.btnBuyNow.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnBuyNow.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnBuyNow.Size = new System.Drawing.Size(312, 81);
-            this.btnBuyNow.TabIndex = 1;
-            this.btnBuyNow.Text = "MUA VÉ NGAY";
-            this.btnBuyNow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuyNow.TextColor = System.Drawing.Color.Black;
-            this.btnBuyNow.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnBuyNow.UseCompatibleTextRendering = true;
-            this.btnBuyNow.UseVisualStyleBackColor = false;
-            this.btnBuyNow.Click += new System.EventHandler(this.btnBuyNow_Click);
-            // 
-            // btnTimKiemVe
-            // 
-            this.btnTimKiemVe.BackColor = System.Drawing.Color.Transparent;
-            this.btnTimKiemVe.BorderColor = System.Drawing.Color.Transparent;
-            this.btnTimKiemVe.ButtonColor = System.Drawing.Color.CornflowerBlue;
-            this.btnTimKiemVe.FlatAppearance.BorderSize = 0;
-            this.btnTimKiemVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemVe.ForeColor = System.Drawing.Color.Transparent;
-            this.btnTimKiemVe.Location = new System.Drawing.Point(500, 14);
-            this.btnTimKiemVe.Name = "btnTimKiemVe";
-            this.btnTimKiemVe.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnTimKiemVe.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
-            this.btnTimKiemVe.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnTimKiemVe.Size = new System.Drawing.Size(89, 33);
-            this.btnTimKiemVe.TabIndex = 30;
-            this.btnTimKiemVe.Text = "Tìm Kiếm";
-            this.btnTimKiemVe.TextColor = System.Drawing.Color.Black;
-            this.btnTimKiemVe.UseVisualStyleBackColor = false;
-            this.btnTimKiemVe.Click += new System.EventHandler(this.btnTimKiemVe_Click);
-            // 
-            // btnGetTickets
-            // 
-            this.btnGetTickets.BackColor = System.Drawing.Color.Transparent;
-            this.btnGetTickets.BorderColor = System.Drawing.Color.Black;
-            this.btnGetTickets.ButtonColor = System.Drawing.Color.White;
-            this.btnGetTickets.FlatAppearance.BorderSize = 0;
-            this.btnGetTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGetTickets.ForeColor = System.Drawing.Color.Transparent;
-            this.btnGetTickets.Location = new System.Drawing.Point(687, 220);
-            this.btnGetTickets.Name = "btnGetTickets";
-            this.btnGetTickets.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnGetTickets.OnHoverButtonColor = System.Drawing.Color.SandyBrown;
-            this.btnGetTickets.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnGetTickets.Size = new System.Drawing.Size(174, 50);
-            this.btnGetTickets.TabIndex = 1;
-            this.btnGetTickets.Text = "Lấy Vé";
-            this.btnGetTickets.TextColor = System.Drawing.Color.Black;
-            this.btnGetTickets.UseVisualStyleBackColor = false;
-            this.btnGetTickets.Click += new System.EventHandler(this.btnGetTickets_Click);
-            // 
-            // btnResetVe
-            // 
-            this.btnResetVe.BackColor = System.Drawing.Color.Transparent;
-            this.btnResetVe.BorderColor = System.Drawing.Color.Black;
-            this.btnResetVe.ButtonColor = System.Drawing.Color.White;
-            this.btnResetVe.FlatAppearance.BorderSize = 0;
-            this.btnResetVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResetVe.ForeColor = System.Drawing.Color.Transparent;
-            this.btnResetVe.Location = new System.Drawing.Point(581, 149);
-            this.btnResetVe.Name = "btnResetVe";
-            this.btnResetVe.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnResetVe.OnHoverButtonColor = System.Drawing.Color.SandyBrown;
-            this.btnResetVe.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnResetVe.Size = new System.Drawing.Size(174, 50);
-            this.btnResetVe.TabIndex = 1;
-            this.btnResetVe.Text = "Reset";
-            this.btnResetVe.TextColor = System.Drawing.Color.Black;
-            this.btnResetVe.UseVisualStyleBackColor = false;
-            this.btnResetVe.Click += new System.EventHandler(this.btnResetVe_Click);
-            // 
-            // button_WOC9
-            // 
-            this.button_WOC9.BackColor = System.Drawing.Color.Transparent;
-            this.button_WOC9.BorderColor = System.Drawing.Color.Black;
-            this.button_WOC9.ButtonColor = System.Drawing.Color.White;
-            this.button_WOC9.FlatAppearance.BorderSize = 0;
-            this.button_WOC9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC9.ForeColor = System.Drawing.Color.Transparent;
-            this.button_WOC9.Location = new System.Drawing.Point(779, 144);
-            this.button_WOC9.Name = "button_WOC9";
-            this.button_WOC9.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC9.OnHoverButtonColor = System.Drawing.Color.DarkOrange;
-            this.button_WOC9.OnHoverTextColor = System.Drawing.Color.Black;
-            this.button_WOC9.Size = new System.Drawing.Size(174, 50);
-            this.button_WOC9.TabIndex = 1;
-            this.button_WOC9.Text = "Hủy Vé";
-            this.button_WOC9.TextColor = System.Drawing.Color.Black;
-            this.button_WOC9.UseVisualStyleBackColor = false;
-            this.button_WOC9.Click += new System.EventHandler(this.button_WOC9_Click);
-            // 
-            // button_WOC8
-            // 
-            this.button_WOC8.BackColor = System.Drawing.Color.Transparent;
-            this.button_WOC8.BorderColor = System.Drawing.Color.Black;
-            this.button_WOC8.ButtonColor = System.Drawing.Color.White;
-            this.button_WOC8.FlatAppearance.BorderSize = 0;
-            this.button_WOC8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC8.ForeColor = System.Drawing.Color.Transparent;
-            this.button_WOC8.Location = new System.Drawing.Point(779, 76);
-            this.button_WOC8.Name = "button_WOC8";
-            this.button_WOC8.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC8.OnHoverButtonColor = System.Drawing.Color.Orange;
-            this.button_WOC8.OnHoverTextColor = System.Drawing.Color.Black;
-            this.button_WOC8.Size = new System.Drawing.Size(174, 50);
-            this.button_WOC8.TabIndex = 1;
-            this.button_WOC8.Text = "Sửa Vé";
-            this.button_WOC8.TextColor = System.Drawing.Color.Black;
-            this.button_WOC8.UseVisualStyleBackColor = false;
-            this.button_WOC8.Click += new System.EventHandler(this.btnSuaVeXe_Click);
-            // 
-            // btnAddVeXe
-            // 
-            this.btnAddVeXe.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddVeXe.BorderColor = System.Drawing.Color.Black;
-            this.btnAddVeXe.ButtonColor = System.Drawing.Color.White;
-            this.btnAddVeXe.FlatAppearance.BorderSize = 0;
-            this.btnAddVeXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddVeXe.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAddVeXe.Location = new System.Drawing.Point(577, 76);
-            this.btnAddVeXe.Name = "btnAddVeXe";
-            this.btnAddVeXe.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnAddVeXe.OnHoverButtonColor = System.Drawing.Color.NavajoWhite;
-            this.btnAddVeXe.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnAddVeXe.Size = new System.Drawing.Size(174, 50);
-            this.btnAddVeXe.TabIndex = 1;
-            this.btnAddVeXe.Text = "Mua Vé";
-            this.btnAddVeXe.TextColor = System.Drawing.Color.Black;
-            this.btnAddVeXe.UseVisualStyleBackColor = false;
-            this.btnAddVeXe.Click += new System.EventHandler(this.btnAddVeXe_Click);
-            // 
-            // btnXoaChuyen
-            // 
-            this.btnXoaChuyen.BackColor = System.Drawing.Color.Transparent;
-            this.btnXoaChuyen.BorderColor = System.Drawing.Color.Black;
-            this.btnXoaChuyen.ButtonColor = System.Drawing.Color.White;
-            this.btnXoaChuyen.FlatAppearance.BorderSize = 0;
-            this.btnXoaChuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaChuyen.ForeColor = System.Drawing.Color.Transparent;
-            this.btnXoaChuyen.Location = new System.Drawing.Point(655, 222);
-            this.btnXoaChuyen.Name = "btnXoaChuyen";
-            this.btnXoaChuyen.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnXoaChuyen.OnHoverButtonColor = System.Drawing.Color.DarkOrange;
-            this.btnXoaChuyen.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnXoaChuyen.Size = new System.Drawing.Size(174, 50);
-            this.btnXoaChuyen.TabIndex = 13;
-            this.btnXoaChuyen.Text = "Xóa Chuyến";
-            this.btnXoaChuyen.TextColor = System.Drawing.Color.Black;
-            this.btnXoaChuyen.UseVisualStyleBackColor = false;
-            this.btnXoaChuyen.Click += new System.EventHandler(this.btnXoaChuyenXe_Click);
-            // 
-            // btnSuaChuyen
-            // 
-            this.btnSuaChuyen.BackColor = System.Drawing.Color.Transparent;
-            this.btnSuaChuyen.BorderColor = System.Drawing.Color.Black;
-            this.btnSuaChuyen.ButtonColor = System.Drawing.Color.White;
-            this.btnSuaChuyen.FlatAppearance.BorderSize = 0;
-            this.btnSuaChuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaChuyen.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSuaChuyen.Location = new System.Drawing.Point(655, 143);
-            this.btnSuaChuyen.Name = "btnSuaChuyen";
-            this.btnSuaChuyen.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnSuaChuyen.OnHoverButtonColor = System.Drawing.Color.Orange;
-            this.btnSuaChuyen.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnSuaChuyen.Size = new System.Drawing.Size(174, 50);
-            this.btnSuaChuyen.TabIndex = 12;
-            this.btnSuaChuyen.Text = "Sửa Chuyến";
-            this.btnSuaChuyen.TextColor = System.Drawing.Color.Black;
-            this.btnSuaChuyen.UseVisualStyleBackColor = false;
-            this.btnSuaChuyen.Click += new System.EventHandler(this.btnSuaChuyen_Click);
-            // 
-            // btnAddChuyen
-            // 
-            this.btnAddChuyen.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddChuyen.BorderColor = System.Drawing.Color.Black;
-            this.btnAddChuyen.ButtonColor = System.Drawing.Color.White;
-            this.btnAddChuyen.FlatAppearance.BorderSize = 0;
-            this.btnAddChuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddChuyen.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAddChuyen.Location = new System.Drawing.Point(655, 68);
-            this.btnAddChuyen.Name = "btnAddChuyen";
-            this.btnAddChuyen.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnAddChuyen.OnHoverButtonColor = System.Drawing.Color.NavajoWhite;
-            this.btnAddChuyen.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnAddChuyen.Size = new System.Drawing.Size(174, 50);
-            this.btnAddChuyen.TabIndex = 20;
-            this.btnAddChuyen.Text = "Thêm Chuyến";
-            this.btnAddChuyen.TextColor = System.Drawing.Color.Black;
-            this.btnAddChuyen.UseVisualStyleBackColor = false;
-            this.btnAddChuyen.Click += new System.EventHandler(this.btnAddChuyen_Click);
-            // 
-            // btnTimKiemChuyen
-            // 
-            this.btnTimKiemChuyen.BackColor = System.Drawing.Color.Transparent;
-            this.btnTimKiemChuyen.BorderColor = System.Drawing.Color.Transparent;
-            this.btnTimKiemChuyen.ButtonColor = System.Drawing.Color.CornflowerBlue;
-            this.btnTimKiemChuyen.FlatAppearance.BorderSize = 0;
-            this.btnTimKiemChuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemChuyen.ForeColor = System.Drawing.Color.Transparent;
-            this.btnTimKiemChuyen.Location = new System.Drawing.Point(448, 18);
-            this.btnTimKiemChuyen.Name = "btnTimKiemChuyen";
-            this.btnTimKiemChuyen.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnTimKiemChuyen.OnHoverButtonColor = System.Drawing.Color.LightSkyBlue;
-            this.btnTimKiemChuyen.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnTimKiemChuyen.Size = new System.Drawing.Size(89, 33);
-            this.btnTimKiemChuyen.TabIndex = 15;
-            this.btnTimKiemChuyen.Text = "Tìm Kiếm";
-            this.btnTimKiemChuyen.TextColor = System.Drawing.Color.Black;
-            this.btnTimKiemChuyen.UseVisualStyleBackColor = false;
-            this.btnTimKiemChuyen.Click += new System.EventHandler(this.btnTimKiemChuyen_Click);
-            // 
-            // btnXoaXe
-            // 
-            this.btnXoaXe.BackColor = System.Drawing.Color.Transparent;
-            this.btnXoaXe.BorderColor = System.Drawing.Color.Black;
-            this.btnXoaXe.ButtonColor = System.Drawing.Color.White;
-            this.btnXoaXe.FlatAppearance.BorderSize = 0;
-            this.btnXoaXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaXe.ForeColor = System.Drawing.Color.Transparent;
-            this.btnXoaXe.Location = new System.Drawing.Point(653, 218);
-            this.btnXoaXe.Name = "btnXoaXe";
-            this.btnXoaXe.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnXoaXe.OnHoverButtonColor = System.Drawing.Color.DarkOrange;
-            this.btnXoaXe.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnXoaXe.Size = new System.Drawing.Size(174, 50);
-            this.btnXoaXe.TabIndex = 33;
-            this.btnXoaXe.Text = "Xóa Xe";
-            this.btnXoaXe.TextColor = System.Drawing.Color.Black;
-            this.btnXoaXe.UseVisualStyleBackColor = false;
-            this.btnXoaXe.Click += new System.EventHandler(this.btnXoaXe_Click);
-            // 
-            // btnSuaXe
-            // 
-            this.btnSuaXe.BackColor = System.Drawing.Color.Transparent;
-            this.btnSuaXe.BorderColor = System.Drawing.Color.Black;
-            this.btnSuaXe.ButtonColor = System.Drawing.Color.White;
-            this.btnSuaXe.FlatAppearance.BorderSize = 0;
-            this.btnSuaXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaXe.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSuaXe.Location = new System.Drawing.Point(653, 139);
-            this.btnSuaXe.Name = "btnSuaXe";
-            this.btnSuaXe.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnSuaXe.OnHoverButtonColor = System.Drawing.Color.Orange;
-            this.btnSuaXe.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnSuaXe.Size = new System.Drawing.Size(174, 50);
-            this.btnSuaXe.TabIndex = 32;
-            this.btnSuaXe.Text = "Sửa Xe";
-            this.btnSuaXe.TextColor = System.Drawing.Color.Black;
-            this.btnSuaXe.UseVisualStyleBackColor = false;
-            this.btnSuaXe.Click += new System.EventHandler(this.btnSuaXe_Click);
-            // 
-            // btnThemXe
-            // 
-            this.btnThemXe.BackColor = System.Drawing.Color.Transparent;
-            this.btnThemXe.BorderColor = System.Drawing.Color.Black;
-            this.btnThemXe.ButtonColor = System.Drawing.Color.White;
-            this.btnThemXe.FlatAppearance.BorderSize = 0;
-            this.btnThemXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemXe.ForeColor = System.Drawing.Color.Transparent;
-            this.btnThemXe.Location = new System.Drawing.Point(653, 64);
-            this.btnThemXe.Name = "btnThemXe";
-            this.btnThemXe.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnThemXe.OnHoverButtonColor = System.Drawing.Color.NavajoWhite;
-            this.btnThemXe.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnThemXe.Size = new System.Drawing.Size(174, 50);
-            this.btnThemXe.TabIndex = 38;
-            this.btnThemXe.Text = "Thêm Xe Mới";
-            this.btnThemXe.TextColor = System.Drawing.Color.Black;
-            this.btnThemXe.UseVisualStyleBackColor = false;
-            this.btnThemXe.Click += new System.EventHandler(this.btnThemXe_Click);
-            // 
-            // btnXoaBX
-            // 
-            this.btnXoaBX.BackColor = System.Drawing.Color.Transparent;
-            this.btnXoaBX.BorderColor = System.Drawing.Color.Black;
-            this.btnXoaBX.ButtonColor = System.Drawing.Color.White;
-            this.btnXoaBX.FlatAppearance.BorderSize = 0;
-            this.btnXoaBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaBX.ForeColor = System.Drawing.Color.Transparent;
-            this.btnXoaBX.Location = new System.Drawing.Point(653, 203);
-            this.btnXoaBX.Name = "btnXoaBX";
-            this.btnXoaBX.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnXoaBX.OnHoverButtonColor = System.Drawing.Color.DarkOrange;
-            this.btnXoaBX.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnXoaBX.Size = new System.Drawing.Size(174, 50);
-            this.btnXoaBX.TabIndex = 48;
-            this.btnXoaBX.Text = "Xóa Bến Xe ";
-            this.btnXoaBX.TextColor = System.Drawing.Color.Black;
-            this.btnXoaBX.UseVisualStyleBackColor = false;
-            this.btnXoaBX.Click += new System.EventHandler(this.btnXoaBX_Click);
-            // 
-            // btnSuaBX
-            // 
-            this.btnSuaBX.BackColor = System.Drawing.Color.Transparent;
-            this.btnSuaBX.BorderColor = System.Drawing.Color.Black;
-            this.btnSuaBX.ButtonColor = System.Drawing.Color.White;
-            this.btnSuaBX.FlatAppearance.BorderSize = 0;
-            this.btnSuaBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaBX.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSuaBX.Location = new System.Drawing.Point(653, 124);
-            this.btnSuaBX.Name = "btnSuaBX";
-            this.btnSuaBX.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnSuaBX.OnHoverButtonColor = System.Drawing.Color.Orange;
-            this.btnSuaBX.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnSuaBX.Size = new System.Drawing.Size(174, 50);
-            this.btnSuaBX.TabIndex = 47;
-            this.btnSuaBX.Text = "Sửa Bến Xe";
-            this.btnSuaBX.TextColor = System.Drawing.Color.Black;
-            this.btnSuaBX.UseVisualStyleBackColor = false;
-            this.btnSuaBX.Click += new System.EventHandler(this.btnSuaBX_Click);
-            // 
-            // btnAddBX
-            // 
-            this.btnAddBX.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddBX.BorderColor = System.Drawing.Color.Black;
-            this.btnAddBX.ButtonColor = System.Drawing.Color.White;
-            this.btnAddBX.FlatAppearance.BorderSize = 0;
-            this.btnAddBX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddBX.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAddBX.Location = new System.Drawing.Point(653, 49);
-            this.btnAddBX.Name = "btnAddBX";
-            this.btnAddBX.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnAddBX.OnHoverButtonColor = System.Drawing.Color.NavajoWhite;
-            this.btnAddBX.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnAddBX.Size = new System.Drawing.Size(174, 50);
-            this.btnAddBX.TabIndex = 52;
-            this.btnAddBX.Text = "Thêm Bến Xe Mới";
-            this.btnAddBX.TextColor = System.Drawing.Color.Black;
-            this.btnAddBX.UseVisualStyleBackColor = false;
-            this.btnAddBX.Click += new System.EventHandler(this.btnAddBX_Click);
-            // 
             // button_WOC1
             // 
             this.button_WOC1.BackColor = System.Drawing.Color.Transparent;
@@ -2107,6 +1986,80 @@ namespace QLDatXe
             this.button_WOC10.Text = "Tìm Kiếm";
             this.button_WOC10.TextColor = System.Drawing.Color.Black;
             this.button_WOC10.UseVisualStyleBackColor = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.groupBox1.Controls.Add(this.pnlManager);
+            this.groupBox1.Controls.Add(this.panel10);
+            this.groupBox1.Controls.Add(this.panel5);
+            this.groupBox1.Controls.Add(this.panel4);
+            this.groupBox1.Controls.Add(this.button_WOC7);
+            this.groupBox1.Controls.Add(this.btnTickets);
+            this.groupBox1.Controls.Add(this.btnCalendar);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(2, 177);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(232, 522);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chức Năng";
+            // 
+            // pnlManager
+            // 
+            this.pnlManager.Controls.Add(this.panel9);
+            this.pnlManager.Controls.Add(this.panel8);
+            this.pnlManager.Controls.Add(this.panel7);
+            this.pnlManager.Controls.Add(this.panel6);
+            this.pnlManager.Controls.Add(this.btnStaff);
+            this.pnlManager.Controls.Add(this.button_WOC5);
+            this.pnlManager.Controls.Add(this.button_WOC4);
+            this.pnlManager.Controls.Add(this.button_WOC3);
+            this.pnlManager.Location = new System.Drawing.Point(10, 146);
+            this.pnlManager.Name = "pnlManager";
+            this.pnlManager.Size = new System.Drawing.Size(200, 257);
+            this.pnlManager.TabIndex = 3;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
+            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel9.Location = new System.Drawing.Point(30, 209);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(27, 30);
+            this.panel9.TabIndex = 7;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Transparent;
+            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
+            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel8.Location = new System.Drawing.Point(30, 145);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(27, 30);
+            this.panel8.TabIndex = 8;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Transparent;
+            this.panel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel7.BackgroundImage")));
+            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel7.Location = new System.Drawing.Point(30, 82);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(27, 30);
+            this.panel7.TabIndex = 9;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel6.Location = new System.Drawing.Point(30, 19);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(27, 30);
+            this.panel6.TabIndex = 10;
             // 
             // btnStaff
             // 
@@ -2205,6 +2158,36 @@ namespace QLDatXe
             this.button_WOC3.UseVisualStyleBackColor = false;
             this.button_WOC3.Click += new System.EventHandler(this.button_WOC3_Click);
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Transparent;
+            this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
+            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel10.Location = new System.Drawing.Point(43, 465);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(27, 30);
+            this.panel10.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel5.Location = new System.Drawing.Point(43, 101);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(27, 30);
+            this.panel5.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel4.Location = new System.Drawing.Point(43, 38);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(27, 30);
+            this.panel4.TabIndex = 2;
+            // 
             // button_WOC7
             // 
             this.button_WOC7.BackColor = System.Drawing.Color.Transparent;
@@ -2275,6 +2258,24 @@ namespace QLDatXe
             this.btnCalendar.TextColor = System.Drawing.Color.Black;
             this.btnCalendar.UseVisualStyleBackColor = false;
             this.btnCalendar.Click += new System.EventHandler(this.btnCalendar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(2, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1234, 158);
+            this.panel1.TabIndex = 4;
+            // 
+            // NotificationError
+            // 
+            this.NotificationError.ContainerControl = this;
+            this.NotificationError.Icon = ((System.Drawing.Icon)(resources.GetObject("NotificationError.Icon")));
+            // 
+            // erpTrangThaiVe
+            // 
+            this.erpTrangThaiVe.ContainerControl = this;
             // 
             // fTicketRoom
             // 
